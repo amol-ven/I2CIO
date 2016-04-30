@@ -1,0 +1,180 @@
+GAS LISTING /tmp/ccuIAg9N.s 			page 1
+
+
+   1               		.file	"cmd.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.stabs	"/home/amol/Desktop/AVR/I2C-slave/",100,0,2,.Ltext0
+   8               		.stabs	"cmd.c",100,0,2,.Ltext0
+   9               		.text
+  10               	.Ltext0:
+  11               		.stabs	"gcc2_compiled.",60,0,0,0
+  12               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  13               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  14               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  15               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  16               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  17               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,0,
+  18               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0;01777777777777777777777;",128,0,0,0
+  19               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,0,0
+  20               		.stabs	"short unsigned int:t(0,9)=r(0,9);0;0177777;",128,0,0,0
+  21               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,0,0
+  22               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,0,0
+  23               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,0,0
+  24               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,0,0
+  25               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,0,0
+  26               		.stabs	"short _Fract:t(0,15)=r(0,1);1;0;",128,0,0,0
+  27               		.stabs	"_Fract:t(0,16)=r(0,1);2;0;",128,0,0,0
+  28               		.stabs	"long _Fract:t(0,17)=r(0,1);4;0;",128,0,0,0
+  29               		.stabs	"long long _Fract:t(0,18)=r(0,1);8;0;",128,0,0,0
+  30               		.stabs	"unsigned short _Fract:t(0,19)=r(0,1);1;0;",128,0,0,0
+  31               		.stabs	"unsigned _Fract:t(0,20)=r(0,1);2;0;",128,0,0,0
+  32               		.stabs	"unsigned long _Fract:t(0,21)=r(0,1);4;0;",128,0,0,0
+  33               		.stabs	"unsigned long long _Fract:t(0,22)=r(0,1);8;0;",128,0,0,0
+  34               		.stabs	"_Sat short _Fract:t(0,23)=r(0,1);1;0;",128,0,0,0
+  35               		.stabs	"_Sat _Fract:t(0,24)=r(0,1);2;0;",128,0,0,0
+  36               		.stabs	"_Sat long _Fract:t(0,25)=r(0,1);4;0;",128,0,0,0
+  37               		.stabs	"_Sat long long _Fract:t(0,26)=r(0,1);8;0;",128,0,0,0
+  38               		.stabs	"_Sat unsigned short _Fract:t(0,27)=r(0,1);1;0;",128,0,0,0
+  39               		.stabs	"_Sat unsigned _Fract:t(0,28)=r(0,1);2;0;",128,0,0,0
+  40               		.stabs	"_Sat unsigned long _Fract:t(0,29)=r(0,1);4;0;",128,0,0,0
+  41               		.stabs	"_Sat unsigned long long _Fract:t(0,30)=r(0,1);8;0;",128,0,0,0
+  42               		.stabs	"short _Accum:t(0,31)=r(0,1);2;0;",128,0,0,0
+  43               		.stabs	"_Accum:t(0,32)=r(0,1);4;0;",128,0,0,0
+  44               		.stabs	"long _Accum:t(0,33)=r(0,1);8;0;",128,0,0,0
+  45               		.stabs	"long long _Accum:t(0,34)=r(0,1);8;0;",128,0,0,0
+  46               		.stabs	"unsigned short _Accum:t(0,35)=r(0,1);2;0;",128,0,0,0
+  47               		.stabs	"unsigned _Accum:t(0,36)=r(0,1);4;0;",128,0,0,0
+  48               		.stabs	"unsigned long _Accum:t(0,37)=r(0,1);8;0;",128,0,0,0
+  49               		.stabs	"unsigned long long _Accum:t(0,38)=r(0,1);8;0;",128,0,0,0
+  50               		.stabs	"_Sat short _Accum:t(0,39)=r(0,1);2;0;",128,0,0,0
+  51               		.stabs	"_Sat _Accum:t(0,40)=r(0,1);4;0;",128,0,0,0
+  52               		.stabs	"_Sat long _Accum:t(0,41)=r(0,1);8;0;",128,0,0,0
+  53               		.stabs	"_Sat long long _Accum:t(0,42)=r(0,1);8;0;",128,0,0,0
+  54               		.stabs	"_Sat unsigned short _Accum:t(0,43)=r(0,1);2;0;",128,0,0,0
+  55               		.stabs	"_Sat unsigned _Accum:t(0,44)=r(0,1);4;0;",128,0,0,0
+  56               		.stabs	"_Sat unsigned long _Accum:t(0,45)=r(0,1);8;0;",128,0,0,0
+  57               		.stabs	"_Sat unsigned long long _Accum:t(0,46)=r(0,1);8;0;",128,0,0,0
+GAS LISTING /tmp/ccuIAg9N.s 			page 2
+
+
+  58               		.stabs	"void:t(0,47)=(0,47)",128,0,0,0
+  59               		.stabs	"byte_t:t(0,48)=(0,11)",128,0,1,0
+  60               		.stabs	"getSetFrmCmd:F(0,1)",36,0,3,getSetFrmCmd
+  61               		.stabs	"cmd:P(0,48)",64,0,3,24
+  62               	.global	getSetFrmCmd
+  63               		.type	getSetFrmCmd, @function
+  64               	getSetFrmCmd:
+  65               		.stabd	46,0,0
+   1:cmd.c         **** typedef unsigned char byte_t;
+   2:cmd.c         **** 
+   3:cmd.c         **** int getSetFrmCmd(byte_t cmd)
+   4:cmd.c         **** {
+  66               		.stabn	68,0,4,.LM0-.LFBB1
+  67               	.LM0:
+  68               	.LFBB1:
+  69               	/* prologue: function */
+  70               	/* frame size = 0 */
+  71               	/* stack size = 0 */
+  72               	.L__stack_usage = 0
+   5:cmd.c         **** 	return (cmd>>6)&3;
+  73               		.stabn	68,0,5,.LM1-.LFBB1
+  74               	.LM1:
+  75 0000 8295      		swap r24
+  76 0002 8695      		lsr r24
+  77 0004 8695      		lsr r24
+  78 0006 8370      		andi r24,lo8(3)
+   6:cmd.c         **** }
+  79               		.stabn	68,0,6,.LM2-.LFBB1
+  80               	.LM2:
+  81 0008 90E0      		ldi r25,0
+  82 000a 0895      		ret
+  83               		.size	getSetFrmCmd, .-getSetFrmCmd
+  84               	.Lscope1:
+  85               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+  86               		.stabd	78,0,0
+  87               		.stabs	"getOprFrmCmd:F(0,1)",36,0,8,getOprFrmCmd
+  88               		.stabs	"cmd:P(0,48)",64,0,8,24
+  89               	.global	getOprFrmCmd
+  90               		.type	getOprFrmCmd, @function
+  91               	getOprFrmCmd:
+  92               		.stabd	46,0,0
+   7:cmd.c         **** 
+   8:cmd.c         **** int getOprFrmCmd(byte_t cmd)
+   9:cmd.c         **** {
+  93               		.stabn	68,0,9,.LM3-.LFBB2
+  94               	.LM3:
+  95               	.LFBB2:
+  96               	/* prologue: function */
+  97               	/* frame size = 0 */
+  98               	/* stack size = 0 */
+  99               	.L__stack_usage = 0
+  10:cmd.c         **** 	return (cmd>>3)&7;
+ 100               		.stabn	68,0,10,.LM4-.LFBB2
+ 101               	.LM4:
+ 102 000c 8695      		lsr r24
+ 103 000e 8695      		lsr r24
+ 104 0010 8695      		lsr r24
+GAS LISTING /tmp/ccuIAg9N.s 			page 3
+
+
+ 105 0012 8770      		andi r24,lo8(7)
+  11:cmd.c         **** }
+ 106               		.stabn	68,0,11,.LM5-.LFBB2
+ 107               	.LM5:
+ 108 0014 90E0      		ldi r25,0
+ 109 0016 0895      		ret
+ 110               		.size	getOprFrmCmd, .-getOprFrmCmd
+ 111               	.Lscope2:
+ 112               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 113               		.stabd	78,0,0
+ 114               		.stabs	"getValFrmCmd:F(0,1)",36,0,13,getValFrmCmd
+ 115               		.stabs	"cmd:P(0,48)",64,0,13,24
+ 116               	.global	getValFrmCmd
+ 117               		.type	getValFrmCmd, @function
+ 118               	getValFrmCmd:
+ 119               		.stabd	46,0,0
+  12:cmd.c         **** 
+  13:cmd.c         **** int getValFrmCmd(byte_t cmd)
+  14:cmd.c         **** {
+ 120               		.stabn	68,0,14,.LM6-.LFBB3
+ 121               	.LM6:
+ 122               	.LFBB3:
+ 123               	/* prologue: function */
+ 124               	/* frame size = 0 */
+ 125               	/* stack size = 0 */
+ 126               	.L__stack_usage = 0
+  15:cmd.c         **** 	return (cmd>>2)&1;
+  16:cmd.c         **** }
+ 127               		.stabn	68,0,16,.LM7-.LFBB3
+ 128               	.LM7:
+ 129 0018 82FB      		bst r24,2
+ 130 001a 8827      		clr r24
+ 131 001c 80F9      		bld r24,0
+ 132 001e 90E0      		ldi r25,0
+ 133 0020 0895      		ret
+ 134               		.size	getValFrmCmd, .-getValFrmCmd
+ 135               	.Lscope3:
+ 136               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 137               		.stabd	78,0,0
+ 138               		.stabs	"",100,0,0,.Letext0
+ 139               	.Letext0:
+ 140               		.ident	"GCC: (GNU) 4.8.2"
+GAS LISTING /tmp/ccuIAg9N.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 cmd.c
+     /tmp/ccuIAg9N.s:2      *ABS*:0000003e __SP_H__
+     /tmp/ccuIAg9N.s:3      *ABS*:0000003d __SP_L__
+     /tmp/ccuIAg9N.s:4      *ABS*:0000003f __SREG__
+     /tmp/ccuIAg9N.s:5      *ABS*:00000000 __tmp_reg__
+     /tmp/ccuIAg9N.s:6      *ABS*:00000001 __zero_reg__
+     /tmp/ccuIAg9N.s:64     .text:00000000 getSetFrmCmd
+     /tmp/ccuIAg9N.s:91     .text:0000000c getOprFrmCmd
+     /tmp/ccuIAg9N.s:118    .text:00000018 getValFrmCmd
+
+NO UNDEFINED SYMBOLS

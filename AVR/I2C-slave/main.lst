@@ -1,0 +1,2690 @@
+GAS LISTING /tmp/ccdyBaEW.s 			page 1
+
+
+   1               		.file	"main.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.stabs	"/home/amol/Desktop/AVR/I2C-slave/",100,0,2,.Ltext0
+   8               		.stabs	"main.c",100,0,2,.Ltext0
+   9               		.text
+  10               	.Ltext0:
+  11               		.stabs	"gcc2_compiled.",60,0,0,0
+  12               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  13               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  14               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  15               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  16               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  17               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,0,
+  18               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0;01777777777777777777777;",128,0,0,0
+  19               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,0,0
+  20               		.stabs	"short unsigned int:t(0,9)=r(0,9);0;0177777;",128,0,0,0
+  21               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,0,0
+  22               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,0,0
+  23               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,0,0
+  24               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,0,0
+  25               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,0,0
+  26               		.stabs	"short _Fract:t(0,15)=r(0,1);1;0;",128,0,0,0
+  27               		.stabs	"_Fract:t(0,16)=r(0,1);2;0;",128,0,0,0
+  28               		.stabs	"long _Fract:t(0,17)=r(0,1);4;0;",128,0,0,0
+  29               		.stabs	"long long _Fract:t(0,18)=r(0,1);8;0;",128,0,0,0
+  30               		.stabs	"unsigned short _Fract:t(0,19)=r(0,1);1;0;",128,0,0,0
+  31               		.stabs	"unsigned _Fract:t(0,20)=r(0,1);2;0;",128,0,0,0
+  32               		.stabs	"unsigned long _Fract:t(0,21)=r(0,1);4;0;",128,0,0,0
+  33               		.stabs	"unsigned long long _Fract:t(0,22)=r(0,1);8;0;",128,0,0,0
+  34               		.stabs	"_Sat short _Fract:t(0,23)=r(0,1);1;0;",128,0,0,0
+  35               		.stabs	"_Sat _Fract:t(0,24)=r(0,1);2;0;",128,0,0,0
+  36               		.stabs	"_Sat long _Fract:t(0,25)=r(0,1);4;0;",128,0,0,0
+  37               		.stabs	"_Sat long long _Fract:t(0,26)=r(0,1);8;0;",128,0,0,0
+  38               		.stabs	"_Sat unsigned short _Fract:t(0,27)=r(0,1);1;0;",128,0,0,0
+  39               		.stabs	"_Sat unsigned _Fract:t(0,28)=r(0,1);2;0;",128,0,0,0
+  40               		.stabs	"_Sat unsigned long _Fract:t(0,29)=r(0,1);4;0;",128,0,0,0
+  41               		.stabs	"_Sat unsigned long long _Fract:t(0,30)=r(0,1);8;0;",128,0,0,0
+  42               		.stabs	"short _Accum:t(0,31)=r(0,1);2;0;",128,0,0,0
+  43               		.stabs	"_Accum:t(0,32)=r(0,1);4;0;",128,0,0,0
+  44               		.stabs	"long _Accum:t(0,33)=r(0,1);8;0;",128,0,0,0
+  45               		.stabs	"long long _Accum:t(0,34)=r(0,1);8;0;",128,0,0,0
+  46               		.stabs	"unsigned short _Accum:t(0,35)=r(0,1);2;0;",128,0,0,0
+  47               		.stabs	"unsigned _Accum:t(0,36)=r(0,1);4;0;",128,0,0,0
+  48               		.stabs	"unsigned long _Accum:t(0,37)=r(0,1);8;0;",128,0,0,0
+  49               		.stabs	"unsigned long long _Accum:t(0,38)=r(0,1);8;0;",128,0,0,0
+  50               		.stabs	"_Sat short _Accum:t(0,39)=r(0,1);2;0;",128,0,0,0
+  51               		.stabs	"_Sat _Accum:t(0,40)=r(0,1);4;0;",128,0,0,0
+  52               		.stabs	"_Sat long _Accum:t(0,41)=r(0,1);8;0;",128,0,0,0
+  53               		.stabs	"_Sat long long _Accum:t(0,42)=r(0,1);8;0;",128,0,0,0
+  54               		.stabs	"_Sat unsigned short _Accum:t(0,43)=r(0,1);2;0;",128,0,0,0
+  55               		.stabs	"_Sat unsigned _Accum:t(0,44)=r(0,1);4;0;",128,0,0,0
+  56               		.stabs	"_Sat unsigned long _Accum:t(0,45)=r(0,1);8;0;",128,0,0,0
+  57               		.stabs	"_Sat unsigned long long _Accum:t(0,46)=r(0,1);8;0;",128,0,0,0
+GAS LISTING /tmp/ccdyBaEW.s 			page 2
+
+
+  58               		.stabs	"void:t(0,47)=(0,47)",128,0,0,0
+  59               		.stabs	"/usr/lib/avr/include/avr/io.h",130,0,0,0
+  60               		.stabs	"/usr/lib/avr/include/avr/sfr_defs.h",130,0,0,0
+  61               		.stabs	"/usr/lib/avr/include/inttypes.h",130,0,0,0
+  62               		.stabs	"/usr/lib/gcc/avr/4.8.2/include/stdint.h",130,0,0,0
+  63               		.stabs	"/usr/lib/avr/include/stdint.h",130,0,0,0
+  64               		.stabs	"int8_t:t(5,1)=(0,10)",128,0,121,0
+  65               		.stabs	"uint8_t:t(5,2)=(0,11)",128,0,122,0
+  66               		.stabs	"int16_t:t(5,3)=(0,1)",128,0,123,0
+  67               		.stabs	"uint16_t:t(5,4)=(0,4)",128,0,124,0
+  68               		.stabs	"int32_t:t(5,5)=(0,3)",128,0,125,0
+  69               		.stabs	"uint32_t:t(5,6)=(0,5)",128,0,126,0
+  70               		.stabs	"int64_t:t(5,7)=(0,6)",128,0,128,0
+  71               		.stabs	"uint64_t:t(5,8)=(0,7)",128,0,129,0
+  72               		.stabs	"intptr_t:t(5,9)=(5,3)",128,0,142,0
+  73               		.stabs	"uintptr_t:t(5,10)=(5,4)",128,0,147,0
+  74               		.stabs	"int_least8_t:t(5,11)=(5,1)",128,0,159,0
+  75               		.stabs	"uint_least8_t:t(5,12)=(5,2)",128,0,164,0
+  76               		.stabs	"int_least16_t:t(5,13)=(5,3)",128,0,169,0
+  77               		.stabs	"uint_least16_t:t(5,14)=(5,4)",128,0,174,0
+  78               		.stabs	"int_least32_t:t(5,15)=(5,5)",128,0,179,0
+  79               		.stabs	"uint_least32_t:t(5,16)=(5,6)",128,0,184,0
+  80               		.stabs	"int_least64_t:t(5,17)=(5,7)",128,0,192,0
+  81               		.stabs	"uint_least64_t:t(5,18)=(5,8)",128,0,199,0
+  82               		.stabs	"int_fast8_t:t(5,19)=(5,1)",128,0,213,0
+  83               		.stabs	"uint_fast8_t:t(5,20)=(5,2)",128,0,218,0
+  84               		.stabs	"int_fast16_t:t(5,21)=(5,3)",128,0,223,0
+  85               		.stabs	"uint_fast16_t:t(5,22)=(5,4)",128,0,228,0
+  86               		.stabs	"int_fast32_t:t(5,23)=(5,5)",128,0,233,0
+  87               		.stabs	"uint_fast32_t:t(5,24)=(5,6)",128,0,238,0
+  88               		.stabs	"int_fast64_t:t(5,25)=(5,7)",128,0,246,0
+  89               		.stabs	"uint_fast64_t:t(5,26)=(5,8)",128,0,253,0
+  90               		.stabs	"intmax_t:t(5,27)=(5,7)",128,0,273,0
+  91               		.stabs	"uintmax_t:t(5,28)=(5,8)",128,0,278,0
+  92               		.stabn	162,0,0,0
+  93               		.stabn	162,0,0,0
+  94               		.stabs	"int_farptr_t:t(3,1)=(5,5)",128,0,77,0
+  95               		.stabs	"uint_farptr_t:t(3,2)=(5,6)",128,0,81,0
+  96               		.stabn	162,0,0,0
+  97               		.stabn	162,0,0,0
+  98               		.stabs	"/usr/lib/avr/include/avr/fuse.h",130,0,0,0
+  99               		.stabs	"__fuse_t:t(6,1)=(6,2)=s2low:(0,11),0,8;high:(0,11),8,8;;",128,0,252,0
+ 100               		.stabn	162,0,0,0
+ 101               		.stabn	162,0,0,0
+ 102               		.stabs	"/usr/lib/avr/include/stdlib.h",130,0,0,0
+ 103               		.stabs	"/usr/lib/gcc/avr/4.8.2/include/stddef.h",130,0,0,0
+ 104               		.stabs	"size_t:t(8,1)=(0,4)",128,0,212,0
+ 105               		.stabs	"wchar_t:t(8,2)=(0,1)",128,0,324,0
+ 106               		.stabn	162,0,0,0
+ 107               		.stabs	"div_t:t(7,1)=(7,2)=s4quot:(0,1),0,16;rem:(0,1),16,16;;",128,0,71,0
+ 108               		.stabs	"ldiv_t:t(7,3)=(7,4)=s8quot:(0,3),0,32;rem:(0,3),32,32;;",128,0,77,0
+ 109               		.stabs	"__compar_fn_t:t(7,5)=(7,6)=*(7,7)=f(0,1)",128,0,80,0
+ 110               		.stabn	162,0,0,0
+ 111               		.stabs	"../amol-ven-Avark-757add0/SRC/avark.h",130,0,0,0
+ 112               		.stabs	"K_STACK:t(9,1)=(9,2)=B(0,11)",128,0,10,0
+ 113               		.stabs	"pointer_to_task:t(9,3)=(9,4)=*(9,5)=f(0,47)",128,0,12,0
+ 114               		.stabn	162,0,0,0
+GAS LISTING /tmp/ccdyBaEW.s 			page 3
+
+
+ 115               		.stabs	"byte_t:t(0,48)=(0,11)",128,0,14,0
+ 116               		.stabs	"bool_t:t(0,49)=(0,11)",128,0,15,0
+ 117               		.stabs	"sendByte:F(0,47)",36,0,84,sendByte
+ 118               		.stabs	"b:P(0,48)",64,0,84,15
+ 119               	.global	sendByte
+ 120               		.type	sendByte, @function
+ 121               	sendByte:
+ 122               		.stabd	46,0,0
+   1:main.c        **** #include <avr/io.h>
+   2:main.c        **** 
+   3:main.c        **** #define F_CPU 16000000UL
+   4:main.c        **** #include <util/delay.h>
+   5:main.c        **** #include <util/twi.h>
+   6:main.c        **** #include <avr/interrupt.h>
+   7:main.c        **** 
+   8:main.c        **** #include <stdlib.h>
+   9:main.c        **** 
+  10:main.c        **** #include "registers.h"
+  11:main.c        **** 
+  12:main.c        **** 
+  13:main.c        **** #include "../amol-ven-Avark-757add0/SRC/avark.h"
+  14:main.c        **** typedef unsigned char byte_t;
+  15:main.c        **** typedef unsigned char bool_t;
+  16:main.c        **** 
+  17:main.c        **** 
+  18:main.c        **** 
+  19:main.c        **** //volatile uint8_t buffer_address;
+  20:main.c        **** //volatile uint8_t txbuffer[0xFF];
+  21:main.c        **** //volatile uint8_t rxbuffer[0xFF];
+  22:main.c        **** 
+  23:main.c        **** 
+  24:main.c        **** #define IDLE				0
+  25:main.c        **** #define MY_ADDR				1
+  26:main.c        **** #define PTR_RCVD			2
+  27:main.c        **** 
+  28:main.c        **** volatile int state = IDLE;
+  29:main.c        **** volatile int RegAddr;
+  30:main.c        **** 
+  31:main.c        **** 
+  32:main.c        **** volatile unsigned char Registers[REGISTERS];
+  33:main.c        **** 
+  34:main.c        **** K_STACK set1_stack[200];
+  35:main.c        **** K_STACK set2_stack[200];
+  36:main.c        **** K_STACK set3_stack[200];
+  37:main.c        **** 
+  38:main.c        **** /*
+  39:main.c        **** //######## uart if needed here #########
+  40:main.c        **** void sendChar(volatile char a)
+  41:main.c        **** {
+  42:main.c        **** 	while( !(UCSRA&(1<<UDRE)) );
+  43:main.c        **** 	UDR=a;
+  44:main.c        **** }	
+  45:main.c        **** 
+  46:main.c        **** 
+  47:main.c        **** void sendString(volatile char *a)
+  48:main.c        **** {
+  49:main.c        **** 	int index=0;
+GAS LISTING /tmp/ccdyBaEW.s 			page 4
+
+
+  50:main.c        **** 
+  51:main.c        **** 	while(a[(int)index]!='\0')
+  52:main.c        **** 	{
+  53:main.c        **** 		sendChar(a[(int)index]);
+  54:main.c        **** 		index++;
+  55:main.c        **** 	}
+  56:main.c        **** 	index=0;
+  57:main.c        **** }
+  58:main.c        **** 
+  59:main.c        **** void sendULInt(unsigned long int x)
+  60:main.c        **** {
+  61:main.c        **** 	char integer[15];
+  62:main.c        **** 	char place=14;
+  63:main.c        **** 	if(x==0)
+  64:main.c        **** 	{
+  65:main.c        **** 		sendChar('0');
+  66:main.c        **** 	}
+  67:main.c        **** 	while(x!=0)
+  68:main.c        **** 	{
+  69:main.c        **** 		integer[place]=(x%10)+48;
+  70:main.c        **** 		x/=10;
+  71:main.c        **** 		place--;
+  72:main.c        **** 	}
+  73:main.c        **** 	place++;
+  74:main.c        **** 	while(place<=14)
+  75:main.c        **** 	{
+  76:main.c        **** 		sendChar(integer[place]);
+  77:main.c        **** 		place++;
+  78:main.c        **** 	}
+  79:main.c        **** }
+  80:main.c        **** 
+  81:main.c        **** //########################################
+  82:main.c        **** */
+  83:main.c        **** 
+  84:main.c        **** void sendByte(byte_t b)
+  85:main.c        **** {
+ 123               		.stabn	68,0,85,.LM0-.LFBB1
+ 124               	.LM0:
+ 125               	.LFBB1:
+ 126 0000 FF92      		push r15
+ 127 0002 0F93      		push r16
+ 128 0004 1F93      		push r17
+ 129 0006 CF93      		push r28
+ 130 0008 DF93      		push r29
+ 131 000a 00D0      		rcall .
+ 132 000c 1F92      		push __zero_reg__
+ 133 000e CDB7      		in r28,__SP_L__
+ 134 0010 DEB7      		in r29,__SP_H__
+ 135               	/* prologue: function */
+ 136               	/* frame size = 3 */
+ 137               	/* stack size = 8 */
+ 138               	.L__stack_usage = 8
+ 139 0012 F82E      		mov r15,r24
+  86:main.c        **** 	char integer[3];
+  87:main.c        **** 	int place=2;
+  88:main.c        **** 	if(b==0)
+ 140               		.stabn	68,0,88,.LM1-.LFBB1
+GAS LISTING /tmp/ccdyBaEW.s 			page 5
+
+
+ 141               	.LM1:
+ 142 0014 8111      		cpse r24,__zero_reg__
+ 143 0016 00C0      		rjmp .L2
+ 144               	.LBB2:
+  89:main.c        **** 	{
+  90:main.c        **** 		sendChar('0');
+ 145               		.stabn	68,0,90,.LM2-.LFBB1
+ 146               	.LM2:
+ 147 0018 80E3      		ldi r24,lo8(48)
+ 148 001a 90E0      		ldi r25,0
+ 149 001c 0E94 0000 		call sendChar
+ 150               	.L2:
+ 151 0020 FE01      		movw r30,r28
+ 152 0022 3496      		adiw r30,4
+ 153               	.LBE2:
+  85:main.c        **** {
+ 154               		.stabn	68,0,85,.LM3-.LFBB1
+ 155               	.LM3:
+ 156 0024 02E0      		ldi r16,lo8(2)
+ 157 0026 10E0      		ldi r17,0
+  91:main.c        **** 	}
+  92:main.c        **** 	while(b!=0)
+  93:main.c        **** 	{
+  94:main.c        **** 		integer[place]=(b%10)+48;
+ 158               		.stabn	68,0,94,.LM4-.LFBB1
+ 159               	.LM4:
+ 160 0028 2AE0      		ldi r18,lo8(10)
+ 161               	.L3:
+  92:main.c        **** 	while(b!=0)
+ 162               		.stabn	68,0,92,.LM5-.LFBB1
+ 163               	.LM5:
+ 164 002a FF20      		tst r15
+ 165 002c 01F0      		breq .L5
+ 166               		.stabn	68,0,94,.LM6-.LFBB1
+ 167               	.LM6:
+ 168 002e 8F2D      		mov r24,r15
+ 169 0030 622F      		mov r22,r18
+ 170 0032 0E94 0000 		call __udivmodqi4
+ 171 0036 905D      		subi r25,lo8(-(48))
+ 172 0038 9293      		st -Z,r25
+  95:main.c        **** 		b/=10;
+ 173               		.stabn	68,0,95,.LM7-.LFBB1
+ 174               	.LM7:
+ 175 003a F82E      		mov r15,r24
+  96:main.c        **** 		place--;
+ 176               		.stabn	68,0,96,.LM8-.LFBB1
+ 177               	.LM8:
+ 178 003c 0150      		subi r16,1
+ 179 003e 1109      		sbc r17,__zero_reg__
+ 180 0040 00C0      		rjmp .L3
+ 181               	.L5:
+ 182 0042 0F5F      		subi r16,-1
+ 183 0044 1F4F      		sbci r17,-1
+  97:main.c        **** 	}
+  98:main.c        **** 	place++;
+  99:main.c        **** 	while(place<=2)
+ 184               		.stabn	68,0,99,.LM9-.LFBB1
+GAS LISTING /tmp/ccdyBaEW.s 			page 6
+
+
+ 185               	.LM9:
+ 186 0046 0330      		cpi r16,3
+ 187 0048 1105      		cpc r17,__zero_reg__
+ 188 004a 01F0      		breq .L8
+ 189 004c E1E0      		ldi r30,lo8(1)
+ 190 004e F0E0      		ldi r31,0
+ 191 0050 EC0F      		add r30,r28
+ 192 0052 FD1F      		adc r31,r29
+ 193 0054 E00F      		add r30,r16
+ 194 0056 F11F      		adc r31,r17
+ 195               	.LBB3:
+ 100:main.c        **** 	{
+ 101:main.c        **** 		sendChar(integer[place]);
+ 196               		.stabn	68,0,101,.LM10-.LFBB1
+ 197               	.LM10:
+ 198 0058 8081      		ld r24,Z
+ 199 005a 90E0      		ldi r25,0
+ 200 005c 0E94 0000 		call sendChar
+ 201 0060 00C0      		rjmp .L5
+ 202               	.L8:
+ 203               	/* epilogue start */
+ 204               	.LBE3:
+ 102:main.c        **** 		place++;
+ 103:main.c        **** 	}
+ 104:main.c        **** }
+ 205               		.stabn	68,0,104,.LM11-.LFBB1
+ 206               	.LM11:
+ 207 0062 0F90      		pop __tmp_reg__
+ 208 0064 0F90      		pop __tmp_reg__
+ 209 0066 0F90      		pop __tmp_reg__
+ 210 0068 DF91      		pop r29
+ 211 006a CF91      		pop r28
+ 212 006c 1F91      		pop r17
+ 213 006e 0F91      		pop r16
+ 214 0070 FF90      		pop r15
+ 215 0072 0895      		ret
+ 216               		.size	sendByte, .-sendByte
+ 217               		.stabs	"integer:(0,50)=ar(0,51)=r(0,51);0;0177777;;0;2;(0,2)",128,0,86,1
+ 218               		.stabs	"place:r(0,1)",64,0,87,16
+ 219               		.stabn	192,0,0,.LFBB1-.LFBB1
+ 220               		.stabn	224,0,0,.Lscope1-.LFBB1
+ 221               	.Lscope1:
+ 222               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 223               		.stabd	78,0,0
+ 224               		.stabs	"sendWord:F(0,47)",36,0,106,sendWord
+ 225               		.stabs	"w:P(0,4)",64,0,106,16
+ 226               	.global	sendWord
+ 227               		.type	sendWord, @function
+ 228               	sendWord:
+ 229               		.stabd	46,0,0
+ 105:main.c        **** 
+ 106:main.c        **** void sendWord(unsigned int w)
+ 107:main.c        **** {
+ 230               		.stabn	68,0,107,.LM12-.LFBB2
+ 231               	.LM12:
+ 232               	.LFBB2:
+ 233 0074 EF92      		push r14
+GAS LISTING /tmp/ccdyBaEW.s 			page 7
+
+
+ 234 0076 FF92      		push r15
+ 235 0078 0F93      		push r16
+ 236 007a 1F93      		push r17
+ 237 007c CF93      		push r28
+ 238 007e DF93      		push r29
+ 239 0080 00D0      		rcall .
+ 240 0082 00D0      		rcall .
+ 241 0084 1F92      		push __zero_reg__
+ 242 0086 CDB7      		in r28,__SP_L__
+ 243 0088 DEB7      		in r29,__SP_H__
+ 244               	/* prologue: function */
+ 245               	/* frame size = 5 */
+ 246               	/* stack size = 11 */
+ 247               	.L__stack_usage = 11
+ 248 008a 8C01      		movw r16,r24
+ 108:main.c        **** 	char integer[5];
+ 109:main.c        **** 	int place=4;
+ 110:main.c        **** 	if(w==0)
+ 249               		.stabn	68,0,110,.LM13-.LFBB2
+ 250               	.LM13:
+ 251 008c 0097      		sbiw r24,0
+ 252 008e 01F4      		brne .L10
+ 253               	.LBB4:
+ 111:main.c        **** 	{
+ 112:main.c        **** 		sendChar('0');
+ 254               		.stabn	68,0,112,.LM14-.LFBB2
+ 255               	.LM14:
+ 256 0090 80E3      		ldi r24,lo8(48)
+ 257 0092 90E0      		ldi r25,0
+ 258 0094 0E94 0000 		call sendChar
+ 259               	.L10:
+ 260 0098 FE01      		movw r30,r28
+ 261 009a 3696      		adiw r30,6
+ 262               	.LBE4:
+ 107:main.c        **** {
+ 263               		.stabn	68,0,107,.LM15-.LFBB2
+ 264               	.LM15:
+ 265 009c 24E0      		ldi r18,lo8(4)
+ 266 009e 30E0      		ldi r19,0
+ 113:main.c        **** 	}
+ 114:main.c        **** 	while(w!=0)
+ 115:main.c        **** 	{
+ 116:main.c        **** 		integer[place]=(w%10)+48;
+ 267               		.stabn	68,0,116,.LM16-.LFBB2
+ 268               	.LM16:
+ 269 00a0 8AE0      		ldi r24,lo8(10)
+ 270 00a2 E82E      		mov r14,r24
+ 271 00a4 F12C      		mov r15,__zero_reg__
+ 272               	.L11:
+ 114:main.c        **** 	while(w!=0)
+ 273               		.stabn	68,0,114,.LM17-.LFBB2
+ 274               	.LM17:
+ 275 00a6 0115      		cp r16,__zero_reg__
+ 276 00a8 1105      		cpc r17,__zero_reg__
+ 277 00aa 01F0      		breq .L15
+ 278               		.stabn	68,0,116,.LM18-.LFBB2
+ 279               	.LM18:
+GAS LISTING /tmp/ccdyBaEW.s 			page 8
+
+
+ 280 00ac C801      		movw r24,r16
+ 281 00ae B701      		movw r22,r14
+ 282 00b0 0E94 0000 		call __udivmodhi4
+ 283 00b4 805D      		subi r24,lo8(-(48))
+ 284 00b6 8293      		st -Z,r24
+ 117:main.c        **** 		w/=10;
+ 285               		.stabn	68,0,117,.LM19-.LFBB2
+ 286               	.LM19:
+ 287 00b8 8B01      		movw r16,r22
+ 118:main.c        **** 		place--;
+ 288               		.stabn	68,0,118,.LM20-.LFBB2
+ 289               	.LM20:
+ 290 00ba 2150      		subi r18,1
+ 291 00bc 3109      		sbc r19,__zero_reg__
+ 292 00be 00C0      		rjmp .L11
+ 293               	.L15:
+ 294 00c0 8901      		movw r16,r18
+ 295               	.L13:
+ 296 00c2 0F5F      		subi r16,-1
+ 297 00c4 1F4F      		sbci r17,-1
+ 119:main.c        **** 	}
+ 120:main.c        **** 	place++;
+ 121:main.c        **** 	while(place<=4)
+ 298               		.stabn	68,0,121,.LM21-.LFBB2
+ 299               	.LM21:
+ 300 00c6 0530      		cpi r16,5
+ 301 00c8 1105      		cpc r17,__zero_reg__
+ 302 00ca 01F0      		breq .L16
+ 303 00cc E1E0      		ldi r30,lo8(1)
+ 304 00ce F0E0      		ldi r31,0
+ 305 00d0 EC0F      		add r30,r28
+ 306 00d2 FD1F      		adc r31,r29
+ 307 00d4 E00F      		add r30,r16
+ 308 00d6 F11F      		adc r31,r17
+ 309               	.LBB5:
+ 122:main.c        **** 	{
+ 123:main.c        **** 		sendChar(integer[place]);
+ 310               		.stabn	68,0,123,.LM22-.LFBB2
+ 311               	.LM22:
+ 312 00d8 8081      		ld r24,Z
+ 313 00da 90E0      		ldi r25,0
+ 314 00dc 0E94 0000 		call sendChar
+ 315 00e0 00C0      		rjmp .L13
+ 316               	.L16:
+ 317               	/* epilogue start */
+ 318               	.LBE5:
+ 124:main.c        **** 		place++;
+ 125:main.c        **** 	}
+ 126:main.c        **** }
+ 319               		.stabn	68,0,126,.LM23-.LFBB2
+ 320               	.LM23:
+ 321 00e2 0F90      		pop __tmp_reg__
+ 322 00e4 0F90      		pop __tmp_reg__
+ 323 00e6 0F90      		pop __tmp_reg__
+ 324 00e8 0F90      		pop __tmp_reg__
+ 325 00ea 0F90      		pop __tmp_reg__
+ 326 00ec DF91      		pop r29
+GAS LISTING /tmp/ccdyBaEW.s 			page 9
+
+
+ 327 00ee CF91      		pop r28
+ 328 00f0 1F91      		pop r17
+ 329 00f2 0F91      		pop r16
+ 330 00f4 FF90      		pop r15
+ 331 00f6 EF90      		pop r14
+ 332 00f8 0895      		ret
+ 333               		.size	sendWord, .-sendWord
+ 334               		.stabs	"integer:(0,52)=ar(0,51);0;4;(0,2)",128,0,108,1
+ 335               		.stabs	"place:r(0,1)",64,0,109,18
+ 336               		.stabn	192,0,0,.LFBB2-.LFBB2
+ 337               		.stabn	224,0,0,.Lscope2-.LFBB2
+ 338               	.Lscope2:
+ 339               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 340               		.stabd	78,0,0
+ 341               		.section	.rodata.str1.1,"aMS",@progbits,1
+ 342               	.LC0:
+ 343 0000 7365 7431 		.string	"set1"
+ 343      00
+ 344               	.LC1:
+ 345 0005 636D 6431 		.string	"cmd1"
+ 345      00
+ 346               	.LC2:
+ 347 000a 0941 4443 		.string	"\tADCVAL1="
+ 347      5641 4C31 
+ 347      3D00 
+ 348               	.LC3:
+ 349 0014 0A0D 00   		.string	"\n\r"
+ 350               	.LC4:
+ 351 0017 5245 4144 		.string	"READY1 = 1\n\r"
+ 351      5931 203D 
+ 351      2031 0A0D 
+ 351      00
+ 352               		.text
+ 353               		.stabs	"set1:F(0,47)",36,0,128,set1
+ 354               	.global	set1
+ 355               		.type	set1, @function
+ 356               	set1:
+ 357               		.stabd	46,0,0
+ 127:main.c        **** 
+ 128:main.c        **** void set1()
+ 129:main.c        **** {
+ 358               		.stabn	68,0,129,.LM24-.LFBB3
+ 359               	.LM24:
+ 360               	.LFBB3:
+ 361 00fa CF93      		push r28
+ 362 00fc DF93      		push r29
+ 363 00fe 00D0      		rcall .
+ 364 0100 00D0      		rcall .
+ 365 0102 CDB7      		in r28,__SP_L__
+ 366 0104 DEB7      		in r29,__SP_H__
+ 367               	/* prologue: function */
+ 368               	/* frame size = 4 */
+ 369               	/* stack size = 6 */
+ 370               	.L__stack_usage = 6
+ 130:main.c        **** 	volatile int opr1, val1;
+ 131:main.c        **** 	sendString("set1");
+ 371               		.stabn	68,0,131,.LM25-.LFBB3
+GAS LISTING /tmp/ccdyBaEW.s 			page 10
+
+
+ 372               	.LM25:
+ 373 0106 80E0      		ldi r24,lo8(.LC0)
+ 374 0108 90E0      		ldi r25,hi8(.LC0)
+ 375 010a 0E94 0000 		call sendString
+ 376               	.LBB6:
+ 132:main.c        **** 	while(1)
+ 133:main.c        **** 	{
+ 134:main.c        **** 		//sendString("test1");
+ 135:main.c        **** 		opr1 = getOprFrmCmd(CMD1);
+ 136:main.c        **** 		if(opr1!=NOP && CMD1_CP==NOP)
+ 137:main.c        **** 		{
+ 138:main.c        **** 			sendString("cmd1");
+ 139:main.c        **** 			//READY1 = 0;
+ 140:main.c        **** 			val1 = getValFrmCmd(CMD1);
+ 141:main.c        **** 			switch(opr1)
+ 142:main.c        **** 			{
+ 143:main.c        **** 				case DRUG:
+ 144:main.c        **** 					if(val1)  {D1_PORT |= (1<<D1_PIN);}
+ 145:main.c        **** 					else      {D1_PORT &= ~(1<<D1_PIN);}
+ 146:main.c        **** 					break;
+ 147:main.c        **** 					
+ 148:main.c        **** 				case MEDIA:
+ 149:main.c        **** 					if(val1)  {M1_PORT |= (1<<M1_PIN);}
+ 150:main.c        **** 					else      {M1_PORT &= ~(1<<M1_PIN);}
+ 151:main.c        **** 					break;
+ 152:main.c        **** 					
+ 153:main.c        **** 				case AIR:
+ 154:main.c        **** 					if(val1)  {A1_PORT |= (1<<A1_PIN);}
+ 155:main.c        **** 					else      {A1_PORT &= ~(1<<A1_PIN);}
+ 156:main.c        **** 					break;
+ 157:main.c        **** 
+ 158:main.c        **** 				case LIGHTS:
+ 159:main.c        **** 					if(val1)  {L1_PORT |= (1<<L1_PIN);}
+ 160:main.c        **** 					else      {L1_PORT &= ~(1<<L1_PIN);}
+ 161:main.c        **** 					break;
+ 162:main.c        **** 					
+ 163:main.c        **** 				case WASTE:
+ 164:main.c        **** 					if(val1)  {W1_PORT |= (1<<W1_PIN);}
+ 165:main.c        **** 					else      {W1_PORT &= ~(1<<W1_PIN);}
+ 166:main.c        **** 					break;
+ 167:main.c        **** 				
+ 168:main.c        **** 				case ADC_CMD:
+ 169:main.c        **** 					
+ 170:main.c        **** 					ADMUX = ( ADMUX&(~0x1F) )|SET1_ADC_CHANNEL;
+ 171:main.c        **** 					ADCSRA |= (1<<ADSC);
+ 172:main.c        **** 					
+ 173:main.c        **** 					while( !(ADCSRA&(1<<ADIF)) );
+ 174:main.c        **** 					
+ 175:main.c        **** 					byte_t h, l;
+ 176:main.c        **** 					l = ADCL;
+ 177:main.c        **** 					h = ADCH;
+ 178:main.c        **** 					unsigned int adcval = ((((unsigned int)h)<<8) | ((unsigned int)l));
+ 179:main.c        **** 					sendString("\tADCVAL1=");
+ 180:main.c        **** 					//sendULInt(adcval);
+ 181:main.c        **** 					sendWord(adcval);
+ 182:main.c        **** 					sendString("\n\r");
+ 183:main.c        **** 					//cli();while(1);
+GAS LISTING /tmp/ccdyBaEW.s 			page 11
+
+
+ 184:main.c        **** 					
+ 185:main.c        **** 					REPLY1L = l;
+ 186:main.c        **** 					REPLY1H = h;
+ 187:main.c        **** 					break;
+ 188:main.c        **** 					
+ 189:main.c        **** 				default:
+ 190:main.c        **** 					break;		
+ 191:main.c        **** 			}
+ 192:main.c        **** 			CMD1 = NOP;
+ 193:main.c        **** 			CMD2_CP = NOP;
+ 194:main.c        **** 			sendString("READY1 = 1\n\r");
+ 195:main.c        **** 			
+ 196:main.c        **** 			//READY1 = 1;
+ 197:main.c        **** 		}
+ 198:main.c        **** 		else
+ 199:main.c        **** 		{
+ 200:main.c        **** 			K_taskQuit();
+ 201:main.c        **** 		}
+ 202:main.c        **** 		READY1 = 1;
+ 377               		.stabn	68,0,202,.LM26-.LFBB3
+ 378               	.LM26:
+ 379 010e FF24      		clr r15
+ 380 0110 F394      		inc r15
+ 381               	.L35:
+ 135:main.c        **** 		opr1 = getOprFrmCmd(CMD1);
+ 382               		.stabn	68,0,135,.LM27-.LFBB3
+ 383               	.LM27:
+ 384 0112 8091 0000 		lds r24,Registers
+ 385 0116 90E0      		ldi r25,0
+ 386 0118 0E94 0000 		call getOprFrmCmd
+ 387 011c 9C83      		std Y+4,r25
+ 388 011e 8B83      		std Y+3,r24
+ 136:main.c        **** 		if(opr1!=NOP && CMD1_CP==NOP)
+ 389               		.stabn	68,0,136,.LM28-.LFBB3
+ 390               	.LM28:
+ 391 0120 8B81      		ldd r24,Y+3
+ 392 0122 9C81      		ldd r25,Y+4
+ 393 0124 892B      		or r24,r25
+ 394 0126 01F4      		brne .+2
+ 395 0128 00C0      		rjmp .L18
+ 136:main.c        **** 		if(opr1!=NOP && CMD1_CP==NOP)
+ 396               		.stabn	68,0,136,.LM29-.LFBB3
+ 397               	.LM29:
+ 398 012a 8091 0000 		lds r24,Registers+12
+ 399 012e 8111      		cpse r24,__zero_reg__
+ 400 0130 00C0      		rjmp .L18
+ 401               	.LBB7:
+ 138:main.c        **** 			sendString("cmd1");
+ 402               		.stabn	68,0,138,.LM30-.LFBB3
+ 403               	.LM30:
+ 404 0132 80E0      		ldi r24,lo8(.LC1)
+ 405 0134 90E0      		ldi r25,hi8(.LC1)
+ 406 0136 0E94 0000 		call sendString
+ 140:main.c        **** 			val1 = getValFrmCmd(CMD1);
+ 407               		.stabn	68,0,140,.LM31-.LFBB3
+ 408               	.LM31:
+ 409 013a 8091 0000 		lds r24,Registers
+GAS LISTING /tmp/ccdyBaEW.s 			page 12
+
+
+ 410 013e 90E0      		ldi r25,0
+ 411 0140 0E94 0000 		call getValFrmCmd
+ 412 0144 9A83      		std Y+2,r25
+ 413 0146 8983      		std Y+1,r24
+ 141:main.c        **** 			switch(opr1)
+ 414               		.stabn	68,0,141,.LM32-.LFBB3
+ 415               	.LM32:
+ 416 0148 8B81      		ldd r24,Y+3
+ 417 014a 9C81      		ldd r25,Y+4
+ 418 014c 8330      		cpi r24,3
+ 419 014e 9105      		cpc r25,__zero_reg__
+ 420 0150 01F0      		breq .L20
+ 421 0152 04F4      		brge .L21
+ 422 0154 8130      		cpi r24,1
+ 423 0156 9105      		cpc r25,__zero_reg__
+ 424 0158 01F0      		breq .L22
+ 425 015a 0297      		sbiw r24,2
+ 426 015c 01F0      		breq .L23
+ 427 015e 00C0      		rjmp .L19
+ 428               	.L21:
+ 429 0160 8530      		cpi r24,5
+ 430 0162 9105      		cpc r25,__zero_reg__
+ 431 0164 01F0      		breq .L24
+ 432 0166 04F0      		brlt .L25
+ 433 0168 0697      		sbiw r24,6
+ 434 016a 01F0      		breq .+2
+ 435 016c 00C0      		rjmp .L19
+ 436               	.LBB8:
+ 170:main.c        **** 					ADMUX = ( ADMUX&(~0x1F) )|SET1_ADC_CHANNEL;
+ 437               		.stabn	68,0,170,.LM33-.LFBB3
+ 438               	.LM33:
+ 439 016e 87B1      		in r24,0x7
+ 440 0170 807E      		andi r24,lo8(-32)
+ 441 0172 87B9      		out 0x7,r24
+ 171:main.c        **** 					ADCSRA |= (1<<ADSC);
+ 442               		.stabn	68,0,171,.LM34-.LFBB3
+ 443               	.LM34:
+ 444 0174 369A      		sbi 0x6,6
+ 173:main.c        **** 					while( !(ADCSRA&(1<<ADIF)) );
+ 445               		.stabn	68,0,173,.LM35-.LFBB3
+ 446               	.LM35:
+ 447 0176 00C0      		rjmp .L33
+ 448               	.L22:
+ 144:main.c        **** 					if(val1)  {D1_PORT |= (1<<D1_PIN);}
+ 449               		.stabn	68,0,144,.LM36-.LFBB3
+ 450               	.LM36:
+ 451 0178 8981      		ldd r24,Y+1
+ 452 017a 9A81      		ldd r25,Y+2
+ 453 017c 892B      		or r24,r25
+ 454 017e 01F0      		breq .L27
+ 144:main.c        **** 					if(val1)  {D1_PORT |= (1<<D1_PIN);}
+ 455               		.stabn	68,0,144,.LM37-.LFBB3
+ 456               	.LM37:
+ 457 0180 AA9A      		sbi 0x15,2
+ 458 0182 00C0      		rjmp .L19
+ 459               	.L27:
+ 145:main.c        **** 					else      {D1_PORT &= ~(1<<D1_PIN);}
+GAS LISTING /tmp/ccdyBaEW.s 			page 13
+
+
+ 460               		.stabn	68,0,145,.LM38-.LFBB3
+ 461               	.LM38:
+ 462 0184 AA98      		cbi 0x15,2
+ 463 0186 00C0      		rjmp .L19
+ 464               	.L23:
+ 149:main.c        **** 					if(val1)  {M1_PORT |= (1<<M1_PIN);}
+ 465               		.stabn	68,0,149,.LM39-.LFBB3
+ 466               	.LM39:
+ 467 0188 8981      		ldd r24,Y+1
+ 468 018a 9A81      		ldd r25,Y+2
+ 469 018c 892B      		or r24,r25
+ 470 018e 01F0      		breq .L28
+ 149:main.c        **** 					if(val1)  {M1_PORT |= (1<<M1_PIN);}
+ 471               		.stabn	68,0,149,.LM40-.LFBB3
+ 472               	.LM40:
+ 473 0190 AB9A      		sbi 0x15,3
+ 474 0192 00C0      		rjmp .L19
+ 475               	.L28:
+ 150:main.c        **** 					else      {M1_PORT &= ~(1<<M1_PIN);}
+ 476               		.stabn	68,0,150,.LM41-.LFBB3
+ 477               	.LM41:
+ 478 0194 AB98      		cbi 0x15,3
+ 479 0196 00C0      		rjmp .L19
+ 480               	.L20:
+ 154:main.c        **** 					if(val1)  {A1_PORT |= (1<<A1_PIN);}
+ 481               		.stabn	68,0,154,.LM42-.LFBB3
+ 482               	.LM42:
+ 483 0198 8981      		ldd r24,Y+1
+ 484 019a 9A81      		ldd r25,Y+2
+ 485 019c 892B      		or r24,r25
+ 486 019e 01F0      		breq .L29
+ 154:main.c        **** 					if(val1)  {A1_PORT |= (1<<A1_PIN);}
+ 487               		.stabn	68,0,154,.LM43-.LFBB3
+ 488               	.LM43:
+ 489 01a0 AC9A      		sbi 0x15,4
+ 490 01a2 00C0      		rjmp .L19
+ 491               	.L29:
+ 155:main.c        **** 					else      {A1_PORT &= ~(1<<A1_PIN);}
+ 492               		.stabn	68,0,155,.LM44-.LFBB3
+ 493               	.LM44:
+ 494 01a4 AC98      		cbi 0x15,4
+ 495 01a6 00C0      		rjmp .L19
+ 496               	.L25:
+ 159:main.c        **** 					if(val1)  {L1_PORT |= (1<<L1_PIN);}
+ 497               		.stabn	68,0,159,.LM45-.LFBB3
+ 498               	.LM45:
+ 499 01a8 8981      		ldd r24,Y+1
+ 500 01aa 9A81      		ldd r25,Y+2
+ 501 01ac 892B      		or r24,r25
+ 502 01ae 01F0      		breq .L30
+ 159:main.c        **** 					if(val1)  {L1_PORT |= (1<<L1_PIN);}
+ 503               		.stabn	68,0,159,.LM46-.LFBB3
+ 504               	.LM46:
+ 505 01b0 AD9A      		sbi 0x15,5
+ 506 01b2 00C0      		rjmp .L19
+ 507               	.L30:
+ 160:main.c        **** 					else      {L1_PORT &= ~(1<<L1_PIN);}
+GAS LISTING /tmp/ccdyBaEW.s 			page 14
+
+
+ 508               		.stabn	68,0,160,.LM47-.LFBB3
+ 509               	.LM47:
+ 510 01b4 AD98      		cbi 0x15,5
+ 511 01b6 00C0      		rjmp .L19
+ 512               	.L24:
+ 164:main.c        **** 					if(val1)  {W1_PORT |= (1<<W1_PIN);}
+ 513               		.stabn	68,0,164,.LM48-.LFBB3
+ 514               	.LM48:
+ 515 01b8 8981      		ldd r24,Y+1
+ 516 01ba 9A81      		ldd r25,Y+2
+ 517 01bc 892B      		or r24,r25
+ 518 01be 01F0      		breq .L31
+ 164:main.c        **** 					if(val1)  {W1_PORT |= (1<<W1_PIN);}
+ 519               		.stabn	68,0,164,.LM49-.LFBB3
+ 520               	.LM49:
+ 521 01c0 AE9A      		sbi 0x15,6
+ 522 01c2 00C0      		rjmp .L19
+ 523               	.L31:
+ 165:main.c        **** 					else      {W1_PORT &= ~(1<<W1_PIN);}
+ 524               		.stabn	68,0,165,.LM50-.LFBB3
+ 525               	.LM50:
+ 526 01c4 AE98      		cbi 0x15,6
+ 527 01c6 00C0      		rjmp .L19
+ 528               	.L33:
+ 173:main.c        **** 					while( !(ADCSRA&(1<<ADIF)) );
+ 529               		.stabn	68,0,173,.LM51-.LFBB3
+ 530               	.LM51:
+ 531 01c8 349B      		sbis 0x6,4
+ 532 01ca 00C0      		rjmp .L33
+ 176:main.c        **** 					l = ADCL;
+ 533               		.stabn	68,0,176,.LM52-.LFBB3
+ 534               	.LM52:
+ 535 01cc D4B0      		in r13,0x4
+ 177:main.c        **** 					h = ADCH;
+ 536               		.stabn	68,0,177,.LM53-.LFBB3
+ 537               	.LM53:
+ 538 01ce E5B0      		in r14,0x5
+ 178:main.c        **** 					unsigned int adcval = ((((unsigned int)h)<<8) | ((unsigned int)l));
+ 539               		.stabn	68,0,178,.LM54-.LFBB3
+ 540               	.LM54:
+ 541 01d0 0D2D      		mov r16,r13
+ 542 01d2 10E0      		ldi r17,0
+ 543 01d4 1E29      		or r17,r14
+ 179:main.c        **** 					sendString("\tADCVAL1=");
+ 544               		.stabn	68,0,179,.LM55-.LFBB3
+ 545               	.LM55:
+ 546 01d6 80E0      		ldi r24,lo8(.LC2)
+ 547 01d8 90E0      		ldi r25,hi8(.LC2)
+ 548 01da 0E94 0000 		call sendString
+ 181:main.c        **** 					sendWord(adcval);
+ 549               		.stabn	68,0,181,.LM56-.LFBB3
+ 550               	.LM56:
+ 551 01de C801      		movw r24,r16
+ 552 01e0 0E94 0000 		call sendWord
+ 182:main.c        **** 					sendString("\n\r");
+ 553               		.stabn	68,0,182,.LM57-.LFBB3
+ 554               	.LM57:
+GAS LISTING /tmp/ccdyBaEW.s 			page 15
+
+
+ 555 01e4 80E0      		ldi r24,lo8(.LC3)
+ 556 01e6 90E0      		ldi r25,hi8(.LC3)
+ 557 01e8 0E94 0000 		call sendString
+ 185:main.c        **** 					REPLY1L = l;
+ 558               		.stabn	68,0,185,.LM58-.LFBB3
+ 559               	.LM58:
+ 560 01ec D092 0000 		sts Registers+7,r13
+ 186:main.c        **** 					REPLY1H = h;
+ 561               		.stabn	68,0,186,.LM59-.LFBB3
+ 562               	.LM59:
+ 563 01f0 E092 0000 		sts Registers+6,r14
+ 564               	.L19:
+ 565               	.LBE8:
+ 192:main.c        **** 			CMD1 = NOP;
+ 566               		.stabn	68,0,192,.LM60-.LFBB3
+ 567               	.LM60:
+ 568 01f4 1092 0000 		sts Registers,__zero_reg__
+ 193:main.c        **** 			CMD2_CP = NOP;
+ 569               		.stabn	68,0,193,.LM61-.LFBB3
+ 570               	.LM61:
+ 571 01f8 1092 0000 		sts Registers+13,__zero_reg__
+ 194:main.c        **** 			sendString("READY1 = 1\n\r");
+ 572               		.stabn	68,0,194,.LM62-.LFBB3
+ 573               	.LM62:
+ 574 01fc 80E0      		ldi r24,lo8(.LC4)
+ 575 01fe 90E0      		ldi r25,hi8(.LC4)
+ 576 0200 0E94 0000 		call sendString
+ 577               	.LBE7:
+ 137:main.c        **** 		{
+ 578               		.stabn	68,0,137,.LM63-.LFBB3
+ 579               	.LM63:
+ 580 0204 00C0      		rjmp .L34
+ 581               	.L18:
+ 582               	.LBB9:
+ 200:main.c        **** 			K_taskQuit();
+ 583               		.stabn	68,0,200,.LM64-.LFBB3
+ 584               	.LM64:
+ 585 0206 0E94 0000 		call K_taskQuit
+ 586               	.L34:
+ 587               	.LBE9:
+ 588               		.stabn	68,0,202,.LM65-.LFBB3
+ 589               	.LM65:
+ 590 020a F092 0000 		sts Registers+3,r15
+ 591               	.LBE6:
+ 203:main.c        **** 	}
+ 592               		.stabn	68,0,203,.LM66-.LFBB3
+ 593               	.LM66:
+ 594 020e 00C0      		rjmp .L35
+ 595               		.size	set1, .-set1
+ 596               		.stabs	"opr1:(0,53)=B(0,1)",128,0,130,3
+ 597               		.stabs	"val1:(0,53)",128,0,130,1
+ 598               		.stabn	192,0,0,.LFBB3-.LFBB3
+ 599               		.stabs	"h:r(0,48)",64,0,175,14
+ 600               		.stabs	"l:r(0,48)",64,0,175,13
+ 601               		.stabs	"adcval:r(0,4)",64,0,178,16
+ 602               		.stabn	192,0,0,.LBB8-.LFBB3
+ 603               		.stabn	224,0,0,.LBE8-.LFBB3
+GAS LISTING /tmp/ccdyBaEW.s 			page 16
+
+
+ 604               		.stabn	224,0,0,.Lscope3-.LFBB3
+ 605               	.Lscope3:
+ 606               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 607               		.stabd	78,0,0
+ 608               		.section	.rodata.str1.1
+ 609               	.LC5:
+ 610 0024 7365 7432 		.string	"set2"
+ 610      00
+ 611               	.LC6:
+ 612 0029 0941 4443 		.string	"\tADCVAL2="
+ 612      5641 4C32 
+ 612      3D00 
+ 613               	.LC7:
+ 614 0033 5245 4144 		.string	"READY2 = 1\n\r"
+ 614      5932 203D 
+ 614      2031 0A0D 
+ 614      00
+ 615               		.text
+ 616               		.stabs	"set2:F(0,47)",36,0,206,set2
+ 617               	.global	set2
+ 618               		.type	set2, @function
+ 619               	set2:
+ 620               		.stabd	46,0,0
+ 204:main.c        **** }
+ 205:main.c        **** 
+ 206:main.c        **** void set2()
+ 207:main.c        **** {
+ 621               		.stabn	68,0,207,.LM67-.LFBB4
+ 622               	.LM67:
+ 623               	.LFBB4:
+ 624 0210 CF93      		push r28
+ 625 0212 DF93      		push r29
+ 626 0214 00D0      		rcall .
+ 627 0216 00D0      		rcall .
+ 628 0218 CDB7      		in r28,__SP_L__
+ 629 021a DEB7      		in r29,__SP_H__
+ 630               	/* prologue: function */
+ 631               	/* frame size = 4 */
+ 632               	/* stack size = 6 */
+ 633               	.L__stack_usage = 6
+ 208:main.c        **** 	volatile int opr2, val2;
+ 209:main.c        **** 	sendString("set2");
+ 634               		.stabn	68,0,209,.LM68-.LFBB4
+ 635               	.LM68:
+ 636 021c 80E0      		ldi r24,lo8(.LC5)
+ 637 021e 90E0      		ldi r25,hi8(.LC5)
+ 638 0220 0E94 0000 		call sendString
+ 639               	.LBB10:
+ 210:main.c        **** 	while(1)
+ 211:main.c        **** 	{
+ 212:main.c        **** 		opr2 = getOprFrmCmd(CMD2);
+ 213:main.c        **** 		if(opr2!=NOP && opr2==getOprFrmCmd(CMD2_CP))
+ 214:main.c        **** 		{
+ 215:main.c        **** 			//READY2 = 0;
+ 216:main.c        **** 			val2 = getValFrmCmd(CMD2);
+ 217:main.c        **** 			switch(opr2)
+ 218:main.c        **** 			{
+GAS LISTING /tmp/ccdyBaEW.s 			page 17
+
+
+ 219:main.c        **** 				case DRUG:
+ 220:main.c        **** 					if(val2)  {D2_PORT |= (1<<D2_PIN);}
+ 221:main.c        **** 					else      {D2_PORT &= ~(1<<D2_PIN);}
+ 222:main.c        **** 					break;
+ 223:main.c        **** 					
+ 224:main.c        **** 				case MEDIA:
+ 225:main.c        **** 					if(val2)  {M2_PORT |= (1<<M2_PIN);}
+ 226:main.c        **** 					else      {M2_PORT &= ~(1<<M2_PIN);}
+ 227:main.c        **** 					break;
+ 228:main.c        **** 					
+ 229:main.c        **** 				case AIR:
+ 230:main.c        **** 					if(val2)  {A2_PORT |= (1<<A2_PIN);}
+ 231:main.c        **** 					else      {A2_PORT &= ~(1<<A2_PIN);}
+ 232:main.c        **** 					break;
+ 233:main.c        **** 
+ 234:main.c        **** 				case LIGHTS:
+ 235:main.c        **** 					if(val2)  {L2_PORT |= (1<<L2_PIN);}
+ 236:main.c        **** 					else      {L2_PORT &= ~(1<<L2_PIN);}
+ 237:main.c        **** 					break;
+ 238:main.c        **** 					
+ 239:main.c        **** 				case WASTE:
+ 240:main.c        **** 					if(val2)  {W2_PORT |= (1<<W2_PIN);}
+ 241:main.c        **** 					else      {W2_PORT &= ~(1<<W2_PIN);}
+ 242:main.c        **** 					break;
+ 243:main.c        **** 				
+ 244:main.c        **** 				case ADC_CMD:
+ 245:main.c        **** 					//TODO
+ 246:main.c        **** 					//ADC MUTEX
+ 247:main.c        **** 					ADMUX = ( ADMUX&(~0x1F) )|SET2_ADC_CHANNEL;
+ 248:main.c        **** 					ADCSRA |= (1<<ADSC);
+ 249:main.c        **** 					
+ 250:main.c        **** 					while( !(ADCSRA&(1<<ADIF)) );
+ 251:main.c        **** 					
+ 252:main.c        **** 					byte_t h, l;
+ 253:main.c        **** 					l = ADCL;
+ 254:main.c        **** 					h = ADCH;
+ 255:main.c        **** 					unsigned int adcval = (((unsigned int)h)<<8) | (unsigned int)ADCL;
+ 256:main.c        **** 					sendString("\tADCVAL2=");
+ 257:main.c        **** 					//sendULInt(adcval);
+ 258:main.c        **** 					sendWord(adcval);
+ 259:main.c        **** 					sendString("\n\r");
+ 260:main.c        **** 					//cli();while(1);
+ 261:main.c        **** 					
+ 262:main.c        **** 					REPLY2L = l;
+ 263:main.c        **** 					REPLY2H = h;
+ 264:main.c        **** 					break;
+ 265:main.c        **** 					
+ 266:main.c        **** 				default:
+ 267:main.c        **** 					break;		
+ 268:main.c        **** 			}
+ 269:main.c        **** 			CMD2 = NOP;
+ 270:main.c        **** 			CMD2_CP = NOP;
+ 271:main.c        **** 			sendString("READY2 = 1\n\r");
+ 272:main.c        **** 			
+ 273:main.c        **** 			//READY2 = 1;
+ 274:main.c        **** 		}
+ 275:main.c        **** 		else
+GAS LISTING /tmp/ccdyBaEW.s 			page 18
+
+
+ 276:main.c        **** 		{
+ 277:main.c        **** 			K_taskQuit();
+ 278:main.c        **** 		}
+ 279:main.c        **** 		READY2 = 1;
+ 640               		.stabn	68,0,279,.LM69-.LFBB4
+ 641               	.LM69:
+ 642 0224 FF24      		clr r15
+ 643 0226 F394      		inc r15
+ 644               	.L57:
+ 212:main.c        **** 		opr2 = getOprFrmCmd(CMD2);
+ 645               		.stabn	68,0,212,.LM70-.LFBB4
+ 646               	.LM70:
+ 647 0228 8091 0000 		lds r24,Registers+1
+ 648 022c 90E0      		ldi r25,0
+ 649 022e 0E94 0000 		call getOprFrmCmd
+ 650 0232 9C83      		std Y+4,r25
+ 651 0234 8B83      		std Y+3,r24
+ 213:main.c        **** 		if(opr2!=NOP && opr2==getOprFrmCmd(CMD2_CP))
+ 652               		.stabn	68,0,213,.LM71-.LFBB4
+ 653               	.LM71:
+ 654 0236 8B81      		ldd r24,Y+3
+ 655 0238 9C81      		ldd r25,Y+4
+ 656 023a 892B      		or r24,r25
+ 657 023c 01F4      		brne .+2
+ 658 023e 00C0      		rjmp .L40
+ 213:main.c        **** 		if(opr2!=NOP && opr2==getOprFrmCmd(CMD2_CP))
+ 659               		.stabn	68,0,213,.LM72-.LFBB4
+ 660               	.LM72:
+ 661 0240 0B81      		ldd r16,Y+3
+ 662 0242 1C81      		ldd r17,Y+4
+ 663 0244 8091 0000 		lds r24,Registers+13
+ 664 0248 90E0      		ldi r25,0
+ 665 024a 0E94 0000 		call getOprFrmCmd
+ 666 024e 0817      		cp r16,r24
+ 667 0250 1907      		cpc r17,r25
+ 668 0252 01F0      		breq .+2
+ 669 0254 00C0      		rjmp .L40
+ 670               	.LBB11:
+ 216:main.c        **** 			val2 = getValFrmCmd(CMD2);
+ 671               		.stabn	68,0,216,.LM73-.LFBB4
+ 672               	.LM73:
+ 673 0256 8091 0000 		lds r24,Registers+1
+ 674 025a 90E0      		ldi r25,0
+ 675 025c 0E94 0000 		call getValFrmCmd
+ 676 0260 9A83      		std Y+2,r25
+ 677 0262 8983      		std Y+1,r24
+ 217:main.c        **** 			switch(opr2)
+ 678               		.stabn	68,0,217,.LM74-.LFBB4
+ 679               	.LM74:
+ 680 0264 8B81      		ldd r24,Y+3
+ 681 0266 9C81      		ldd r25,Y+4
+ 682 0268 8330      		cpi r24,3
+ 683 026a 9105      		cpc r25,__zero_reg__
+ 684 026c 01F0      		breq .L42
+ 685 026e 04F4      		brge .L43
+ 686 0270 8130      		cpi r24,1
+ 687 0272 9105      		cpc r25,__zero_reg__
+GAS LISTING /tmp/ccdyBaEW.s 			page 19
+
+
+ 688 0274 01F0      		breq .L44
+ 689 0276 0297      		sbiw r24,2
+ 690 0278 01F0      		breq .L45
+ 691 027a 00C0      		rjmp .L41
+ 692               	.L43:
+ 693 027c 8530      		cpi r24,5
+ 694 027e 9105      		cpc r25,__zero_reg__
+ 695 0280 01F0      		breq .L46
+ 696 0282 04F0      		brlt .L47
+ 697 0284 0697      		sbiw r24,6
+ 698 0286 01F0      		breq .+2
+ 699 0288 00C0      		rjmp .L41
+ 700               	.LBB12:
+ 247:main.c        **** 					ADMUX = ( ADMUX&(~0x1F) )|SET2_ADC_CHANNEL;
+ 701               		.stabn	68,0,247,.LM75-.LFBB4
+ 702               	.LM75:
+ 703 028a 87B1      		in r24,0x7
+ 704 028c 807E      		andi r24,lo8(-32)
+ 705 028e 8160      		ori r24,lo8(1)
+ 706 0290 87B9      		out 0x7,r24
+ 248:main.c        **** 					ADCSRA |= (1<<ADSC);
+ 707               		.stabn	68,0,248,.LM76-.LFBB4
+ 708               	.LM76:
+ 709 0292 369A      		sbi 0x6,6
+ 250:main.c        **** 					while( !(ADCSRA&(1<<ADIF)) );
+ 710               		.stabn	68,0,250,.LM77-.LFBB4
+ 711               	.LM77:
+ 712 0294 00C0      		rjmp .L55
+ 713               	.L44:
+ 220:main.c        **** 					if(val2)  {D2_PORT |= (1<<D2_PIN);}
+ 714               		.stabn	68,0,220,.LM78-.LFBB4
+ 715               	.LM78:
+ 716 0296 8981      		ldd r24,Y+1
+ 717 0298 9A81      		ldd r25,Y+2
+ 718 029a 892B      		or r24,r25
+ 719 029c 01F0      		breq .L49
+ 220:main.c        **** 					if(val2)  {D2_PORT |= (1<<D2_PIN);}
+ 720               		.stabn	68,0,220,.LM79-.LFBB4
+ 721               	.LM79:
+ 722 029e AF9A      		sbi 0x15,7
+ 723 02a0 00C0      		rjmp .L41
+ 724               	.L49:
+ 221:main.c        **** 					else      {D2_PORT &= ~(1<<D2_PIN);}
+ 725               		.stabn	68,0,221,.LM80-.LFBB4
+ 726               	.LM80:
+ 727 02a2 AF98      		cbi 0x15,7
+ 728 02a4 00C0      		rjmp .L41
+ 729               	.L45:
+ 225:main.c        **** 					if(val2)  {M2_PORT |= (1<<M2_PIN);}
+ 730               		.stabn	68,0,225,.LM81-.LFBB4
+ 731               	.LM81:
+ 732 02a6 8981      		ldd r24,Y+1
+ 733 02a8 9A81      		ldd r25,Y+2
+ 734 02aa 892B      		or r24,r25
+ 735 02ac 01F0      		breq .L50
+ 225:main.c        **** 					if(val2)  {M2_PORT |= (1<<M2_PIN);}
+ 736               		.stabn	68,0,225,.LM82-.LFBB4
+GAS LISTING /tmp/ccdyBaEW.s 			page 20
+
+
+ 737               	.LM82:
+ 738 02ae 929A      		sbi 0x12,2
+ 739 02b0 00C0      		rjmp .L41
+ 740               	.L50:
+ 226:main.c        **** 					else      {M2_PORT &= ~(1<<M2_PIN);}
+ 741               		.stabn	68,0,226,.LM83-.LFBB4
+ 742               	.LM83:
+ 743 02b2 9298      		cbi 0x12,2
+ 744 02b4 00C0      		rjmp .L41
+ 745               	.L42:
+ 230:main.c        **** 					if(val2)  {A2_PORT |= (1<<A2_PIN);}
+ 746               		.stabn	68,0,230,.LM84-.LFBB4
+ 747               	.LM84:
+ 748 02b6 8981      		ldd r24,Y+1
+ 749 02b8 9A81      		ldd r25,Y+2
+ 750 02ba 892B      		or r24,r25
+ 751 02bc 01F0      		breq .L51
+ 230:main.c        **** 					if(val2)  {A2_PORT |= (1<<A2_PIN);}
+ 752               		.stabn	68,0,230,.LM85-.LFBB4
+ 753               	.LM85:
+ 754 02be 939A      		sbi 0x12,3
+ 755 02c0 00C0      		rjmp .L41
+ 756               	.L51:
+ 231:main.c        **** 					else      {A2_PORT &= ~(1<<A2_PIN);}
+ 757               		.stabn	68,0,231,.LM86-.LFBB4
+ 758               	.LM86:
+ 759 02c2 9398      		cbi 0x12,3
+ 760 02c4 00C0      		rjmp .L41
+ 761               	.L47:
+ 235:main.c        **** 					if(val2)  {L2_PORT |= (1<<L2_PIN);}
+ 762               		.stabn	68,0,235,.LM87-.LFBB4
+ 763               	.LM87:
+ 764 02c6 8981      		ldd r24,Y+1
+ 765 02c8 9A81      		ldd r25,Y+2
+ 766 02ca 892B      		or r24,r25
+ 767 02cc 01F0      		breq .L52
+ 235:main.c        **** 					if(val2)  {L2_PORT |= (1<<L2_PIN);}
+ 768               		.stabn	68,0,235,.LM88-.LFBB4
+ 769               	.LM88:
+ 770 02ce 949A      		sbi 0x12,4
+ 771 02d0 00C0      		rjmp .L41
+ 772               	.L52:
+ 236:main.c        **** 					else      {L2_PORT &= ~(1<<L2_PIN);}
+ 773               		.stabn	68,0,236,.LM89-.LFBB4
+ 774               	.LM89:
+ 775 02d2 9498      		cbi 0x12,4
+ 776 02d4 00C0      		rjmp .L41
+ 777               	.L46:
+ 240:main.c        **** 					if(val2)  {W2_PORT |= (1<<W2_PIN);}
+ 778               		.stabn	68,0,240,.LM90-.LFBB4
+ 779               	.LM90:
+ 780 02d6 8981      		ldd r24,Y+1
+ 781 02d8 9A81      		ldd r25,Y+2
+ 782 02da 892B      		or r24,r25
+ 783 02dc 01F0      		breq .L53
+ 240:main.c        **** 					if(val2)  {W2_PORT |= (1<<W2_PIN);}
+ 784               		.stabn	68,0,240,.LM91-.LFBB4
+GAS LISTING /tmp/ccdyBaEW.s 			page 21
+
+
+ 785               	.LM91:
+ 786 02de 959A      		sbi 0x12,5
+ 787 02e0 00C0      		rjmp .L41
+ 788               	.L53:
+ 241:main.c        **** 					else      {W2_PORT &= ~(1<<W2_PIN);}
+ 789               		.stabn	68,0,241,.LM92-.LFBB4
+ 790               	.LM92:
+ 791 02e2 9598      		cbi 0x12,5
+ 792 02e4 00C0      		rjmp .L41
+ 793               	.L55:
+ 250:main.c        **** 					while( !(ADCSRA&(1<<ADIF)) );
+ 794               		.stabn	68,0,250,.LM93-.LFBB4
+ 795               	.LM93:
+ 796 02e6 349B      		sbis 0x6,4
+ 797 02e8 00C0      		rjmp .L55
+ 253:main.c        **** 					l = ADCL;
+ 798               		.stabn	68,0,253,.LM94-.LFBB4
+ 799               	.LM94:
+ 800 02ea D4B0      		in r13,0x4
+ 254:main.c        **** 					h = ADCH;
+ 801               		.stabn	68,0,254,.LM95-.LFBB4
+ 802               	.LM95:
+ 803 02ec E5B0      		in r14,0x5
+ 255:main.c        **** 					unsigned int adcval = (((unsigned int)h)<<8) | (unsigned int)ADCL;
+ 804               		.stabn	68,0,255,.LM96-.LFBB4
+ 805               	.LM96:
+ 806 02ee 04B1      		in r16,0x4
+ 807 02f0 10E0      		ldi r17,0
+ 808 02f2 1E29      		or r17,r14
+ 256:main.c        **** 					sendString("\tADCVAL2=");
+ 809               		.stabn	68,0,256,.LM97-.LFBB4
+ 810               	.LM97:
+ 811 02f4 80E0      		ldi r24,lo8(.LC6)
+ 812 02f6 90E0      		ldi r25,hi8(.LC6)
+ 813 02f8 0E94 0000 		call sendString
+ 258:main.c        **** 					sendWord(adcval);
+ 814               		.stabn	68,0,258,.LM98-.LFBB4
+ 815               	.LM98:
+ 816 02fc C801      		movw r24,r16
+ 817 02fe 0E94 0000 		call sendWord
+ 259:main.c        **** 					sendString("\n\r");
+ 818               		.stabn	68,0,259,.LM99-.LFBB4
+ 819               	.LM99:
+ 820 0302 80E0      		ldi r24,lo8(.LC3)
+ 821 0304 90E0      		ldi r25,hi8(.LC3)
+ 822 0306 0E94 0000 		call sendString
+ 262:main.c        **** 					REPLY2L = l;
+ 823               		.stabn	68,0,262,.LM100-.LFBB4
+ 824               	.LM100:
+ 825 030a D092 0000 		sts Registers+9,r13
+ 263:main.c        **** 					REPLY2H = h;
+ 826               		.stabn	68,0,263,.LM101-.LFBB4
+ 827               	.LM101:
+ 828 030e E092 0000 		sts Registers+8,r14
+ 829               	.L41:
+ 830               	.LBE12:
+ 269:main.c        **** 			CMD2 = NOP;
+GAS LISTING /tmp/ccdyBaEW.s 			page 22
+
+
+ 831               		.stabn	68,0,269,.LM102-.LFBB4
+ 832               	.LM102:
+ 833 0312 1092 0000 		sts Registers+1,__zero_reg__
+ 270:main.c        **** 			CMD2_CP = NOP;
+ 834               		.stabn	68,0,270,.LM103-.LFBB4
+ 835               	.LM103:
+ 836 0316 1092 0000 		sts Registers+13,__zero_reg__
+ 271:main.c        **** 			sendString("READY2 = 1\n\r");
+ 837               		.stabn	68,0,271,.LM104-.LFBB4
+ 838               	.LM104:
+ 839 031a 80E0      		ldi r24,lo8(.LC7)
+ 840 031c 90E0      		ldi r25,hi8(.LC7)
+ 841 031e 0E94 0000 		call sendString
+ 842               	.LBE11:
+ 214:main.c        **** 		{
+ 843               		.stabn	68,0,214,.LM105-.LFBB4
+ 844               	.LM105:
+ 845 0322 00C0      		rjmp .L56
+ 846               	.L40:
+ 847               	.LBB13:
+ 277:main.c        **** 			K_taskQuit();
+ 848               		.stabn	68,0,277,.LM106-.LFBB4
+ 849               	.LM106:
+ 850 0324 0E94 0000 		call K_taskQuit
+ 851               	.L56:
+ 852               	.LBE13:
+ 853               		.stabn	68,0,279,.LM107-.LFBB4
+ 854               	.LM107:
+ 855 0328 F092 0000 		sts Registers+4,r15
+ 856               	.LBE10:
+ 280:main.c        **** 	}
+ 857               		.stabn	68,0,280,.LM108-.LFBB4
+ 858               	.LM108:
+ 859 032c 00C0      		rjmp .L57
+ 860               		.size	set2, .-set2
+ 861               		.stabs	"opr2:(0,53)",128,0,208,3
+ 862               		.stabs	"val2:(0,53)",128,0,208,1
+ 863               		.stabn	192,0,0,.LFBB4-.LFBB4
+ 864               		.stabs	"h:r(0,48)",64,0,252,14
+ 865               		.stabs	"l:r(0,48)",64,0,252,13
+ 866               		.stabs	"adcval:r(0,4)",64,0,255,16
+ 867               		.stabn	192,0,0,.LBB12-.LFBB4
+ 868               		.stabn	224,0,0,.LBE12-.LFBB4
+ 869               		.stabn	224,0,0,.Lscope4-.LFBB4
+ 870               	.Lscope4:
+ 871               		.stabs	"",36,0,0,.Lscope4-.LFBB4
+ 872               		.stabd	78,0,0
+ 873               		.section	.rodata.str1.1
+ 874               	.LC8:
+ 875 0040 7365 7433 		.string	"set3"
+ 875      00
+ 876               	.LC9:
+ 877 0045 636D 6433 		.string	"cmd3"
+ 877      00
+ 878               	.LC10:
+ 879 004a 6169 7233 		.string	"air3\n\r"
+ 879      0A0D 00
+GAS LISTING /tmp/ccdyBaEW.s 			page 23
+
+
+ 880               	.LC11:
+ 881 0051 0941 4443 		.string	"\tADCVAL3="
+ 881      5641 4C33 
+ 881      3D00 
+ 882               	.LC12:
+ 883 005b 4445 4620 		.string	"DEF in set 3 switch\n\r"
+ 883      696E 2073 
+ 883      6574 2033 
+ 883      2073 7769 
+ 883      7463 680A 
+ 884               	.LC13:
+ 885 0071 5245 4144 		.string	"READY3 = 1\n\r"
+ 885      5933 203D 
+ 885      2031 0A0D 
+ 885      00
+ 886               		.text
+ 887               		.stabs	"set3:F(0,47)",36,0,284,set3
+ 888               	.global	set3
+ 889               		.type	set3, @function
+ 890               	set3:
+ 891               		.stabd	46,0,0
+ 281:main.c        **** }
+ 282:main.c        **** 
+ 283:main.c        **** 
+ 284:main.c        **** void set3()
+ 285:main.c        **** {
+ 892               		.stabn	68,0,285,.LM109-.LFBB5
+ 893               	.LM109:
+ 894               	.LFBB5:
+ 895 032e CF93      		push r28
+ 896 0330 DF93      		push r29
+ 897 0332 00D0      		rcall .
+ 898 0334 00D0      		rcall .
+ 899 0336 CDB7      		in r28,__SP_L__
+ 900 0338 DEB7      		in r29,__SP_H__
+ 901               	/* prologue: function */
+ 902               	/* frame size = 4 */
+ 903               	/* stack size = 6 */
+ 904               	.L__stack_usage = 6
+ 286:main.c        **** 	volatile int opr3, val3;
+ 287:main.c        **** 	//DDRC |= 1<<7;
+ 288:main.c        **** 	//PORTC |= (1<<7);
+ 289:main.c        **** 	sendString("set3");
+ 905               		.stabn	68,0,289,.LM110-.LFBB5
+ 906               	.LM110:
+ 907 033a 80E0      		ldi r24,lo8(.LC8)
+ 908 033c 90E0      		ldi r25,hi8(.LC8)
+ 909 033e 0E94 0000 		call sendString
+ 910               	.LBB14:
+ 290:main.c        **** 	while(1)
+ 291:main.c        **** 	{
+ 292:main.c        **** 		opr3 = getOprFrmCmd(CMD3);
+ 293:main.c        **** 		if(opr3 != NOP)
+ 294:main.c        **** 		{
+ 295:main.c        **** 			sendString("cmd3");
+ 296:main.c        **** 			//READY3 = 0;
+ 297:main.c        **** 			val3 = getValFrmCmd(CMD3);
+GAS LISTING /tmp/ccdyBaEW.s 			page 24
+
+
+ 298:main.c        **** 			switch(opr3)
+ 299:main.c        **** 			{
+ 300:main.c        **** 				case DRUG:
+ 301:main.c        **** 					if(val3)  {D3_PORT |= (1<<D3_PIN);}
+ 302:main.c        **** 					else      {D3_PORT &= ~(1<<D3_PIN);}
+ 303:main.c        **** 					break;
+ 304:main.c        **** 					
+ 305:main.c        **** 				case MEDIA:
+ 306:main.c        **** 					if(val3)  {M3_PORT |= (1<<M3_PIN);}
+ 307:main.c        **** 					else      {M3_PORT &= ~(1<<M3_PIN);}
+ 308:main.c        **** 					break;
+ 309:main.c        **** 					
+ 310:main.c        **** 				case AIR:
+ 311:main.c        **** 					sendString("air3\n\r");
+ 312:main.c        **** 					if(val3)  {A3_PORT |= (1<<A3_PIN);}
+ 313:main.c        **** 					else      {A3_PORT &= ~(1<<A3_PIN);}
+ 314:main.c        **** 					break;
+ 315:main.c        **** 
+ 316:main.c        **** 				case LIGHTS:
+ 317:main.c        **** 					if(val3)  {L3_PORT |= (1<<L3_PIN);}
+ 318:main.c        **** 					else      {L3_PORT &= ~(1<<L3_PIN);}
+ 319:main.c        **** 					break;
+ 320:main.c        **** 					
+ 321:main.c        **** 				case WASTE:
+ 322:main.c        **** 					if(val3)  {W3_PORT |= (1<<W3_PIN);}
+ 323:main.c        **** 					else      {W3_PORT &= ~(1<<W3_PIN);}
+ 324:main.c        **** 					break;
+ 325:main.c        **** 				
+ 326:main.c        **** 				case ADC_CMD:
+ 327:main.c        **** 					//TODO
+ 328:main.c        **** 					//ADC MUTEX
+ 329:main.c        **** 					ADMUX = ( ADMUX&(~0x1F) )|SET3_ADC_CHANNEL;
+ 330:main.c        **** 					ADCSRA |= (1<<ADSC);
+ 331:main.c        **** 					
+ 332:main.c        **** 					while( !(ADCSRA&(1<<ADIF)) );
+ 333:main.c        **** 					
+ 334:main.c        **** 					byte_t h, l;
+ 335:main.c        **** 					l = ADCL;
+ 336:main.c        **** 					h = ADCH;
+ 337:main.c        **** 					unsigned int adcval = (((unsigned int)h)<<8) | l;
+ 338:main.c        **** 					sendString("\tADCVAL3=");
+ 339:main.c        **** 					//sendULInt(adcval);
+ 340:main.c        **** 					sendWord(adcval);
+ 341:main.c        **** 					sendString("\n\r");
+ 342:main.c        **** 					//cli();while(1);
+ 343:main.c        **** 					
+ 344:main.c        **** 					REPLY3L = l;
+ 345:main.c        **** 					REPLY3H = h;
+ 346:main.c        **** 					break;
+ 347:main.c        **** 					
+ 348:main.c        **** 				default:
+ 349:main.c        **** 					sendString("DEF in set 3 switch\n\r");
+ 350:main.c        **** 					break;		
+ 351:main.c        **** 			}
+ 352:main.c        **** 			CMD3 = NOP;
+ 353:main.c        **** 			sendString("READY3 = 1\n\r");
+ 354:main.c        **** 			
+GAS LISTING /tmp/ccdyBaEW.s 			page 25
+
+
+ 355:main.c        **** 			//READY3 = 1;
+ 356:main.c        **** 		}
+ 357:main.c        **** 		else
+ 358:main.c        **** 		{
+ 359:main.c        **** 			//sendString("nop3");
+ 360:main.c        **** 			K_taskQuit();
+ 361:main.c        **** 		}
+ 362:main.c        **** 		READY3 = 1;
+ 911               		.stabn	68,0,362,.LM111-.LFBB5
+ 912               	.LM111:
+ 913 0342 FF24      		clr r15
+ 914 0344 F394      		inc r15
+ 915               	.L80:
+ 292:main.c        **** 		opr3 = getOprFrmCmd(CMD3);
+ 916               		.stabn	68,0,292,.LM112-.LFBB5
+ 917               	.LM112:
+ 918 0346 8091 0000 		lds r24,Registers+2
+ 919 034a 90E0      		ldi r25,0
+ 920 034c 0E94 0000 		call getOprFrmCmd
+ 921 0350 9C83      		std Y+4,r25
+ 922 0352 8B83      		std Y+3,r24
+ 293:main.c        **** 		if(opr3 != NOP)
+ 923               		.stabn	68,0,293,.LM113-.LFBB5
+ 924               	.LM113:
+ 925 0354 8B81      		ldd r24,Y+3
+ 926 0356 9C81      		ldd r25,Y+4
+ 927 0358 892B      		or r24,r25
+ 928 035a 01F4      		brne .+2
+ 929 035c 00C0      		rjmp .L62
+ 930               	.LBB15:
+ 295:main.c        **** 			sendString("cmd3");
+ 931               		.stabn	68,0,295,.LM114-.LFBB5
+ 932               	.LM114:
+ 933 035e 80E0      		ldi r24,lo8(.LC9)
+ 934 0360 90E0      		ldi r25,hi8(.LC9)
+ 935 0362 0E94 0000 		call sendString
+ 297:main.c        **** 			val3 = getValFrmCmd(CMD3);
+ 936               		.stabn	68,0,297,.LM115-.LFBB5
+ 937               	.LM115:
+ 938 0366 8091 0000 		lds r24,Registers+2
+ 939 036a 90E0      		ldi r25,0
+ 940 036c 0E94 0000 		call getValFrmCmd
+ 941 0370 9A83      		std Y+2,r25
+ 942 0372 8983      		std Y+1,r24
+ 298:main.c        **** 			switch(opr3)
+ 943               		.stabn	68,0,298,.LM116-.LFBB5
+ 944               	.LM116:
+ 945 0374 8B81      		ldd r24,Y+3
+ 946 0376 9C81      		ldd r25,Y+4
+ 947 0378 8330      		cpi r24,3
+ 948 037a 9105      		cpc r25,__zero_reg__
+ 949 037c 01F0      		breq .L64
+ 950 037e 04F4      		brge .L65
+ 951 0380 8130      		cpi r24,1
+ 952 0382 9105      		cpc r25,__zero_reg__
+ 953 0384 01F0      		breq .L66
+ 954 0386 0297      		sbiw r24,2
+GAS LISTING /tmp/ccdyBaEW.s 			page 26
+
+
+ 955 0388 01F0      		breq .L67
+ 956 038a 00C0      		rjmp .L63
+ 957               	.L65:
+ 958 038c 8530      		cpi r24,5
+ 959 038e 9105      		cpc r25,__zero_reg__
+ 960 0390 01F0      		breq .L68
+ 961 0392 04F0      		brlt .L69
+ 962 0394 0697      		sbiw r24,6
+ 963 0396 01F0      		breq .+2
+ 964 0398 00C0      		rjmp .L63
+ 965               	.LBB16:
+ 329:main.c        **** 					ADMUX = ( ADMUX&(~0x1F) )|SET3_ADC_CHANNEL;
+ 966               		.stabn	68,0,329,.LM117-.LFBB5
+ 967               	.LM117:
+ 968 039a 87B1      		in r24,0x7
+ 969 039c 807E      		andi r24,lo8(-32)
+ 970 039e 8260      		ori r24,lo8(2)
+ 971 03a0 87B9      		out 0x7,r24
+ 330:main.c        **** 					ADCSRA |= (1<<ADSC);
+ 972               		.stabn	68,0,330,.LM118-.LFBB5
+ 973               	.LM118:
+ 974 03a2 369A      		sbi 0x6,6
+ 332:main.c        **** 					while( !(ADCSRA&(1<<ADIF)) );
+ 975               		.stabn	68,0,332,.LM119-.LFBB5
+ 976               	.LM119:
+ 977 03a4 00C0      		rjmp .L78
+ 978               	.L66:
+ 301:main.c        **** 					if(val3)  {D3_PORT |= (1<<D3_PIN);}
+ 979               		.stabn	68,0,301,.LM120-.LFBB5
+ 980               	.LM120:
+ 981 03a6 8981      		ldd r24,Y+1
+ 982 03a8 9A81      		ldd r25,Y+2
+ 983 03aa 892B      		or r24,r25
+ 984 03ac 01F0      		breq .L71
+ 301:main.c        **** 					if(val3)  {D3_PORT |= (1<<D3_PIN);}
+ 985               		.stabn	68,0,301,.LM121-.LFBB5
+ 986               	.LM121:
+ 987 03ae 969A      		sbi 0x12,6
+ 988 03b0 00C0      		rjmp .L72
+ 989               	.L71:
+ 302:main.c        **** 					else      {D3_PORT &= ~(1<<D3_PIN);}
+ 990               		.stabn	68,0,302,.LM122-.LFBB5
+ 991               	.LM122:
+ 992 03b2 9698      		cbi 0x12,6
+ 993 03b4 00C0      		rjmp .L72
+ 994               	.L67:
+ 306:main.c        **** 					if(val3)  {M3_PORT |= (1<<M3_PIN);}
+ 995               		.stabn	68,0,306,.LM123-.LFBB5
+ 996               	.LM123:
+ 997 03b6 8981      		ldd r24,Y+1
+ 998 03b8 9A81      		ldd r25,Y+2
+ 999 03ba 892B      		or r24,r25
+ 1000 03bc 01F0      		breq .L73
+ 306:main.c        **** 					if(val3)  {M3_PORT |= (1<<M3_PIN);}
+ 1001               		.stabn	68,0,306,.LM124-.LFBB5
+ 1002               	.LM124:
+ 1003 03be 979A      		sbi 0x12,7
+GAS LISTING /tmp/ccdyBaEW.s 			page 27
+
+
+ 1004 03c0 00C0      		rjmp .L72
+ 1005               	.L73:
+ 307:main.c        **** 					else      {M3_PORT &= ~(1<<M3_PIN);}
+ 1006               		.stabn	68,0,307,.LM125-.LFBB5
+ 1007               	.LM125:
+ 1008 03c2 9798      		cbi 0x12,7
+ 1009 03c4 00C0      		rjmp .L72
+ 1010               	.L64:
+ 311:main.c        **** 					sendString("air3\n\r");
+ 1011               		.stabn	68,0,311,.LM126-.LFBB5
+ 1012               	.LM126:
+ 1013 03c6 80E0      		ldi r24,lo8(.LC10)
+ 1014 03c8 90E0      		ldi r25,hi8(.LC10)
+ 1015 03ca 0E94 0000 		call sendString
+ 312:main.c        **** 					if(val3)  {A3_PORT |= (1<<A3_PIN);}
+ 1016               		.stabn	68,0,312,.LM127-.LFBB5
+ 1017               	.LM127:
+ 1018 03ce 8981      		ldd r24,Y+1
+ 1019 03d0 9A81      		ldd r25,Y+2
+ 1020 03d2 892B      		or r24,r25
+ 1021 03d4 01F0      		breq .L74
+ 312:main.c        **** 					if(val3)  {A3_PORT |= (1<<A3_PIN);}
+ 1022               		.stabn	68,0,312,.LM128-.LFBB5
+ 1023               	.LM128:
+ 1024 03d6 C09A      		sbi 0x18,0
+ 1025 03d8 00C0      		rjmp .L72
+ 1026               	.L74:
+ 313:main.c        **** 					else      {A3_PORT &= ~(1<<A3_PIN);}
+ 1027               		.stabn	68,0,313,.LM129-.LFBB5
+ 1028               	.LM129:
+ 1029 03da C098      		cbi 0x18,0
+ 1030 03dc 00C0      		rjmp .L72
+ 1031               	.L69:
+ 317:main.c        **** 					if(val3)  {L3_PORT |= (1<<L3_PIN);}
+ 1032               		.stabn	68,0,317,.LM130-.LFBB5
+ 1033               	.LM130:
+ 1034 03de 8981      		ldd r24,Y+1
+ 1035 03e0 9A81      		ldd r25,Y+2
+ 1036 03e2 892B      		or r24,r25
+ 1037 03e4 01F0      		breq .L75
+ 317:main.c        **** 					if(val3)  {L3_PORT |= (1<<L3_PIN);}
+ 1038               		.stabn	68,0,317,.LM131-.LFBB5
+ 1039               	.LM131:
+ 1040 03e6 C19A      		sbi 0x18,1
+ 1041 03e8 00C0      		rjmp .L72
+ 1042               	.L75:
+ 318:main.c        **** 					else      {L3_PORT &= ~(1<<L3_PIN);}
+ 1043               		.stabn	68,0,318,.LM132-.LFBB5
+ 1044               	.LM132:
+ 1045 03ea C198      		cbi 0x18,1
+ 1046 03ec 00C0      		rjmp .L72
+ 1047               	.L68:
+ 322:main.c        **** 					if(val3)  {W3_PORT |= (1<<W3_PIN);}
+ 1048               		.stabn	68,0,322,.LM133-.LFBB5
+ 1049               	.LM133:
+ 1050 03ee 8981      		ldd r24,Y+1
+ 1051 03f0 9A81      		ldd r25,Y+2
+GAS LISTING /tmp/ccdyBaEW.s 			page 28
+
+
+ 1052 03f2 892B      		or r24,r25
+ 1053 03f4 01F0      		breq .L76
+ 322:main.c        **** 					if(val3)  {W3_PORT |= (1<<W3_PIN);}
+ 1054               		.stabn	68,0,322,.LM134-.LFBB5
+ 1055               	.LM134:
+ 1056 03f6 C29A      		sbi 0x18,2
+ 1057 03f8 00C0      		rjmp .L72
+ 1058               	.L76:
+ 323:main.c        **** 					else      {W3_PORT &= ~(1<<W3_PIN);}
+ 1059               		.stabn	68,0,323,.LM135-.LFBB5
+ 1060               	.LM135:
+ 1061 03fa C298      		cbi 0x18,2
+ 1062 03fc 00C0      		rjmp .L72
+ 1063               	.L78:
+ 332:main.c        **** 					while( !(ADCSRA&(1<<ADIF)) );
+ 1064               		.stabn	68,0,332,.LM136-.LFBB5
+ 1065               	.LM136:
+ 1066 03fe 349B      		sbis 0x6,4
+ 1067 0400 00C0      		rjmp .L78
+ 335:main.c        **** 					l = ADCL;
+ 1068               		.stabn	68,0,335,.LM137-.LFBB5
+ 1069               	.LM137:
+ 1070 0402 D4B0      		in r13,0x4
+ 336:main.c        **** 					h = ADCH;
+ 1071               		.stabn	68,0,336,.LM138-.LFBB5
+ 1072               	.LM138:
+ 1073 0404 E5B0      		in r14,0x5
+ 337:main.c        **** 					unsigned int adcval = (((unsigned int)h)<<8) | l;
+ 1074               		.stabn	68,0,337,.LM139-.LFBB5
+ 1075               	.LM139:
+ 1076 0406 0D2D      		mov r16,r13
+ 1077 0408 10E0      		ldi r17,0
+ 1078 040a 1E29      		or r17,r14
+ 338:main.c        **** 					sendString("\tADCVAL3=");
+ 1079               		.stabn	68,0,338,.LM140-.LFBB5
+ 1080               	.LM140:
+ 1081 040c 80E0      		ldi r24,lo8(.LC11)
+ 1082 040e 90E0      		ldi r25,hi8(.LC11)
+ 1083 0410 0E94 0000 		call sendString
+ 340:main.c        **** 					sendWord(adcval);
+ 1084               		.stabn	68,0,340,.LM141-.LFBB5
+ 1085               	.LM141:
+ 1086 0414 C801      		movw r24,r16
+ 1087 0416 0E94 0000 		call sendWord
+ 341:main.c        **** 					sendString("\n\r");
+ 1088               		.stabn	68,0,341,.LM142-.LFBB5
+ 1089               	.LM142:
+ 1090 041a 80E0      		ldi r24,lo8(.LC3)
+ 1091 041c 90E0      		ldi r25,hi8(.LC3)
+ 1092 041e 0E94 0000 		call sendString
+ 344:main.c        **** 					REPLY3L = l;
+ 1093               		.stabn	68,0,344,.LM143-.LFBB5
+ 1094               	.LM143:
+ 1095 0422 D092 0000 		sts Registers+11,r13
+ 345:main.c        **** 					REPLY3H = h;
+ 1096               		.stabn	68,0,345,.LM144-.LFBB5
+ 1097               	.LM144:
+GAS LISTING /tmp/ccdyBaEW.s 			page 29
+
+
+ 1098 0426 E092 0000 		sts Registers+10,r14
+ 346:main.c        **** 					break;
+ 1099               		.stabn	68,0,346,.LM145-.LFBB5
+ 1100               	.LM145:
+ 1101 042a 00C0      		rjmp .L72
+ 1102               	.L63:
+ 349:main.c        **** 					sendString("DEF in set 3 switch\n\r");
+ 1103               		.stabn	68,0,349,.LM146-.LFBB5
+ 1104               	.LM146:
+ 1105 042c 80E0      		ldi r24,lo8(.LC12)
+ 1106 042e 90E0      		ldi r25,hi8(.LC12)
+ 1107 0430 0E94 0000 		call sendString
+ 1108               	.L72:
+ 1109               	.LBE16:
+ 352:main.c        **** 			CMD3 = NOP;
+ 1110               		.stabn	68,0,352,.LM147-.LFBB5
+ 1111               	.LM147:
+ 1112 0434 1092 0000 		sts Registers+2,__zero_reg__
+ 353:main.c        **** 			sendString("READY3 = 1\n\r");
+ 1113               		.stabn	68,0,353,.LM148-.LFBB5
+ 1114               	.LM148:
+ 1115 0438 80E0      		ldi r24,lo8(.LC13)
+ 1116 043a 90E0      		ldi r25,hi8(.LC13)
+ 1117 043c 0E94 0000 		call sendString
+ 1118               	.LBE15:
+ 1119 0440 00C0      		rjmp .L79
+ 1120               	.L62:
+ 1121               	.LBB17:
+ 360:main.c        **** 			K_taskQuit();
+ 1122               		.stabn	68,0,360,.LM149-.LFBB5
+ 1123               	.LM149:
+ 1124 0442 0E94 0000 		call K_taskQuit
+ 1125               	.L79:
+ 1126               	.LBE17:
+ 1127               		.stabn	68,0,362,.LM150-.LFBB5
+ 1128               	.LM150:
+ 1129 0446 F092 0000 		sts Registers+5,r15
+ 1130               	.LBE14:
+ 363:main.c        **** 	}
+ 1131               		.stabn	68,0,363,.LM151-.LFBB5
+ 1132               	.LM151:
+ 1133 044a 00C0      		rjmp .L80
+ 1134               		.size	set3, .-set3
+ 1135               		.stabs	"opr3:(0,53)",128,0,286,3
+ 1136               		.stabs	"val3:(0,53)",128,0,286,1
+ 1137               		.stabn	192,0,0,.LFBB5-.LFBB5
+ 1138               		.stabs	"h:r(0,48)",64,0,334,14
+ 1139               		.stabs	"l:r(0,48)",64,0,334,13
+ 1140               		.stabs	"adcval:r(0,4)",64,0,337,16
+ 1141               		.stabn	192,0,0,.LBB16-.LFBB5
+ 1142               		.stabn	224,0,0,.LBE16-.LFBB5
+ 1143               		.stabn	224,0,0,.Lscope5-.LFBB5
+ 1144               	.Lscope5:
+ 1145               		.stabs	"",36,0,0,.Lscope5-.LFBB5
+ 1146               		.stabd	78,0,0
+ 1147               		.section	.rodata.str1.1
+ 1148               	.LC14:
+GAS LISTING /tmp/ccdyBaEW.s 			page 30
+
+
+ 1149 007e 5374 6172 		.string	"Start\n\r"
+ 1149      740A 0D00 
+ 1150               		.section	.text.startup,"ax",@progbits
+ 1151               		.stabs	"main:F(0,1)",36,0,367,main
+ 1152               	.global	main
+ 1153               		.type	main, @function
+ 1154               	main:
+ 1155               		.stabd	46,0,0
+ 364:main.c        **** }
+ 365:main.c        **** 
+ 366:main.c        **** 
+ 367:main.c        **** int main(void)
+ 368:main.c        **** {
+ 1156               		.stabn	68,0,368,.LM152-.LFBB6
+ 1157               	.LM152:
+ 1158               	.LFBB6:
+ 1159               	/* prologue: function */
+ 1160               	/* frame size = 0 */
+ 1161               	/* stack size = 0 */
+ 1162               	.L__stack_usage = 0
+ 369:main.c        **** 	DDRC = 0xFC;
+ 1163               		.stabn	68,0,369,.LM153-.LFBB6
+ 1164               	.LM153:
+ 1165 0000 8CEF      		ldi r24,lo8(-4)
+ 1166 0002 84BB      		out 0x14,r24
+ 370:main.c        **** 	PORTC = 3;
+ 1167               		.stabn	68,0,370,.LM154-.LFBB6
+ 1168               	.LM154:
+ 1169 0004 83E0      		ldi r24,lo8(3)
+ 1170 0006 85BB      		out 0x15,r24
+ 371:main.c        **** 	
+ 372:main.c        **** 	UCSRB = (1<<RXEN)|(1<<TXEN)|(1<<RXCIE);
+ 1171               		.stabn	68,0,372,.LM155-.LFBB6
+ 1172               	.LM155:
+ 1173 0008 88E9      		ldi r24,lo8(-104)
+ 1174 000a 8AB9      		out 0xa,r24
+ 373:main.c        **** 	UCSRC = (1<<URSEL)|(1<<UCSZ1)|(1<<UCSZ0);
+ 1175               		.stabn	68,0,373,.LM156-.LFBB6
+ 1176               	.LM156:
+ 1177 000c 86E8      		ldi r24,lo8(-122)
+ 1178 000e 80BD      		out 0x20,r24
+ 374:main.c        **** 	//UBRRL = 103;      //9600
+ 375:main.c        **** 	UBRRL = 8;          //115200
+ 1179               		.stabn	68,0,375,.LM157-.LFBB6
+ 1180               	.LM157:
+ 1181 0010 88E0      		ldi r24,lo8(8)
+ 1182 0012 89B9      		out 0x9,r24
+ 376:main.c        **** 	
+ 377:main.c        **** 	sendString("Start\n\r");
+ 1183               		.stabn	68,0,377,.LM158-.LFBB6
+ 1184               	.LM158:
+ 1185 0014 80E0      		ldi r24,lo8(.LC14)
+ 1186 0016 90E0      		ldi r25,hi8(.LC14)
+ 1187 0018 0E94 0000 		call sendString
+ 378:main.c        **** 	
+ 379:main.c        **** 	
+ 380:main.c        **** 	ADCSRA = (1<<ADEN) | (1<<ADPS2) | (1<<ADPS1) | (1<<ADPS0);
+GAS LISTING /tmp/ccdyBaEW.s 			page 31
+
+
+ 1188               		.stabn	68,0,380,.LM159-.LFBB6
+ 1189               	.LM159:
+ 1190 001c 87E8      		ldi r24,lo8(-121)
+ 1191 001e 86B9      		out 0x6,r24
+ 381:main.c        **** 	
+ 382:main.c        **** 	
+ 383:main.c        **** 	
+ 384:main.c        **** 	TWBR = 98;
+ 1192               		.stabn	68,0,384,.LM160-.LFBB6
+ 1193               	.LM160:
+ 1194 0020 82E6      		ldi r24,lo8(98)
+ 1195 0022 80B9      		out 0,r24
+ 385:main.c        **** 	TWAR = 0x10<<1|1;
+ 1196               		.stabn	68,0,385,.LM161-.LFBB6
+ 1197               	.LM161:
+ 1198 0024 81E2      		ldi r24,lo8(33)
+ 1199 0026 82B9      		out 0x2,r24
+ 386:main.c        **** 	//TWCR = (1<<TWEA)|(1<<TWEN)|(1<<TWIE);
+ 387:main.c        **** 	TWCR = (1<<TWIE) | (1<<TWEA) | (1<<TWINT) | (1<<TWEN);
+ 1200               		.stabn	68,0,387,.LM162-.LFBB6
+ 1201               	.LM162:
+ 1202 0028 85EC      		ldi r24,lo8(-59)
+ 1203 002a 86BF      		out 0x36,r24
+ 388:main.c        **** 	TWSR = 0;
+ 1204               		.stabn	68,0,388,.LM163-.LFBB6
+ 1205               	.LM163:
+ 1206 002c 11B8      		out 0x1,__zero_reg__
+ 389:main.c        **** 	
+ 390:main.c        **** 	
+ 391:main.c        **** 	sei();
+ 1207               		.stabn	68,0,391,.LM164-.LFBB6
+ 1208               	.LM164:
+ 1209               	/* #APP */
+ 1210               	 ;  391 "main.c" 1
+ 1211 002e 7894      		sei
+ 1212               	 ;  0 "" 2
+ 392:main.c        **** 	
+ 393:main.c        **** 	
+ 394:main.c        **** 	
+ 395:main.c        **** 	READY1 = 1;
+ 1213               		.stabn	68,0,395,.LM165-.LFBB6
+ 1214               	.LM165:
+ 1215               	/* #NOAPP */
+ 1216 0030 81E0      		ldi r24,lo8(1)
+ 1217 0032 8093 0000 		sts Registers+3,r24
+ 396:main.c        **** 	READY2 = 1;
+ 1218               		.stabn	68,0,396,.LM166-.LFBB6
+ 1219               	.LM166:
+ 1220 0036 8093 0000 		sts Registers+4,r24
+ 397:main.c        **** 	READY3 = 1;
+ 1221               		.stabn	68,0,397,.LM167-.LFBB6
+ 1222               	.LM167:
+ 1223 003a 8093 0000 		sts Registers+5,r24
+ 398:main.c        **** 	
+ 399:main.c        **** 	
+ 400:main.c        **** 	//K_init(set1, &set1_stack[99], set2, &set2_stack[99]);
+ 401:main.c        **** 	K_init(set1, &set1_stack[199], set2, &set2_stack[199], set3, &set3_stack[99]);
+GAS LISTING /tmp/ccdyBaEW.s 			page 32
+
+
+ 1224               		.stabn	68,0,401,.LM168-.LFBB6
+ 1225               	.LM168:
+ 1226 003e 90E0      		ldi r25,lo8(set3_stack+99)
+ 1227 0040 E92E      		mov r14,r25
+ 1228 0042 90E0      		ldi r25,hi8(set3_stack+99)
+ 1229 0044 F92E      		mov r15,r25
+ 1230 0046 00E0      		ldi r16,lo8(gs(set3))
+ 1231 0048 10E0      		ldi r17,hi8(gs(set3))
+ 1232 004a 20E0      		ldi r18,lo8(set2_stack+199)
+ 1233 004c 30E0      		ldi r19,hi8(set2_stack+199)
+ 1234 004e 40E0      		ldi r20,lo8(gs(set2))
+ 1235 0050 50E0      		ldi r21,hi8(gs(set2))
+ 1236 0052 60E0      		ldi r22,lo8(set1_stack+199)
+ 1237 0054 70E0      		ldi r23,hi8(set1_stack+199)
+ 1238 0056 80E0      		ldi r24,lo8(gs(set1))
+ 1239 0058 90E0      		ldi r25,hi8(gs(set1))
+ 1240 005a 0E94 0000 		call K_init
+ 402:main.c        **** 	K_start();
+ 1241               		.stabn	68,0,402,.LM169-.LFBB6
+ 1242               	.LM169:
+ 1243 005e 0E94 0000 		call K_start
+ 1244               	.L82:
+ 1245 0062 00C0      		rjmp .L82
+ 1246               		.size	main, .-main
+ 1247               	.Lscope6:
+ 1248               		.stabs	"",36,0,0,.Lscope6-.LFBB6
+ 1249               		.stabd	78,0,0
+ 1250               		.section	.rodata.str1.1
+ 1251               	.LC15:
+ 1252 0086 0909 5354 		.string	"\t\tSTATUS="
+ 1252      4154 5553 
+ 1252      3D00 
+ 1253               	.LC16:
+ 1254 0090 5074 7220 		.string	"Ptr set to "
+ 1254      7365 7420 
+ 1254      746F 2000 
+ 1255               	.LC17:
+ 1256 009c 5365 7420 		.string	"Set data as "
+ 1256      6461 7461 
+ 1256      2061 7320 
+ 1256      00
+ 1257               	.LC18:
+ 1258 00a9 5265 6741 		.string	"RegAddr out of bounds.\n\r"
+ 1258      6464 7220 
+ 1258      6F75 7420 
+ 1258      6F66 2062 
+ 1258      6F75 6E64 
+ 1259               	.LC19:
+ 1260 00c2 7265 6164 		.string	"read data as "
+ 1260      2064 6174 
+ 1260      6120 6173 
+ 1260      2000 
+ 1261               	.LC20:
+ 1262 00d0 436C 6F73 		.string	"Close I2C\n\r"
+ 1262      6520 4932 
+ 1262      430A 0D00 
+ 1263               	.LC21:
+GAS LISTING /tmp/ccdyBaEW.s 			page 33
+
+
+ 1264 00dc 0A0D 4445 		.string	"\n\rDEFAULT in ISR\n\r"
+ 1264      4641 554C 
+ 1264      5420 696E 
+ 1264      2049 5352 
+ 1264      0A0D 00
+ 1265               		.text
+ 1266               		.stabs	"__vector_19:F(0,47)",36,0,428,__vector_19
+ 1267               	.global	__vector_19
+ 1268               		.type	__vector_19, @function
+ 1269               	__vector_19:
+ 1270               		.stabd	46,0,0
+ 403:main.c        **** 	while(1);
+ 404:main.c        **** 	
+ 405:main.c        **** 	
+ 406:main.c        **** 	while(1)
+ 407:main.c        **** 	{
+ 408:main.c        **** 		/*
+ 409:main.c        **** 		PORTC |= (1<<7);
+ 410:main.c        **** 		_delay_ms(110);
+ 411:main.c        **** 		PORTC &= ~(1<<7);
+ 412:main.c        **** 		_delay_ms(110);
+ 413:main.c        **** 		
+ 414:main.c        **** 		PORTC |= (1<<7);
+ 415:main.c        **** 		_delay_ms(110);
+ 416:main.c        **** 		PORTC &= ~(1<<7);
+ 417:main.c        **** 		_delay_ms(800);
+ 418:main.c        **** 		*/
+ 419:main.c        **** 		
+ 420:main.c        **** 		
+ 421:main.c        **** 		
+ 422:main.c        **** 	}
+ 423:main.c        **** 	return 0;
+ 424:main.c        **** }
+ 425:main.c        **** 
+ 426:main.c        **** //Decimal: 96 128 128 160
+ 427:main.c        **** //Hex:     60  80  80  A0
+ 428:main.c        **** ISR(TWI_vect)
+ 429:main.c        **** {
+ 1271               		.stabn	68,0,429,.LM170-.LFBB7
+ 1272               	.LM170:
+ 1273               	.LFBB7:
+ 1274 044c 1F92      		push r1
+ 1275 044e 0F92      		push r0
+ 1276 0450 0FB6      		in r0,__SREG__
+ 1277 0452 0F92      		push r0
+ 1278 0454 1124      		clr __zero_reg__
+ 1279 0456 2F93      		push r18
+ 1280 0458 3F93      		push r19
+ 1281 045a 4F93      		push r20
+ 1282 045c 5F93      		push r21
+ 1283 045e 6F93      		push r22
+ 1284 0460 7F93      		push r23
+ 1285 0462 8F93      		push r24
+ 1286 0464 9F93      		push r25
+ 1287 0466 AF93      		push r26
+ 1288 0468 BF93      		push r27
+ 1289 046a CF93      		push r28
+GAS LISTING /tmp/ccdyBaEW.s 			page 34
+
+
+ 1290 046c EF93      		push r30
+ 1291 046e FF93      		push r31
+ 1292               	/* prologue: Signal */
+ 1293               	/* frame size = 0 */
+ 1294               	/* stack size = 16 */
+ 1295               	.L__stack_usage = 16
+ 430:main.c        **** 	byte_t status = TWSR&0xF8;
+ 1296               		.stabn	68,0,430,.LM171-.LFBB7
+ 1297               	.LM171:
+ 1298 0470 C1B1      		in r28,0x1
+ 1299 0472 C87F      		andi r28,lo8(-8)
+ 431:main.c        **** 	sendString("\t\tSTATUS=");
+ 1300               		.stabn	68,0,431,.LM172-.LFBB7
+ 1301               	.LM172:
+ 1302 0474 80E0      		ldi r24,lo8(.LC15)
+ 1303 0476 90E0      		ldi r25,hi8(.LC15)
+ 1304 0478 0E94 0000 		call sendString
+ 432:main.c        **** 	sendByte(status);
+ 1305               		.stabn	68,0,432,.LM173-.LFBB7
+ 1306               	.LM173:
+ 1307 047c 8C2F      		mov r24,r28
+ 1308 047e 0E94 0000 		call sendByte
+ 433:main.c        **** 	sendString("\n\r");
+ 1309               		.stabn	68,0,433,.LM174-.LFBB7
+ 1310               	.LM174:
+ 1311 0482 80E0      		ldi r24,lo8(.LC3)
+ 1312 0484 90E0      		ldi r25,hi8(.LC3)
+ 1313 0486 0E94 0000 		call sendString
+ 434:main.c        **** 	byte_t data;
+ 435:main.c        **** 	//while(1);
+ 436:main.c        **** 	
+ 437:main.c        **** 	//sendChar('\t');
+ 438:main.c        **** 	//sendULInt(state);
+ 439:main.c        **** 	//sendString("\n\r");
+ 440:main.c        **** 	
+ 441:main.c        **** 	
+ 442:main.c        **** 	switch(status)
+ 1314               		.stabn	68,0,442,.LM175-.LFBB7
+ 1315               	.LM175:
+ 1316 048a C03A      		cpi r28,lo8(-96)
+ 1317 048c 01F4      		brne .+2
+ 1318 048e 00C0      		rjmp .L85
+ 1319 0490 00F4      		brsh .L86
+ 1320 0492 C036      		cpi r28,lo8(96)
+ 1321 0494 01F0      		breq .L87
+ 1322 0496 C038      		cpi r28,lo8(-128)
+ 1323 0498 01F0      		breq .L88
+ 1324 049a C111      		cpse r28,__zero_reg__
+ 1325 049c 00C0      		rjmp .L84
+ 443:main.c        **** 	{
+ 444:main.c        **** 		case TW_SR_SLA_ACK:			//0x60			96
+ 445:main.c        **** 			// SLA+W received. ACk returned.
+ 446:main.c        **** 			state = MY_ADDR;
+ 447:main.c        **** 			TWCR |= (1<<TWIE) | (1<<TWINT) | (1<<TWEA) | (1<<TWEN); 
+ 448:main.c        **** 			break;
+ 449:main.c        **** 
+ 450:main.c        **** 		case TW_SR_DATA_ACK:		//0x80			128
+GAS LISTING /tmp/ccdyBaEW.s 			page 35
+
+
+ 451:main.c        **** 			data = TWDR;
+ 452:main.c        **** 			if(state == MY_ADDR)
+ 453:main.c        **** 			{
+ 454:main.c        **** 				RegAddr = data;
+ 455:main.c        **** 				state = PTR_RCVD;
+ 456:main.c        **** 				sendString("Ptr set to ");
+ 457:main.c        **** 				sendByte(data);
+ 458:main.c        **** 				sendString("\n\r");
+ 459:main.c        **** 				TWCR |= (1<<TWIE) | (1<<TWINT) | (1<<TWEA) | (1<<TWEN); 
+ 460:main.c        **** 			}
+ 461:main.c        **** 			else if(state == PTR_RCVD)
+ 462:main.c        **** 			{
+ 463:main.c        **** 				// data now has valid data to be put at RegAddr
+ 464:main.c        **** 				// handle it.
+ 465:main.c        **** 				if(1)
+ 466:main.c        **** 				{
+ 467:main.c        **** 					//if you can receive more data. 
+ 468:main.c        **** 					//At the moment always true.
+ 469:main.c        **** 					//So send ACK back.
+ 470:main.c        **** 					/*
+ 471:main.c        **** 					sendString("\ni2cset ");
+ 472:main.c        **** 					sendULInt(data);
+ 473:main.c        **** 					sendString(" at ");
+ 474:main.c        **** 					sendULInt(RegAddr);
+ 475:main.c        **** 					sendString("\n\r");
+ 476:main.c        **** 					*/
+ 477:main.c        **** 					//PORTC = data&(~3);
+ 478:main.c        **** 					//if(RegAddr >= 0 && RegAddr < REGISTERS)
+ 479:main.c        **** 					if( (RegAddr>=_CMD1 && RegAddr<=_CMD3) || (RegAddr>=_CMD1_CP && RegAddr<=_CMD3_CP) )
+ 480:main.c        **** 					{
+ 481:main.c        **** 						Registers[RegAddr] = data;
+ 482:main.c        **** 						
+ 483:main.c        **** 						sendString("Set data as ");
+ 484:main.c        **** 						sendByte(data);
+ 485:main.c        **** 						sendString("\n\r");
+ 486:main.c        **** 						
+ 487:main.c        **** 						//sendString("RegAddr=");
+ 488:main.c        **** 						//sendWord(RegAddr);
+ 489:main.c        **** 						if(RegAddr == _CMD1)
+ 490:main.c        **** 						{
+ 491:main.c        **** 							READY1 = 0;
+ 492:main.c        **** 							CMD1_CP = CMD1;
+ 493:main.c        **** 						}
+ 494:main.c        **** 						else if(RegAddr == _CMD2)
+ 495:main.c        **** 						{
+ 496:main.c        **** 							READY2 = 0;
+ 497:main.c        **** 							CMD2_CP = CMD2;
+ 498:main.c        **** 						}
+ 499:main.c        **** 						else if(RegAddr == _CMD3)
+ 500:main.c        **** 						{
+ 501:main.c        **** 							READY3 = 0;
+ 502:main.c        **** 							CMD3_CP = CMD3;
+ 503:main.c        **** 						}
+ 504:main.c        **** 						
+ 505:main.c        **** 						RegAddr = (RegAddr+1)%REGISTERS;
+ 506:main.c        **** 					}
+ 507:main.c        **** 					else
+GAS LISTING /tmp/ccdyBaEW.s 			page 36
+
+
+ 508:main.c        **** 					{
+ 509:main.c        **** 						//RegAddr out of bounds.
+ 510:main.c        **** 						sendString("RegAddr out of bounds.\n\r");
+ 511:main.c        **** 					}
+ 512:main.c        **** 					TWCR |= (1<<TWIE) | (1<<TWINT) | (1<<TWEA) | (1<<TWEN); 
+ 513:main.c        **** 				}
+ 514:main.c        **** 				else
+ 515:main.c        **** 				{
+ 516:main.c        **** 					//if you cannot receive more data. 
+ 517:main.c        **** 					//So send NACK back.
+ 518:main.c        **** 					TWCR |= (1<<TWIE) | (1<<TWINT) | (1<<TWEN); 
+ 519:main.c        **** 				}
+ 520:main.c        **** 			}
+ 521:main.c        **** 			break;
+ 522:main.c        **** 		
+ 523:main.c        **** 		case TW_SR_STOP:			//0xA0			160
+ 524:main.c        **** 			// stop condition or a repeated start condition has been received.
+ 525:main.c        **** 			state = IDLE;
+ 526:main.c        **** 			//TWCR |= (1<<TWEA) | (1<<TWINT) | (1<<TWEN);	
+ 527:main.c        **** 			TWCR |= (1<<TWIE) | (1<<TWEA) | (1<<TWEN) | (1<<TWINT);
+ 528:main.c        **** 			break;
+ 529:main.c        **** 		
+ 530:main.c        **** 		
+ 531:main.c        **** 		
+ 532:main.c        **** 		
+ 533:main.c        **** 		case TW_ST_SLA_ACK:			//0xA8			168
+ 534:main.c        **** 			// SLA+R received. ACK returned. 	
+ 535:main.c        **** 			// Need to transmit data back to master.
+ 536:main.c        **** 			TWDR = Registers[RegAddr];
+ 537:main.c        **** 			RegAddr = (RegAddr+1)%REGISTERS;
+ 538:main.c        **** 			state = MY_ADDR;
+ 539:main.c        **** 			
+ 540:main.c        **** 			sendString("read data as ");
+ 541:main.c        **** 			sendByte(TWDR);
+ 542:main.c        **** 			sendString("\n\r");
+ 543:main.c        **** 			TWCR |= (1<<TWEA) | (1<<TWINT);
+ 544:main.c        **** 			break;
+ 545:main.c        **** 		
+ 546:main.c        **** 		case TW_ST_DATA_ACK:		//0xB8			184
+ 547:main.c        **** 			//Data transmitted back to master. ACK received. Transmit next data.
+ 548:main.c        **** 			TWDR = Registers[RegAddr];
+ 549:main.c        **** 			RegAddr = (RegAddr+1)%REGISTERS;
+ 550:main.c        **** 			state = MY_ADDR;
+ 551:main.c        **** 			
+ 552:main.c        **** 			sendString("read data as ");
+ 553:main.c        **** 			sendByte(TWDR);
+ 554:main.c        **** 			sendString("\n\r");
+ 555:main.c        **** 			TWCR |= (1<<TWEA) | (1<<TWINT);
+ 556:main.c        **** 			break;
+ 557:main.c        **** 		
+ 558:main.c        **** 		case TW_ST_DATA_NACK:		//0xC0			192
+ 559:main.c        **** 			state = IDLE;
+ 560:main.c        **** 			
+ 561:main.c        **** 			sendString("Close I2C\n\r");
+ 562:main.c        **** 			TWCR |= (1<<TWEA) | (1<<TWINT);
+ 563:main.c        **** 			break;
+ 564:main.c        **** 			
+GAS LISTING /tmp/ccdyBaEW.s 			page 37
+
+
+ 565:main.c        **** 			
+ 566:main.c        **** 			
+ 567:main.c        **** 		case  TW_BUS_ERROR:
+ 568:main.c        **** 			//bus error. illegal start/stop condition.
+ 569:main.c        **** 			state = IDLE;
+ 1326               		.stabn	68,0,569,.LM176-.LFBB7
+ 1327               	.LM176:
+ 1328 049e 1092 0000 		sts state+1,__zero_reg__
+ 1329 04a2 1092 0000 		sts state,__zero_reg__
+ 1330 04a6 00C0      		rjmp .L103
+ 1331               	.L86:
+ 442:main.c        **** 	switch(status)
+ 1332               		.stabn	68,0,442,.LM177-.LFBB7
+ 1333               	.LM177:
+ 1334 04a8 C83B      		cpi r28,lo8(-72)
+ 1335 04aa 01F4      		brne .+2
+ 1336 04ac 00C0      		rjmp .L90
+ 1337 04ae C03C      		cpi r28,lo8(-64)
+ 1338 04b0 01F4      		brne .+2
+ 1339 04b2 00C0      		rjmp .L91
+ 1340 04b4 C83A      		cpi r28,lo8(-88)
+ 1341 04b6 01F0      		breq .+2
+ 1342 04b8 00C0      		rjmp .L84
+ 1343 04ba 00C0      		rjmp .L90
+ 1344               	.L87:
+ 446:main.c        **** 			state = MY_ADDR;
+ 1345               		.stabn	68,0,446,.LM178-.LFBB7
+ 1346               	.LM178:
+ 1347 04bc 81E0      		ldi r24,lo8(1)
+ 1348 04be 90E0      		ldi r25,0
+ 1349 04c0 9093 0000 		sts state+1,r25
+ 1350 04c4 8093 0000 		sts state,r24
+ 1351 04c8 00C0      		rjmp .L105
+ 1352               	.L88:
+ 451:main.c        **** 			data = TWDR;
+ 1353               		.stabn	68,0,451,.LM179-.LFBB7
+ 1354               	.LM179:
+ 1355 04ca C3B1      		in r28,0x3
+ 452:main.c        **** 			if(state == MY_ADDR)
+ 1356               		.stabn	68,0,452,.LM180-.LFBB7
+ 1357               	.LM180:
+ 1358 04cc 2091 0000 		lds r18,state
+ 1359 04d0 3091 0000 		lds r19,state+1
+ 1360 04d4 2130      		cpi r18,1
+ 1361 04d6 3105      		cpc r19,__zero_reg__
+ 1362 04d8 01F4      		brne .L94
+ 454:main.c        **** 				RegAddr = data;
+ 1363               		.stabn	68,0,454,.LM181-.LFBB7
+ 1364               	.LM181:
+ 1365 04da 2C2F      		mov r18,r28
+ 1366 04dc 30E0      		ldi r19,0
+ 1367 04de 3093 0000 		sts RegAddr+1,r19
+ 1368 04e2 2093 0000 		sts RegAddr,r18
+ 455:main.c        **** 				state = PTR_RCVD;
+ 1369               		.stabn	68,0,455,.LM182-.LFBB7
+ 1370               	.LM182:
+ 1371 04e6 22E0      		ldi r18,lo8(2)
+GAS LISTING /tmp/ccdyBaEW.s 			page 38
+
+
+ 1372 04e8 30E0      		ldi r19,0
+ 1373 04ea 3093 0000 		sts state+1,r19
+ 1374 04ee 2093 0000 		sts state,r18
+ 456:main.c        **** 				sendString("Ptr set to ");
+ 1375               		.stabn	68,0,456,.LM183-.LFBB7
+ 1376               	.LM183:
+ 1377 04f2 80E0      		ldi r24,lo8(.LC16)
+ 1378 04f4 90E0      		ldi r25,hi8(.LC16)
+ 1379 04f6 0E94 0000 		call sendString
+ 457:main.c        **** 				sendByte(data);
+ 1380               		.stabn	68,0,457,.LM184-.LFBB7
+ 1381               	.LM184:
+ 1382 04fa 8C2F      		mov r24,r28
+ 1383 04fc 0E94 0000 		call sendByte
+ 458:main.c        **** 				sendString("\n\r");
+ 1384               		.stabn	68,0,458,.LM185-.LFBB7
+ 1385               	.LM185:
+ 1386 0500 80E0      		ldi r24,lo8(.LC3)
+ 1387 0502 90E0      		ldi r25,hi8(.LC3)
+ 1388 0504 00C0      		rjmp .L106
+ 1389               	.L94:
+ 461:main.c        **** 			else if(state == PTR_RCVD)
+ 1390               		.stabn	68,0,461,.LM186-.LFBB7
+ 1391               	.LM186:
+ 1392 0506 2091 0000 		lds r18,state
+ 1393 050a 3091 0000 		lds r19,state+1
+ 1394 050e 2230      		cpi r18,2
+ 1395 0510 3105      		cpc r19,__zero_reg__
+ 1396 0512 01F0      		breq .+2
+ 1397 0514 00C0      		rjmp .L83
+ 479:main.c        **** 					if( (RegAddr>=_CMD1 && RegAddr<=_CMD3) || (RegAddr>=_CMD1_CP && RegAddr<=_CMD3_CP) )
+ 1398               		.stabn	68,0,479,.LM187-.LFBB7
+ 1399               	.LM187:
+ 1400 0516 2091 0000 		lds r18,RegAddr
+ 1401 051a 3091 0000 		lds r19,RegAddr+1
+ 1402 051e 37FD      		sbrc r19,7
+ 1403 0520 00C0      		rjmp .L95
+ 479:main.c        **** 					if( (RegAddr>=_CMD1 && RegAddr<=_CMD3) || (RegAddr>=_CMD1_CP && RegAddr<=_CMD3_CP) )
+ 1404               		.stabn	68,0,479,.LM188-.LFBB7
+ 1405               	.LM188:
+ 1406 0522 2091 0000 		lds r18,RegAddr
+ 1407 0526 3091 0000 		lds r19,RegAddr+1
+ 1408 052a 2330      		cpi r18,3
+ 1409 052c 3105      		cpc r19,__zero_reg__
+ 1410 052e 04F0      		brlt .L96
+ 1411               	.L95:
+ 479:main.c        **** 					if( (RegAddr>=_CMD1 && RegAddr<=_CMD3) || (RegAddr>=_CMD1_CP && RegAddr<=_CMD3_CP) )
+ 1412               		.stabn	68,0,479,.LM189-.LFBB7
+ 1413               	.LM189:
+ 1414 0530 2091 0000 		lds r18,RegAddr
+ 1415 0534 3091 0000 		lds r19,RegAddr+1
+ 1416 0538 2C30      		cpi r18,12
+ 1417 053a 3105      		cpc r19,__zero_reg__
+ 1418 053c 04F4      		brge .+2
+ 1419 053e 00C0      		rjmp .L97
+ 479:main.c        **** 					if( (RegAddr>=_CMD1 && RegAddr<=_CMD3) || (RegAddr>=_CMD1_CP && RegAddr<=_CMD3_CP) )
+ 1420               		.stabn	68,0,479,.LM190-.LFBB7
+GAS LISTING /tmp/ccdyBaEW.s 			page 39
+
+
+ 1421               	.LM190:
+ 1422 0540 2091 0000 		lds r18,RegAddr
+ 1423 0544 3091 0000 		lds r19,RegAddr+1
+ 1424 0548 2F30      		cpi r18,15
+ 1425 054a 3105      		cpc r19,__zero_reg__
+ 1426 054c 04F0      		brlt .+2
+ 1427 054e 00C0      		rjmp .L97
+ 1428               	.L96:
+ 481:main.c        **** 						Registers[RegAddr] = data;
+ 1429               		.stabn	68,0,481,.LM191-.LFBB7
+ 1430               	.LM191:
+ 1431 0550 E091 0000 		lds r30,RegAddr
+ 1432 0554 F091 0000 		lds r31,RegAddr+1
+ 1433 0558 E050      		subi r30,lo8(-(Registers))
+ 1434 055a F040      		sbci r31,hi8(-(Registers))
+ 1435 055c C083      		st Z,r28
+ 483:main.c        **** 						sendString("Set data as ");
+ 1436               		.stabn	68,0,483,.LM192-.LFBB7
+ 1437               	.LM192:
+ 1438 055e 80E0      		ldi r24,lo8(.LC17)
+ 1439 0560 90E0      		ldi r25,hi8(.LC17)
+ 1440 0562 0E94 0000 		call sendString
+ 484:main.c        **** 						sendByte(data);
+ 1441               		.stabn	68,0,484,.LM193-.LFBB7
+ 1442               	.LM193:
+ 1443 0566 8C2F      		mov r24,r28
+ 1444 0568 0E94 0000 		call sendByte
+ 485:main.c        **** 						sendString("\n\r");
+ 1445               		.stabn	68,0,485,.LM194-.LFBB7
+ 1446               	.LM194:
+ 1447 056c 80E0      		ldi r24,lo8(.LC3)
+ 1448 056e 90E0      		ldi r25,hi8(.LC3)
+ 1449 0570 0E94 0000 		call sendString
+ 489:main.c        **** 						if(RegAddr == _CMD1)
+ 1450               		.stabn	68,0,489,.LM195-.LFBB7
+ 1451               	.LM195:
+ 1452 0574 8091 0000 		lds r24,RegAddr
+ 1453 0578 9091 0000 		lds r25,RegAddr+1
+ 1454 057c 892B      		or r24,r25
+ 1455 057e 01F4      		brne .L98
+ 491:main.c        **** 							READY1 = 0;
+ 1456               		.stabn	68,0,491,.LM196-.LFBB7
+ 1457               	.LM196:
+ 1458 0580 1092 0000 		sts Registers+3,__zero_reg__
+ 492:main.c        **** 							CMD1_CP = CMD1;
+ 1459               		.stabn	68,0,492,.LM197-.LFBB7
+ 1460               	.LM197:
+ 1461 0584 8091 0000 		lds r24,Registers
+ 1462 0588 8093 0000 		sts Registers+12,r24
+ 1463 058c 00C0      		rjmp .L99
+ 1464               	.L98:
+ 494:main.c        **** 						else if(RegAddr == _CMD2)
+ 1465               		.stabn	68,0,494,.LM198-.LFBB7
+ 1466               	.LM198:
+ 1467 058e 8091 0000 		lds r24,RegAddr
+ 1468 0592 9091 0000 		lds r25,RegAddr+1
+ 1469 0596 0197      		sbiw r24,1
+GAS LISTING /tmp/ccdyBaEW.s 			page 40
+
+
+ 1470 0598 01F4      		brne .L100
+ 496:main.c        **** 							READY2 = 0;
+ 1471               		.stabn	68,0,496,.LM199-.LFBB7
+ 1472               	.LM199:
+ 1473 059a 1092 0000 		sts Registers+4,__zero_reg__
+ 497:main.c        **** 							CMD2_CP = CMD2;
+ 1474               		.stabn	68,0,497,.LM200-.LFBB7
+ 1475               	.LM200:
+ 1476 059e 8091 0000 		lds r24,Registers+1
+ 1477 05a2 8093 0000 		sts Registers+13,r24
+ 1478 05a6 00C0      		rjmp .L99
+ 1479               	.L100:
+ 499:main.c        **** 						else if(RegAddr == _CMD3)
+ 1480               		.stabn	68,0,499,.LM201-.LFBB7
+ 1481               	.LM201:
+ 1482 05a8 8091 0000 		lds r24,RegAddr
+ 1483 05ac 9091 0000 		lds r25,RegAddr+1
+ 1484 05b0 0297      		sbiw r24,2
+ 1485 05b2 01F4      		brne .L99
+ 501:main.c        **** 							READY3 = 0;
+ 1486               		.stabn	68,0,501,.LM202-.LFBB7
+ 1487               	.LM202:
+ 1488 05b4 1092 0000 		sts Registers+5,__zero_reg__
+ 502:main.c        **** 							CMD3_CP = CMD3;
+ 1489               		.stabn	68,0,502,.LM203-.LFBB7
+ 1490               	.LM203:
+ 1491 05b8 8091 0000 		lds r24,Registers+2
+ 1492 05bc 8093 0000 		sts Registers+14,r24
+ 1493               	.L99:
+ 505:main.c        **** 						RegAddr = (RegAddr+1)%REGISTERS;
+ 1494               		.stabn	68,0,505,.LM204-.LFBB7
+ 1495               	.LM204:
+ 1496 05c0 8091 0000 		lds r24,RegAddr
+ 1497 05c4 9091 0000 		lds r25,RegAddr+1
+ 1498 05c8 0196      		adiw r24,1
+ 1499 05ca 6FE0      		ldi r22,lo8(15)
+ 1500 05cc 70E0      		ldi r23,0
+ 1501 05ce 0E94 0000 		call __divmodhi4
+ 1502 05d2 9093 0000 		sts RegAddr+1,r25
+ 1503 05d6 8093 0000 		sts RegAddr,r24
+ 1504 05da 00C0      		rjmp .L105
+ 1505               	.L97:
+ 510:main.c        **** 						sendString("RegAddr out of bounds.\n\r");
+ 1506               		.stabn	68,0,510,.LM205-.LFBB7
+ 1507               	.LM205:
+ 1508 05dc 80E0      		ldi r24,lo8(.LC18)
+ 1509 05de 90E0      		ldi r25,hi8(.LC18)
+ 1510               	.L106:
+ 1511 05e0 0E94 0000 		call sendString
+ 1512 05e4 00C0      		rjmp .L105
+ 1513               	.L85:
+ 525:main.c        **** 			state = IDLE;
+ 1514               		.stabn	68,0,525,.LM206-.LFBB7
+ 1515               	.LM206:
+ 1516 05e6 1092 0000 		sts state+1,__zero_reg__
+ 1517 05ea 1092 0000 		sts state,__zero_reg__
+ 1518               	.L105:
+GAS LISTING /tmp/ccdyBaEW.s 			page 41
+
+
+ 527:main.c        **** 			TWCR |= (1<<TWIE) | (1<<TWEA) | (1<<TWEN) | (1<<TWINT);
+ 1519               		.stabn	68,0,527,.LM207-.LFBB7
+ 1520               	.LM207:
+ 1521 05ee 86B7      		in r24,0x36
+ 1522 05f0 856C      		ori r24,lo8(-59)
+ 1523 05f2 00C0      		rjmp .L102
+ 1524               	.L90:
+ 548:main.c        **** 			TWDR = Registers[RegAddr];
+ 1525               		.stabn	68,0,548,.LM208-.LFBB7
+ 1526               	.LM208:
+ 1527 05f4 E091 0000 		lds r30,RegAddr
+ 1528 05f8 F091 0000 		lds r31,RegAddr+1
+ 1529 05fc E050      		subi r30,lo8(-(Registers))
+ 1530 05fe F040      		sbci r31,hi8(-(Registers))
+ 1531 0600 8081      		ld r24,Z
+ 1532 0602 83B9      		out 0x3,r24
+ 549:main.c        **** 			RegAddr = (RegAddr+1)%REGISTERS;
+ 1533               		.stabn	68,0,549,.LM209-.LFBB7
+ 1534               	.LM209:
+ 1535 0604 8091 0000 		lds r24,RegAddr
+ 1536 0608 9091 0000 		lds r25,RegAddr+1
+ 1537 060c 0196      		adiw r24,1
+ 1538 060e 6FE0      		ldi r22,lo8(15)
+ 1539 0610 70E0      		ldi r23,0
+ 1540 0612 0E94 0000 		call __divmodhi4
+ 1541 0616 9093 0000 		sts RegAddr+1,r25
+ 1542 061a 8093 0000 		sts RegAddr,r24
+ 550:main.c        **** 			state = MY_ADDR;
+ 1543               		.stabn	68,0,550,.LM210-.LFBB7
+ 1544               	.LM210:
+ 1545 061e 81E0      		ldi r24,lo8(1)
+ 1546 0620 90E0      		ldi r25,0
+ 1547 0622 9093 0000 		sts state+1,r25
+ 1548 0626 8093 0000 		sts state,r24
+ 552:main.c        **** 			sendString("read data as ");
+ 1549               		.stabn	68,0,552,.LM211-.LFBB7
+ 1550               	.LM211:
+ 1551 062a 80E0      		ldi r24,lo8(.LC19)
+ 1552 062c 90E0      		ldi r25,hi8(.LC19)
+ 1553 062e 0E94 0000 		call sendString
+ 553:main.c        **** 			sendByte(TWDR);
+ 1554               		.stabn	68,0,553,.LM212-.LFBB7
+ 1555               	.LM212:
+ 1556 0632 83B1      		in r24,0x3
+ 1557 0634 0E94 0000 		call sendByte
+ 554:main.c        **** 			sendString("\n\r");
+ 1558               		.stabn	68,0,554,.LM213-.LFBB7
+ 1559               	.LM213:
+ 1560 0638 80E0      		ldi r24,lo8(.LC3)
+ 1561 063a 90E0      		ldi r25,hi8(.LC3)
+ 1562 063c 00C0      		rjmp .L104
+ 1563               	.L91:
+ 559:main.c        **** 			state = IDLE;
+ 1564               		.stabn	68,0,559,.LM214-.LFBB7
+ 1565               	.LM214:
+ 1566 063e 1092 0000 		sts state+1,__zero_reg__
+ 1567 0642 1092 0000 		sts state,__zero_reg__
+GAS LISTING /tmp/ccdyBaEW.s 			page 42
+
+
+ 561:main.c        **** 			sendString("Close I2C\n\r");
+ 1568               		.stabn	68,0,561,.LM215-.LFBB7
+ 1569               	.LM215:
+ 1570 0646 80E0      		ldi r24,lo8(.LC20)
+ 1571 0648 90E0      		ldi r25,hi8(.LC20)
+ 1572               	.L104:
+ 1573 064a 0E94 0000 		call sendString
+ 562:main.c        **** 			TWCR |= (1<<TWEA) | (1<<TWINT);
+ 1574               		.stabn	68,0,562,.LM216-.LFBB7
+ 1575               	.LM216:
+ 1576 064e 86B7      		in r24,0x36
+ 1577 0650 806C      		ori r24,lo8(-64)
+ 1578 0652 00C0      		rjmp .L102
+ 1579               	.L84:
+ 570:main.c        **** 			TWCR |= (1<<TWSTO) | (1<<TWINT) | (1<<TWEA);
+ 571:main.c        **** 			break;
+ 572:main.c        **** 			
+ 573:main.c        **** 		default:
+ 574:main.c        **** 			// if none of the above apply prepare TWI to be addressed again
+ 575:main.c        **** 			state = IDLE;
+ 1580               		.stabn	68,0,575,.LM217-.LFBB7
+ 1581               	.LM217:
+ 1582 0654 1092 0000 		sts state+1,__zero_reg__
+ 1583 0658 1092 0000 		sts state,__zero_reg__
+ 576:main.c        **** 			sendString("\n\rDEFAULT in ISR\n\r");
+ 1584               		.stabn	68,0,576,.LM218-.LFBB7
+ 1585               	.LM218:
+ 1586 065c 80E0      		ldi r24,lo8(.LC21)
+ 1587 065e 90E0      		ldi r25,hi8(.LC21)
+ 1588 0660 0E94 0000 		call sendString
+ 577:main.c        **** 			sendString("\t\tSTATUS=");
+ 1589               		.stabn	68,0,577,.LM219-.LFBB7
+ 1590               	.LM219:
+ 1591 0664 80E0      		ldi r24,lo8(.LC15)
+ 1592 0666 90E0      		ldi r25,hi8(.LC15)
+ 1593 0668 0E94 0000 		call sendString
+ 578:main.c        **** 			sendByte(status);
+ 1594               		.stabn	68,0,578,.LM220-.LFBB7
+ 1595               	.LM220:
+ 1596 066c 8C2F      		mov r24,r28
+ 1597 066e 0E94 0000 		call sendByte
+ 579:main.c        **** 			sendString("\n\r");
+ 1598               		.stabn	68,0,579,.LM221-.LFBB7
+ 1599               	.LM221:
+ 1600 0672 80E0      		ldi r24,lo8(.LC3)
+ 1601 0674 90E0      		ldi r25,hi8(.LC3)
+ 1602 0676 0E94 0000 		call sendString
+ 1603               	.L103:
+ 580:main.c        **** 			//TWCR |= (1<<TWIE) | (1<<TWEA) | (1<<TWEN);
+ 581:main.c        **** 			TWCR |= (1<<TWEA) | (1<<TWINT) | (1<<TWSTO);
+ 1604               		.stabn	68,0,581,.LM222-.LFBB7
+ 1605               	.LM222:
+ 1606 067a 86B7      		in r24,0x36
+ 1607 067c 806D      		ori r24,lo8(-48)
+ 1608               	.L102:
+ 1609 067e 86BF      		out 0x36,r24
+ 1610               	.L83:
+GAS LISTING /tmp/ccdyBaEW.s 			page 43
+
+
+ 1611               	/* epilogue start */
+ 582:main.c        **** 			break;
+ 583:main.c        **** 	
+ 584:main.c        **** 	}
+ 585:main.c        **** 
+ 586:main.c        **** }
+ 1612               		.stabn	68,0,586,.LM223-.LFBB7
+ 1613               	.LM223:
+ 1614 0680 FF91      		pop r31
+ 1615 0682 EF91      		pop r30
+ 1616 0684 CF91      		pop r28
+ 1617 0686 BF91      		pop r27
+ 1618 0688 AF91      		pop r26
+ 1619 068a 9F91      		pop r25
+ 1620 068c 8F91      		pop r24
+ 1621 068e 7F91      		pop r23
+ 1622 0690 6F91      		pop r22
+ 1623 0692 5F91      		pop r21
+ 1624 0694 4F91      		pop r20
+ 1625 0696 3F91      		pop r19
+ 1626 0698 2F91      		pop r18
+ 1627 069a 0F90      		pop r0
+ 1628 069c 0FBE      		out __SREG__,r0
+ 1629 069e 0F90      		pop r0
+ 1630 06a0 1F90      		pop r1
+ 1631 06a2 1895      		reti
+ 1632               		.size	__vector_19, .-__vector_19
+ 1633               		.stabs	"status:r(0,48)",64,0,430,28
+ 1634               		.stabs	"data:r(0,48)",64,0,434,28
+ 1635               		.stabn	192,0,0,.LFBB7-.LFBB7
+ 1636               		.stabn	224,0,0,.Lscope7-.LFBB7
+ 1637               	.Lscope7:
+ 1638               		.stabs	"",36,0,0,.Lscope7-.LFBB7
+ 1639               		.stabd	78,0,0
+ 1640               		.stabs	"__vector_13:F(0,47)",36,0,588,__vector_13
+ 1641               	.global	__vector_13
+ 1642               		.type	__vector_13, @function
+ 1643               	__vector_13:
+ 1644               		.stabd	46,0,0
+ 587:main.c        **** 
+ 588:main.c        **** ISR(USART_RXC_vect)
+ 589:main.c        **** {
+ 1645               		.stabn	68,0,589,.LM224-.LFBB8
+ 1646               	.LM224:
+ 1647               	.LFBB8:
+ 1648 06a4 1F92      		push r1
+ 1649 06a6 0F92      		push r0
+ 1650 06a8 0FB6      		in r0,__SREG__
+ 1651 06aa 0F92      		push r0
+ 1652 06ac 1124      		clr __zero_reg__
+ 1653 06ae 2F93      		push r18
+ 1654 06b0 3F93      		push r19
+ 1655 06b2 4F93      		push r20
+ 1656 06b4 5F93      		push r21
+ 1657 06b6 6F93      		push r22
+ 1658 06b8 7F93      		push r23
+ 1659 06ba 8F93      		push r24
+GAS LISTING /tmp/ccdyBaEW.s 			page 44
+
+
+ 1660 06bc 9F93      		push r25
+ 1661 06be AF93      		push r26
+ 1662 06c0 BF93      		push r27
+ 1663 06c2 EF93      		push r30
+ 1664 06c4 FF93      		push r31
+ 1665               	/* prologue: Signal */
+ 1666               	/* frame size = 0 */
+ 1667               	/* stack size = 15 */
+ 1668               	.L__stack_usage = 15
+ 590:main.c        **** 	sendChar(UDR);
+ 1669               		.stabn	68,0,590,.LM225-.LFBB8
+ 1670               	.LM225:
+ 1671 06c6 8CB1      		in r24,0xc
+ 1672 06c8 90E0      		ldi r25,0
+ 1673 06ca 0E94 0000 		call sendChar
+ 1674               	/* epilogue start */
+ 591:main.c        **** }
+ 1675               		.stabn	68,0,591,.LM226-.LFBB8
+ 1676               	.LM226:
+ 1677 06ce FF91      		pop r31
+ 1678 06d0 EF91      		pop r30
+ 1679 06d2 BF91      		pop r27
+ 1680 06d4 AF91      		pop r26
+ 1681 06d6 9F91      		pop r25
+ 1682 06d8 8F91      		pop r24
+ 1683 06da 7F91      		pop r23
+ 1684 06dc 6F91      		pop r22
+ 1685 06de 5F91      		pop r21
+ 1686 06e0 4F91      		pop r20
+ 1687 06e2 3F91      		pop r19
+ 1688 06e4 2F91      		pop r18
+ 1689 06e6 0F90      		pop r0
+ 1690 06e8 0FBE      		out __SREG__,r0
+ 1691 06ea 0F90      		pop r0
+ 1692 06ec 1F90      		pop r1
+ 1693 06ee 1895      		reti
+ 1694               		.size	__vector_13, .-__vector_13
+ 1695               	.Lscope8:
+ 1696               		.stabs	"",36,0,0,.Lscope8-.LFBB8
+ 1697               		.stabd	78,0,0
+ 1698               		.comm	set3_stack,200,1
+ 1699               		.comm	set2_stack,200,1
+ 1700               		.comm	set1_stack,200,1
+ 1701               		.comm	Registers,15,1
+ 1702               		.comm	RegAddr,2,1
+ 1703               	.global	state
+ 1704               		.section .bss
+ 1705               		.type	state, @object
+ 1706               		.size	state, 2
+ 1707               	state:
+ 1708 0000 0000      		.zero	2
+ 1709               		.comm	task_address,6,1
+ 1710               		.stabs	"task_address:G(0,54)=ar(0,51);0;2;(9,3)",32,0,13,0
+ 1711               		.stabs	"state:G(0,53)",32,0,28,0
+ 1712               		.stabs	"RegAddr:G(0,53)",32,0,29,0
+ 1713               		.stabs	"Registers:G(0,55)=ar(0,51);0;14;(9,2)",32,0,32,0
+ 1714               		.stabs	"set1_stack:G(0,56)=ar(0,51);0;199;(9,1)",32,0,34,0
+GAS LISTING /tmp/ccdyBaEW.s 			page 45
+
+
+ 1715               		.stabs	"set2_stack:G(0,56)",32,0,35,0
+ 1716               		.stabs	"set3_stack:G(0,56)",32,0,36,0
+ 1717               		.text
+ 1718               		.stabs	"",100,0,0,.Letext0
+ 1719               	.Letext0:
+ 1720               		.ident	"GCC: (GNU) 4.8.2"
+ 1721               	.global __do_copy_data
+ 1722               	.global __do_clear_bss
+GAS LISTING /tmp/ccdyBaEW.s 			page 46
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 main.c
+     /tmp/ccdyBaEW.s:2      *ABS*:0000003e __SP_H__
+     /tmp/ccdyBaEW.s:3      *ABS*:0000003d __SP_L__
+     /tmp/ccdyBaEW.s:4      *ABS*:0000003f __SREG__
+     /tmp/ccdyBaEW.s:5      *ABS*:00000000 __tmp_reg__
+     /tmp/ccdyBaEW.s:6      *ABS*:00000001 __zero_reg__
+     /tmp/ccdyBaEW.s:121    .text:00000000 sendByte
+     /tmp/ccdyBaEW.s:228    .text:00000074 sendWord
+     /tmp/ccdyBaEW.s:356    .text:000000fa set1
+                            *COM*:0000000f Registers
+     /tmp/ccdyBaEW.s:619    .text:00000210 set2
+     /tmp/ccdyBaEW.s:890    .text:0000032e set3
+     /tmp/ccdyBaEW.s:1154   .text.startup:00000000 main
+                            *COM*:000000c8 set3_stack
+                            *COM*:000000c8 set2_stack
+                            *COM*:000000c8 set1_stack
+     /tmp/ccdyBaEW.s:1269   .text:0000044c __vector_19
+     /tmp/ccdyBaEW.s:1707   .bss:00000000 state
+                            *COM*:00000002 RegAddr
+     /tmp/ccdyBaEW.s:1643   .text:000006a4 __vector_13
+                            *COM*:00000006 task_address
+
+UNDEFINED SYMBOLS
+sendChar
+__udivmodqi4
+__udivmodhi4
+sendString
+getOprFrmCmd
+getValFrmCmd
+K_taskQuit
+K_init
+K_start
+__divmodhi4
+__do_copy_data
+__do_clear_bss

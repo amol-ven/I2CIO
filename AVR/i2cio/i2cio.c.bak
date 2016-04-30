@@ -1,0 +1,325 @@
+#include <avr/io.h>
+#define F_CPU 16000000UL
+#include <util/delay.h>
+#include <util/twi.h>
+#include <avr/interrupt.h>
+
+#include "registers.h"
+
+
+
+
+typedef unsigned char byte_t;
+typedef unsigned char bool_t;
+
+
+
+//volatile uint8_t buffer_address;
+//volatile uint8_t txbuffer[0xFF];
+//volatile uint8_t rxbuffer[0xFF];
+
+
+#define IDLE				0
+#define MY_ADDR				1
+#define PTR_RCVD			2
+
+volatile int state = IDLE;
+volatile int RegAddr;
+
+
+//volatile unsigned char Registers[REGISTERS];
+volatile unsigned char Registers[100];
+
+
+void sendChar(volatile char a)
+{
+	while( !(UCSRA&(1<<UDRE)) );
+	UDR=a;
+}	
+
+
+void sendString(volatile char *a)
+{
+	int index=0;
+
+	while(a[(int)index]!='\0')
+	{
+		sendChar(a[(int)index]);
+		index++;
+	}
+	index=0;
+}
+
+void sendULInt(unsigned long int x)
+{
+	char integer[15];
+	int place=14;
+	if(x==0)
+	{
+		sendChar('0');
+	}
+	while(x!=0)
+	{
+		integer[place]=(x%10)+48;
+		x/=10;
+		place--;
+	}
+	place++;
+	while(place<=14)
+	{
+		sendChar(integer[place]);
+		place++;
+	}
+}
+
+
+
+void sendByte(byte_t b)
+{
+	char integer[3];
+	int place=2;
+	if(b==0)
+	{
+		sendChar('0');
+	}
+	while(b!=0)
+	{
+		integer[place]=(b%10)+48;
+		b/=10;
+		place--;
+	}
+	place++;
+	while(place<=2)
+	{
+		sendChar(integer[place]);
+		place++;
+	}
+}
+
+void sendWord(unsigned int w)
+{
+	char integer[5];
+	int place=4;
+	if(w==0)
+	{
+		sendChar('0');
+	}
+	while(w!=0)
+	{
+		integer[place]=(w%10)+48;
+		w/=10;
+		place--;
+	}
+	place++;
+	while(place<=4)
+	{
+		sendChar(integer[place]);
+		place++;
+	}
+}
+
+
+int main()
+{
+	DDRC = 0xFC;
+	PORTC = 3;
+	
+	UCSRB = (1<<RXEN)|(1<<TXEN)|(1<<RXCIE);
+	UCSRC = (1<<URSEL)|(1<<UCSZ1)|(1<<UCSZ0);
+	//UBRRL = 103;      //9600
+	UBRRL = 8;          //115200
+	
+	sendString("Start\n\r");
+	
+	
+	ADCSRA = (1<<ADEN) | (1<<ADPS2) | (1<<ADPS1) | (1<<ADPS0);
+	
+	
+	
+	TWBR = 98;
+	TWAR = 0x10<<1|1;
+	//TWCR = (1<<TWEA)|(1<<TWEN)|(1<<TWIE);
+	TWCR = (1<<TWIE) | (1<<TWEA) | (1<<TWINT) | (1<<TWEN);
+	TWSR = 0;
+	
+	
+	sei();
+	
+	
+	while(1);
+	return 0;
+}
+
+
+//Decimal: 96 128 128 160
+//Hex:     60  80  80  A0
+ISR(TWI_vect)
+{
+	byte_t status = TWSR&0xF8;
+	sendString("\t\tSTATUS=");
+	sendByte(status);
+	sendString("\n\r");
+	byte_t data;
+	//while(1);
+	
+	//sendChar('\t');
+	//sendULInt(state);
+	//sendString("\n\r");
+	
+	
+	switch(status)
+	{
+		case TW_SR_SLA_ACK:			//0x60			96
+			// SLA+W received. ACk returned.
+			state = MY_ADDR;
+			TWCR |= (1<<TWIE) | (1<<TWINT) | (1<<TWEA) | (1<<TWEN); 
+			break;
+
+		case TW_SR_DATA_ACK:		//0x80			128
+			data = TWDR;
+			if(state == MY_ADDR)
+			{
+				RegAddr = data;
+				state = PTR_RCVD;
+				sendString("Ptr set to ");
+				sendByte(data);
+				sendString("\n\r");
+				TWCR |= (1<<TWIE) | (1<<TWINT) | (1<<TWEA) | (1<<TWEN); 
+			}
+			else if(state == PTR_RCVD)
+			{
+				// data now has valid data to be put at RegAddr
+				// handle it.
+				if(1)
+				{
+					//if you can receive more data. 
+					//At the moment always true.
+					//So send ACK back.
+					/*
+					sendString("\ni2cset ");
+					sendULInt(data);
+					sendString(" at ");
+					sendULInt(RegAddr);
+					sendString("\n\r");
+					*/
+					//PORTC = data&(~3);
+					//if(RegAddr >= 0 && RegAddr < REGISTERS)
+					if(RegAddr>=0 && RegAddr<=(sizeof(Registers)/sizeof(Registers[0])))
+					//if( (RegAddr>=_CMD1 && RegAddr<=_CMD3) || (RegAddr>=_CMD1_CP && RegAddr<=_CMD3_CP) )
+					{
+						Registers[RegAddr] = data;
+						
+						sendString("Set data as ");
+						sendByte(data);
+						sendString("\n\r");
+						
+						//sendString("RegAddr=");
+						//sendWord(RegAddr);
+						
+						/*
+						if(RegAddr == _CMD1)
+						{
+							READY1 = 0;
+							CMD1_CP = CMD1;
+						}
+						else if(RegAddr == _CMD2)
+						{
+							READY2 = 0;
+							CMD2_CP = CMD2;
+						}
+						else if(RegAddr == _CMD3)
+						{
+							READY3 = 0;
+							CMD3_CP = CMD3;
+						}
+						*/
+						
+						RegAddr = (RegAddr+1)%REGISTERS;
+					}
+					else
+					{
+						//RegAddr out of bounds.
+						sendString("RegAddr out of bounds.\n\r");
+					}
+					TWCR |= (1<<TWIE) | (1<<TWINT) | (1<<TWEA) | (1<<TWEN); 
+				}
+				else
+				{
+					//if you cannot receive more data. 
+					//So send NACK back.
+					TWCR |= (1<<TWIE) | (1<<TWINT) | (1<<TWEN); 
+				}
+			}
+			break;
+		
+		case TW_SR_STOP:			//0xA0			160
+			// stop condition or a repeated start condition has been received.
+			state = IDLE;
+			sendString("stop or repeated start.\n\r");
+			TWCR |= (1<<TWEA) | (1<<TWEN);	
+			//TWCR |= (1<<TWEA) | (1<<TWINT) | (1<<TWEN);	
+			//TWCR |= (1<<TWIE) | (1<<TWEA) | (1<<TWEN) | (1<<TWINT);
+			break;
+		
+		
+		
+		
+		case TW_ST_SLA_ACK:			//0xA8			168
+			// SLA+R received. ACK returned. 	
+			// Need to transmit data back to master.
+			TWDR = Registers[RegAddr];
+			RegAddr = (RegAddr+1)%REGISTERS;
+			state = MY_ADDR;
+			
+			sendString("read data as ");
+			sendByte(TWDR);
+			sendString("\n\r");
+			TWCR |= (1<<TWEA) | (1<<TWINT);
+			break;
+		
+		case TW_ST_DATA_ACK:		//0xB8			184
+			//Data transmitted back to master. ACK received. Transmit next data.
+			TWDR = Registers[RegAddr];
+			RegAddr = (RegAddr+1)%REGISTERS;
+			state = MY_ADDR;
+			
+			sendString("read data as ");
+			sendByte(TWDR);
+			sendString("\n\r");
+			TWCR |= (1<<TWEA) | (1<<TWINT);
+			break;
+		
+		case TW_ST_DATA_NACK:		//0xC0			192
+			state = IDLE;
+			
+			sendString("Close I2C\n\r");
+			TWCR |= (1<<TWEA) | (1<<TWINT);
+			break;
+			
+			
+			
+		case  TW_BUS_ERROR:
+			//bus error. illegal start/stop condition.
+			state = IDLE;
+			TWCR |= (1<<TWSTO) | (1<<TWINT) | (1<<TWEA);
+			break;
+			
+		default:
+			// if none of the above apply prepare TWI to be addressed again
+			state = IDLE;
+			sendString("\n\rDEFAULT in ISR\n\r");
+			sendString("\t\tSTATUS=");
+			sendByte(status);
+			sendString("\n\r");
+			//TWCR |= (1<<TWIE) | (1<<TWEA) | (1<<TWEN);
+			TWCR |= (1<<TWEA) | (1<<TWINT) | (1<<TWSTO);
+			break;
+	
+	}
+
+}
+
+ISR(USART_RXC_vect)
+{
+	sendChar(UDR);
+}

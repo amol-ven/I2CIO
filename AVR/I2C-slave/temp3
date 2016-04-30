@@ -1,0 +1,506 @@
+		STATUS=96
+		STATUS=128
+Ptr set to 3
+		STATUS=160
+		STATUS=168
+read data as 1
+		STATUS=192
+Close I2C
+		STATUS=96
+		STATUS=128
+Ptr set to 0
+		STATUS=128
+Set data as 8
+		STATUS=160
+		STATUS=96
+		STATUS=128
+Ptr set to 12
+		STATUS=160
+		STATUS=168
+read data as 8
+		STATUS=192
+Close I2C
+		STATUS=96
+		STATUS=128
+Ptr set to 12
+		STATUS=128
+Set data as 0
+		STATUS=160
+		STATUS=96
+		STATUS=128
+Ptr set to 3
+		STATUS=160
+		STATUS=168
+read data as 0
+		STATUS=192
+Close I2C
+		STATUS=96
+c		STATUS=128
+Ptr set to 3
+		STATUS=160
+m		STATUS=168
+read data as 0
+		STATUS=192
+Close I2C
+		STATUS=96
+		STATUS=128
+Ptr set to 3
+		STATUS=160
+		STATUS=168
+read data as 0
+		STATUS=192
+Close I2C
+		STATUS=96
+		STATUS=128
+Ptr set to 3
+		STATUS=160
+		STATUS=168
+read data as 0
+		STATUS=192
+Close I2C
+d		STATUS=96
+1		STATUS=128
+Ptr set to 3
+		STATUS=160
+R		STATUS=168
+read data as 0
+E		STATUS=192
+Close I2C
+A		STATUS=96
+D		STATUS=128
+Ptr set to 3
+		STATUS=160
+Y		STATUS=168
+read data as 0
+		STATUS=192
+Close I2C
+		STATUS=96
+		STATUS=128
+Ptr set to 3
+		STATUS=160
+		STATUS=168
+read data as 0
+		STATUS=192
+Close I2C
+		STATUS=96
+		STATUS=128
+Ptr set to 3
+		STATUS=160
+		STATUS=168
+read data as 0
+		STATUS=192
+Close I2C
+1		STATUS=96
+ 		STATUS=128
+Ptr set to 3
+		STATUS=160
+=		STATUS=168
+read data as 0
+ 		STATUS=192
+Close I2C
+1
+		STATUS=96
+		STATUS=128
+Ptr set to 3
+		STATUS=160
+		STATUS=168
+read data as 1
+		STATUS=192
+Close I2C
+		STATUS=96
+		STATUS=128
+Ptr set to 0
+		STATUS=128
+Set data as 16
+		STATUS=160
+		STATUS=96
+		STATUS=128
+Ptr set to 12
+		STATUS=160
+		STATUS=168
+read data as 16
+		STATUS=192
+Close I2C
+		STATUS=96
+		STATUS=128
+Ptr set to 12
+		STATUS=128
+Set data as 0
+		STATUS=160
+		STATUS=96
+		STATUS=128
+Ptr set to 3
+		STATUS=160
+		STATUS=168
+read data as 0
+		STATUS=192
+Close I2C
+		STATUS=96
+		STATUS=128
+Ptr set to 3
+		STATUS=160
+		STATUS=168
+read data as 0
+		STATUS=192
+Close I2C
+c		STATUS=96
+m		STATUS=128
+Ptr set to 3
+		STATUS=160
+		STATUS=168
+read data as 0
+		STATUS=192
+Close I2C
+		STATUS=96
+		STATUS=128
+Ptr set to 3
+		STATUS=160
+		STATUS=168
+read data as 0
+		STATUS=192
+Close I2C
+		STATUS=96
+		STATUS=128
+Ptr set to 3
+		STATUS=160
+		STATUS=168
+read data as 0
+		STATUS=192
+Close I2C
+d		STATUS=96
+1		STATUS=128
+Ptr set to 3
+		STATUS=160
+R		STATUS=168
+read data as 0
+E		STATUS=192
+Close I2C
+A		STATUS=96
+D		STATUS=128
+Ptr set to 3
+		STATUS=160
+		STATUS=168
+read data as 0
+		STATUS=192
+Close I2C
+		STATUS=96
+		STATUS=128
+Ptr set to 3
+		STATUS=160
+		STATUS=168
+read data as 0
+		STATUS=192
+Close I2C
+		STATUS=96
+		STATUS=128
+Ptr set to 3
+		STATUS=160
+		STATUS=168
+read data as 0
+Y		STATUS=192
+Close I2C
+1 = 1		STATUS=96
+
+		STATUS=128
+Ptr set to 3
+		STATUS=160
+		STATUS=168
+read data as 1
+		STATUS=192
+Close I2C
+		STATUS=96
+		STATUS=128
+Ptr set to 0
+		STATUS=128
+Set data as 28
+		STATUS=160
+		STATUS=96
+		STATUS=128
+Ptr set to 12
+		STATUS=160
+		STATUS=168
+read data as 28
+		STATUS=192
+Close I2C
+		STATUS=96
+		STATUS=128
+Ptr set to 12
+		STATUS=128
+Set data as 0
+		STATUS=160
+		STATUS=96
+		STATUS=128
+Ptr set to 3
+		STATUS=160
+		STATUS=168
+read data as 0
+		STATUS=192
+Close I2C
+		STATUS=96
+		STATUS=128
+Ptr set to 3
+		STATUS=160
+		STATUS=168
+read data as 0
+		STATUS=192
+Close I2C
+		STATUS=96
+		STATUS=128
+Ptr set to 3
+		STATUS=160
+		STATUS=168
+read data as 0
+		STATUS=192
+Close I2C
+c		STATUS=96
+m		STATUS=128
+Ptr set to 3
+		STATUS=160
+		STATUS=168
+read data as 0
+		STATUS=192
+Close I2C
+		STATUS=96
+		STATUS=128
+Ptr set to 3
+		STATUS=160
+		STATUS=168
+read data as 0
+		STATUS=192
+Close I2C
+		STATUS=96
+		STATUS=128
+Ptr set to 3
+		STATUS=160
+		STATUS=168
+read data as 0
+d		STATUS=192
+Close I2C
+1		STATUS=96
+R		STATUS=128
+Ptr set to 3
+		STATUS=160
+E		STATUS=168
+read data as 0
+A		STATUS=192
+Close I2C
+D		STATUS=96
+		STATUS=128
+Ptr set to 3
+		STATUS=160
+		STATUS=168
+read data as 0
+		STATUS=192
+Close I2C
+		STATUS=96
+		STATUS=128
+Ptr set to 3
+		STATUS=160
+		STATUS=168
+read data as 0
+		STATUS=192
+Close I2C
+Y1 = 1		STATUS=96
+
+		STATUS=128
+Ptr set to 3
+		STATUS=160
+		STATUS=168
+read data as 1
+		STATUS=192
+Close I2C
+		STATUS=96
+		STATUS=128
+Ptr set to 0
+		STATUS=128
+Set data as 40
+		STATUS=160
+		STATUS=96
+		STATUS=128
+Ptr set to 12
+		STATUS=160
+		STATUS=168
+read data as 40
+		STATUS=192
+Close I2C
+		STATUS=96
+		STATUS=128
+Ptr set to 12
+		STATUS=128
+Set data as 0
+		STATUS=160
+		STATUS=96
+c		STATUS=128
+Ptr set to 3
+		STATUS=160
+m		STATUS=168
+read data as 0
+d		STATUS=192
+Close I2C
+		STATUS=96
+		STATUS=128
+Ptr set to 3
+		STATUS=160
+		STATUS=168
+read data as 0
+		STATUS=192
+Close I2C
+		STATUS=96
+		STATUS=128
+Ptr set to 3
+		STATUS=160
+		STATUS=168
+read data as 0
+		STATUS=192
+Close I2C
+1		STATUS=96
+R		STATUS=128
+Ptr set to 3
+		STATUS=160
+E		STATUS=168
+read data as 0
+A		STATUS=192
+Close I2C
+D		STATUS=96
+Y		STATUS=128
+Ptr set to 3
+		STATUS=160
+1		STATUS=168
+read data as 0
+		STATUS=192
+Close I2C
+		STATUS=96
+		STATUS=128
+Ptr set to 3
+		STATUS=160
+		STATUS=168
+read data as 0
+		STATUS=192
+Close I2C
+		STATUS=96
+		STATUS=128
+Ptr set to 3
+		STATUS=160
+		STATUS=168
+read data as 0
+		STATUS=192
+Close I2C
+ 		STATUS=96
+=		STATUS=128
+Ptr set to 3
+		STATUS=160
+ 		STATUS=168
+read data as 0
+1		STATUS=192
+Close I2C
+
+		STATUS=96
+		STATUS=128
+Ptr set to 3
+		STATUS=160
+		STATUS=168
+read data as 1
+		STATUS=192
+Close I2C
+		STATUS=96
+		STATUS=128
+Ptr set to 3
+		STATUS=160
+		STATUS=168
+read data as 1
+		STATUS=192
+Close I2C
+		STATUS=96
+		STATUS=128
+Ptr set to 0
+		STATUS=128
+Set data as 36
+		STATUS=160
+		STATUS=96
+		STATUS=128
+Ptr set to 12
+		STATUS=160
+		STATUS=168
+read data as 36
+		STATUS=192
+Close I2C
+		STATUS=96
+		STATUS=128
+Ptr set to 12
+		STATUS=128
+Set data as 0
+		STATUS=160
+		STATUS=96
+		STATUS=128
+Ptr set to 3
+		STATUS=160
+		STATUS=168
+read data as 0
+		STATUS=192
+Close I2C
+		STATUS=96
+c		STATUS=128
+Ptr set to 3
+		STATUS=160
+m		STATUS=168
+read data as 0
+		STATUS=192
+Close I2C
+		STATUS=96
+		STATUS=128
+Ptr set to 3
+		STATUS=160
+		STATUS=168
+read data as 0
+		STATUS=192
+Close I2C
+		STATUS=96
+		STATUS=128
+Ptr set to 3
+		STATUS=160
+		STATUS=168
+read data as 0
+		STATUS=192
+Close I2C
+d		STATUS=96
+1		STATUS=128
+Ptr set to 3
+		STATUS=160
+R		STATUS=168
+read data as 0
+E		STATUS=192
+Close I2C
+A		STATUS=96
+D		STATUS=128
+Ptr set to 3
+		STATUS=160
+Y		STATUS=168
+read data as 0
+		STATUS=192
+Close I2C
+		STATUS=96
+		STATUS=128
+Ptr set to 3
+		STATUS=160
+		STATUS=168
+read data as 0
+		STATUS=192
+Close I2C
+		STATUS=96
+		STATUS=128
+Ptr set to 3
+		STATUS=160
+		STATUS=168
+read data as 0
+		STATUS=192
+Close I2C
+1		STATUS=96
+ 		STATUS=128
+Ptr set to 3
+		STATUS=160
+=		STATUS=168
+read data as 0
+ 		STATUS=192
+Close I2C
+1
+

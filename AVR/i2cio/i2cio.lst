@@ -1,0 +1,1808 @@
+GAS LISTING /tmp/ccu7QES2.s 			page 1
+
+
+   1               		.file	"i2cio.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.stabs	"/home/amol/Desktop/AVR/i2cio/",100,0,2,.Ltext0
+   8               		.stabs	"i2cio.c",100,0,2,.Ltext0
+   9               		.text
+  10               	.Ltext0:
+  11               		.stabs	"gcc2_compiled.",60,0,0,0
+  12               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  13               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  14               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  15               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  16               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  17               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,0,
+  18               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0;01777777777777777777777;",128,0,0,0
+  19               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,0,0
+  20               		.stabs	"short unsigned int:t(0,9)=r(0,9);0;0177777;",128,0,0,0
+  21               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,0,0
+  22               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,0,0
+  23               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,0,0
+  24               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,0,0
+  25               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,0,0
+  26               		.stabs	"short _Fract:t(0,15)=r(0,1);1;0;",128,0,0,0
+  27               		.stabs	"_Fract:t(0,16)=r(0,1);2;0;",128,0,0,0
+  28               		.stabs	"long _Fract:t(0,17)=r(0,1);4;0;",128,0,0,0
+  29               		.stabs	"long long _Fract:t(0,18)=r(0,1);8;0;",128,0,0,0
+  30               		.stabs	"unsigned short _Fract:t(0,19)=r(0,1);1;0;",128,0,0,0
+  31               		.stabs	"unsigned _Fract:t(0,20)=r(0,1);2;0;",128,0,0,0
+  32               		.stabs	"unsigned long _Fract:t(0,21)=r(0,1);4;0;",128,0,0,0
+  33               		.stabs	"unsigned long long _Fract:t(0,22)=r(0,1);8;0;",128,0,0,0
+  34               		.stabs	"_Sat short _Fract:t(0,23)=r(0,1);1;0;",128,0,0,0
+  35               		.stabs	"_Sat _Fract:t(0,24)=r(0,1);2;0;",128,0,0,0
+  36               		.stabs	"_Sat long _Fract:t(0,25)=r(0,1);4;0;",128,0,0,0
+  37               		.stabs	"_Sat long long _Fract:t(0,26)=r(0,1);8;0;",128,0,0,0
+  38               		.stabs	"_Sat unsigned short _Fract:t(0,27)=r(0,1);1;0;",128,0,0,0
+  39               		.stabs	"_Sat unsigned _Fract:t(0,28)=r(0,1);2;0;",128,0,0,0
+  40               		.stabs	"_Sat unsigned long _Fract:t(0,29)=r(0,1);4;0;",128,0,0,0
+  41               		.stabs	"_Sat unsigned long long _Fract:t(0,30)=r(0,1);8;0;",128,0,0,0
+  42               		.stabs	"short _Accum:t(0,31)=r(0,1);2;0;",128,0,0,0
+  43               		.stabs	"_Accum:t(0,32)=r(0,1);4;0;",128,0,0,0
+  44               		.stabs	"long _Accum:t(0,33)=r(0,1);8;0;",128,0,0,0
+  45               		.stabs	"long long _Accum:t(0,34)=r(0,1);8;0;",128,0,0,0
+  46               		.stabs	"unsigned short _Accum:t(0,35)=r(0,1);2;0;",128,0,0,0
+  47               		.stabs	"unsigned _Accum:t(0,36)=r(0,1);4;0;",128,0,0,0
+  48               		.stabs	"unsigned long _Accum:t(0,37)=r(0,1);8;0;",128,0,0,0
+  49               		.stabs	"unsigned long long _Accum:t(0,38)=r(0,1);8;0;",128,0,0,0
+  50               		.stabs	"_Sat short _Accum:t(0,39)=r(0,1);2;0;",128,0,0,0
+  51               		.stabs	"_Sat _Accum:t(0,40)=r(0,1);4;0;",128,0,0,0
+  52               		.stabs	"_Sat long _Accum:t(0,41)=r(0,1);8;0;",128,0,0,0
+  53               		.stabs	"_Sat long long _Accum:t(0,42)=r(0,1);8;0;",128,0,0,0
+  54               		.stabs	"_Sat unsigned short _Accum:t(0,43)=r(0,1);2;0;",128,0,0,0
+  55               		.stabs	"_Sat unsigned _Accum:t(0,44)=r(0,1);4;0;",128,0,0,0
+  56               		.stabs	"_Sat unsigned long _Accum:t(0,45)=r(0,1);8;0;",128,0,0,0
+  57               		.stabs	"_Sat unsigned long long _Accum:t(0,46)=r(0,1);8;0;",128,0,0,0
+GAS LISTING /tmp/ccu7QES2.s 			page 2
+
+
+  58               		.stabs	"void:t(0,47)=(0,47)",128,0,0,0
+  59               		.stabs	"/usr/lib/avr/include/avr/io.h",130,0,0,0
+  60               		.stabs	"/usr/lib/avr/include/avr/sfr_defs.h",130,0,0,0
+  61               		.stabs	"/usr/lib/avr/include/inttypes.h",130,0,0,0
+  62               		.stabs	"/usr/lib/gcc/avr/4.8.2/include/stdint.h",130,0,0,0
+  63               		.stabs	"/usr/lib/avr/include/stdint.h",130,0,0,0
+  64               		.stabs	"int8_t:t(5,1)=(0,10)",128,0,121,0
+  65               		.stabs	"uint8_t:t(5,2)=(0,11)",128,0,122,0
+  66               		.stabs	"int16_t:t(5,3)=(0,1)",128,0,123,0
+  67               		.stabs	"uint16_t:t(5,4)=(0,4)",128,0,124,0
+  68               		.stabs	"int32_t:t(5,5)=(0,3)",128,0,125,0
+  69               		.stabs	"uint32_t:t(5,6)=(0,5)",128,0,126,0
+  70               		.stabs	"int64_t:t(5,7)=(0,6)",128,0,128,0
+  71               		.stabs	"uint64_t:t(5,8)=(0,7)",128,0,129,0
+  72               		.stabs	"intptr_t:t(5,9)=(5,3)",128,0,142,0
+  73               		.stabs	"uintptr_t:t(5,10)=(5,4)",128,0,147,0
+  74               		.stabs	"int_least8_t:t(5,11)=(5,1)",128,0,159,0
+  75               		.stabs	"uint_least8_t:t(5,12)=(5,2)",128,0,164,0
+  76               		.stabs	"int_least16_t:t(5,13)=(5,3)",128,0,169,0
+  77               		.stabs	"uint_least16_t:t(5,14)=(5,4)",128,0,174,0
+  78               		.stabs	"int_least32_t:t(5,15)=(5,5)",128,0,179,0
+  79               		.stabs	"uint_least32_t:t(5,16)=(5,6)",128,0,184,0
+  80               		.stabs	"int_least64_t:t(5,17)=(5,7)",128,0,192,0
+  81               		.stabs	"uint_least64_t:t(5,18)=(5,8)",128,0,199,0
+  82               		.stabs	"int_fast8_t:t(5,19)=(5,1)",128,0,213,0
+  83               		.stabs	"uint_fast8_t:t(5,20)=(5,2)",128,0,218,0
+  84               		.stabs	"int_fast16_t:t(5,21)=(5,3)",128,0,223,0
+  85               		.stabs	"uint_fast16_t:t(5,22)=(5,4)",128,0,228,0
+  86               		.stabs	"int_fast32_t:t(5,23)=(5,5)",128,0,233,0
+  87               		.stabs	"uint_fast32_t:t(5,24)=(5,6)",128,0,238,0
+  88               		.stabs	"int_fast64_t:t(5,25)=(5,7)",128,0,246,0
+  89               		.stabs	"uint_fast64_t:t(5,26)=(5,8)",128,0,253,0
+  90               		.stabs	"intmax_t:t(5,27)=(5,7)",128,0,273,0
+  91               		.stabs	"uintmax_t:t(5,28)=(5,8)",128,0,278,0
+  92               		.stabn	162,0,0,0
+  93               		.stabn	162,0,0,0
+  94               		.stabs	"int_farptr_t:t(3,1)=(5,5)",128,0,77,0
+  95               		.stabs	"uint_farptr_t:t(3,2)=(5,6)",128,0,81,0
+  96               		.stabn	162,0,0,0
+  97               		.stabn	162,0,0,0
+  98               		.stabs	"/usr/lib/avr/include/avr/fuse.h",130,0,0,0
+  99               		.stabs	"__fuse_t:t(6,1)=(6,2)=s2low:(0,11),0,8;high:(0,11),8,8;;",128,0,252,0
+ 100               		.stabn	162,0,0,0
+ 101               		.stabn	162,0,0,0
+ 102               		.stabs	"byte_t:t(0,48)=(0,11)",128,0,12,0
+ 103               		.stabs	"bool_t:t(0,49)=(0,11)",128,0,13,0
+ 104               		.stabs	"sendChar:F(0,47)",36,0,35,sendChar
+ 105               		.stabs	"a:p(0,50)=B(0,2)",160,0,35,1
+ 106               	.global	sendChar
+ 107               		.type	sendChar, @function
+ 108               	sendChar:
+ 109               		.stabd	46,0,0
+   1:i2cio.c       **** #include <avr/io.h>
+   2:i2cio.c       **** #define F_CPU 16000000UL
+   3:i2cio.c       **** #include <util/delay.h>
+   4:i2cio.c       **** #include <util/twi.h>
+   5:i2cio.c       **** #include <avr/interrupt.h>
+GAS LISTING /tmp/ccu7QES2.s 			page 3
+
+
+   6:i2cio.c       **** 
+   7:i2cio.c       **** #include "registers.h"
+   8:i2cio.c       **** 
+   9:i2cio.c       **** #define SERIAL
+  10:i2cio.c       **** 
+  11:i2cio.c       **** 
+  12:i2cio.c       **** typedef unsigned char byte_t;
+  13:i2cio.c       **** typedef unsigned char bool_t;
+  14:i2cio.c       **** 
+  15:i2cio.c       **** 
+  16:i2cio.c       **** 
+  17:i2cio.c       **** //volatile uint8_t buffer_address;
+  18:i2cio.c       **** //volatile uint8_t txbuffer[0xFF];
+  19:i2cio.c       **** //volatile uint8_t rxbuffer[0xFF];
+  20:i2cio.c       **** 
+  21:i2cio.c       **** 
+  22:i2cio.c       **** #define IDLE            0
+  23:i2cio.c       **** #define MY_ADDR            1
+  24:i2cio.c       **** #define PTR_RCVD        2
+  25:i2cio.c       **** #define PKT_RCVD        3
+  26:i2cio.c       **** #define SENDING_RESP        4
+  27:i2cio.c       **** 
+  28:i2cio.c       **** volatile int state = IDLE;
+  29:i2cio.c       **** volatile int inptr=0, outptr=0;
+  30:i2cio.c       **** 
+  31:i2cio.c       **** 
+  32:i2cio.c       **** volatile unsigned char Incoming[50];
+  33:i2cio.c       **** volatile unsigned char Outgoing[50];
+  34:i2cio.c       **** 
+  35:i2cio.c       **** void sendChar(volatile char a)
+  36:i2cio.c       **** {
+ 110               		.stabn	68,0,36,.LM0-.LFBB1
+ 111               	.LM0:
+ 112               	.LFBB1:
+ 113 0000 CF93      		push r28
+ 114 0002 DF93      		push r29
+ 115 0004 1F92      		push __zero_reg__
+ 116 0006 CDB7      		in r28,__SP_L__
+ 117 0008 DEB7      		in r29,__SP_H__
+ 118               	/* prologue: function */
+ 119               	/* frame size = 1 */
+ 120               	/* stack size = 3 */
+ 121               	.L__stack_usage = 3
+ 122 000a 8983      		std Y+1,r24
+ 123               	.L3:
+  37:i2cio.c       ****    while( !(UCSRA&(1<<UDRE)) );
+ 124               		.stabn	68,0,37,.LM1-.LFBB1
+ 125               	.LM1:
+ 126 000c 5D9B      		sbis 0xb,5
+ 127 000e 00C0      		rjmp .L3
+  38:i2cio.c       ****    UDR=a;
+ 128               		.stabn	68,0,38,.LM2-.LFBB1
+ 129               	.LM2:
+ 130 0010 8981      		ldd r24,Y+1
+ 131 0012 8CB9      		out 0xc,r24
+ 132               	/* epilogue start */
+  39:i2cio.c       **** }  
+GAS LISTING /tmp/ccu7QES2.s 			page 4
+
+
+ 133               		.stabn	68,0,39,.LM3-.LFBB1
+ 134               	.LM3:
+ 135 0014 0F90      		pop __tmp_reg__
+ 136 0016 DF91      		pop r29
+ 137 0018 CF91      		pop r28
+ 138 001a 0895      		ret
+ 139               		.size	sendChar, .-sendChar
+ 140               	.Lscope1:
+ 141               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 142               		.stabd	78,0,0
+ 143               		.stabs	"sendString:F(0,47)",36,0,42,sendString
+ 144               		.stabs	"a:P(0,51)=*(0,50)",64,0,42,24
+ 145               	.global	sendString
+ 146               		.type	sendString, @function
+ 147               	sendString:
+ 148               		.stabd	46,0,0
+  40:i2cio.c       **** 
+  41:i2cio.c       **** 
+  42:i2cio.c       **** void sendString(volatile char *a)
+  43:i2cio.c       **** {
+ 149               		.stabn	68,0,43,.LM4-.LFBB2
+ 150               	.LM4:
+ 151               	.LFBB2:
+ 152 001c CF93      		push r28
+ 153 001e DF93      		push r29
+ 154               	/* prologue: function */
+ 155               	/* frame size = 0 */
+ 156               	/* stack size = 2 */
+ 157               	.L__stack_usage = 2
+ 158 0020 EC01      		movw r28,r24
+ 159               	.L6:
+  44:i2cio.c       **** #ifdef SERIAL
+  45:i2cio.c       ****    int index=0;
+  46:i2cio.c       **** 
+  47:i2cio.c       ****    while(a[(int)index]!='\0')
+ 160               		.stabn	68,0,47,.LM5-.LFBB2
+ 161               	.LM5:
+ 162 0022 FE01      		movw r30,r28
+ 163 0024 8991      		ld r24,Y+
+ 164 0026 8823      		tst r24
+ 165 0028 01F0      		breq .L8
+  48:i2cio.c       ****    {
+  49:i2cio.c       ****       sendChar(a[(int)index]);
+ 166               		.stabn	68,0,49,.LM6-.LFBB2
+ 167               	.LM6:
+ 168 002a 8081      		ld r24,Z
+ 169 002c 0E94 0000 		call sendChar
+ 170 0030 00C0      		rjmp .L6
+ 171               	.L8:
+ 172               	/* epilogue start */
+  50:i2cio.c       ****       index++;
+  51:i2cio.c       ****    }
+  52:i2cio.c       ****    index=0;
+  53:i2cio.c       **** #endif
+  54:i2cio.c       **** }
+ 173               		.stabn	68,0,54,.LM7-.LFBB2
+ 174               	.LM7:
+GAS LISTING /tmp/ccu7QES2.s 			page 5
+
+
+ 175 0032 DF91      		pop r29
+ 176 0034 CF91      		pop r28
+ 177 0036 0895      		ret
+ 178               		.size	sendString, .-sendString
+ 179               	.Lscope2:
+ 180               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 181               		.stabd	78,0,0
+ 182               		.stabs	"sendULInt:F(0,47)",36,0,56,sendULInt
+ 183               		.stabs	"x:P(0,5)",64,0,56,12
+ 184               	.global	sendULInt
+ 185               		.type	sendULInt, @function
+ 186               	sendULInt:
+ 187               		.stabd	46,0,0
+  55:i2cio.c       **** 
+  56:i2cio.c       **** void sendULInt(unsigned long int x)
+  57:i2cio.c       **** {
+ 188               		.stabn	68,0,57,.LM8-.LFBB3
+ 189               	.LM8:
+ 190               	.LFBB3:
+ 191 0038 4F92      		push r4
+ 192 003a 5F92      		push r5
+ 193 003c 6F92      		push r6
+ 194 003e 7F92      		push r7
+ 195 0040 AF92      		push r10
+ 196 0042 BF92      		push r11
+ 197 0044 CF92      		push r12
+ 198 0046 DF92      		push r13
+ 199 0048 EF92      		push r14
+ 200 004a FF92      		push r15
+ 201 004c 0F93      		push r16
+ 202 004e 1F93      		push r17
+ 203 0050 CF93      		push r28
+ 204 0052 DF93      		push r29
+ 205 0054 CDB7      		in r28,__SP_L__
+ 206 0056 DEB7      		in r29,__SP_H__
+ 207 0058 2F97      		sbiw r28,15
+ 208 005a 0FB6      		in __tmp_reg__,__SREG__
+ 209 005c F894      		cli
+ 210 005e DEBF      		out __SP_H__,r29
+ 211 0060 0FBE      		out __SREG__,__tmp_reg__
+ 212 0062 CDBF      		out __SP_L__,r28
+ 213               	/* prologue: function */
+ 214               	/* frame size = 15 */
+ 215               	/* stack size = 29 */
+ 216               	.L__stack_usage = 29
+ 217 0064 6B01      		movw r12,r22
+ 218 0066 7C01      		movw r14,r24
+  58:i2cio.c       **** #ifdef SERIAL
+  59:i2cio.c       ****    char integer[15];
+  60:i2cio.c       ****    int place=14;
+  61:i2cio.c       ****    if(x==0)
+ 219               		.stabn	68,0,61,.LM9-.LFBB3
+ 220               	.LM9:
+ 221 0068 6115      		cp r22,__zero_reg__
+ 222 006a 7105      		cpc r23,__zero_reg__
+ 223 006c 8105      		cpc r24,__zero_reg__
+ 224 006e 9105      		cpc r25,__zero_reg__
+GAS LISTING /tmp/ccu7QES2.s 			page 6
+
+
+ 225 0070 01F4      		brne .L10
+  62:i2cio.c       ****    {
+  63:i2cio.c       ****       sendChar('0');
+ 226               		.stabn	68,0,63,.LM10-.LFBB3
+ 227               	.LM10:
+ 228 0072 80E3      		ldi r24,lo8(48)
+ 229 0074 0E94 0000 		call sendChar
+ 230               	.L10:
+ 231 0078 5E01      		movw r10,r28
+ 232 007a 80E1      		ldi r24,16
+ 233 007c A80E      		add r10,r24
+ 234 007e B11C      		adc r11,__zero_reg__
+  57:i2cio.c       **** {
+ 235               		.stabn	68,0,57,.LM11-.LFBB3
+ 236               	.LM11:
+ 237 0080 0EE0      		ldi r16,lo8(14)
+ 238 0082 10E0      		ldi r17,0
+  64:i2cio.c       ****    }
+  65:i2cio.c       ****    while(x!=0)
+  66:i2cio.c       ****    {
+  67:i2cio.c       ****       integer[place]=(x%10)+48;
+ 239               		.stabn	68,0,67,.LM12-.LFBB3
+ 240               	.LM12:
+ 241 0084 8AE0      		ldi r24,lo8(10)
+ 242 0086 482E      		mov r4,r24
+ 243 0088 512C      		mov r5,__zero_reg__
+ 244 008a 612C      		mov r6,__zero_reg__
+ 245 008c 712C      		mov r7,__zero_reg__
+ 246               	.L11:
+  65:i2cio.c       ****    while(x!=0)
+ 247               		.stabn	68,0,65,.LM13-.LFBB3
+ 248               	.LM13:
+ 249 008e C114      		cp r12,__zero_reg__
+ 250 0090 D104      		cpc r13,__zero_reg__
+ 251 0092 E104      		cpc r14,__zero_reg__
+ 252 0094 F104      		cpc r15,__zero_reg__
+ 253 0096 01F0      		breq .L13
+ 254               		.stabn	68,0,67,.LM14-.LFBB3
+ 255               	.LM14:
+ 256 0098 C701      		movw r24,r14
+ 257 009a B601      		movw r22,r12
+ 258 009c A301      		movw r20,r6
+ 259 009e 9201      		movw r18,r4
+ 260 00a0 0E94 0000 		call __udivmodsi4
+ 261 00a4 605D      		subi r22,lo8(-(48))
+ 262 00a6 F501      		movw r30,r10
+ 263 00a8 6293      		st -Z,r22
+ 264 00aa 5F01      		movw r10,r30
+  68:i2cio.c       ****       x/=10;
+ 265               		.stabn	68,0,68,.LM15-.LFBB3
+ 266               	.LM15:
+ 267 00ac 6901      		movw r12,r18
+ 268 00ae 7A01      		movw r14,r20
+  69:i2cio.c       ****       place--;
+ 269               		.stabn	68,0,69,.LM16-.LFBB3
+ 270               	.LM16:
+ 271 00b0 0150      		subi r16,1
+GAS LISTING /tmp/ccu7QES2.s 			page 7
+
+
+ 272 00b2 1109      		sbc r17,__zero_reg__
+ 273 00b4 00C0      		rjmp .L11
+ 274               	.L13:
+ 275 00b6 0F5F      		subi r16,-1
+ 276 00b8 1F4F      		sbci r17,-1
+  70:i2cio.c       ****    }
+  71:i2cio.c       ****    place++;
+  72:i2cio.c       ****    while(place<=14)
+ 277               		.stabn	68,0,72,.LM17-.LFBB3
+ 278               	.LM17:
+ 279 00ba 0F30      		cpi r16,15
+ 280 00bc 1105      		cpc r17,__zero_reg__
+ 281 00be 01F0      		breq .L15
+ 282 00c0 E1E0      		ldi r30,lo8(1)
+ 283 00c2 F0E0      		ldi r31,0
+ 284 00c4 EC0F      		add r30,r28
+ 285 00c6 FD1F      		adc r31,r29
+ 286 00c8 E00F      		add r30,r16
+ 287 00ca F11F      		adc r31,r17
+  73:i2cio.c       ****    {
+  74:i2cio.c       ****       sendChar(integer[place]);
+ 288               		.stabn	68,0,74,.LM18-.LFBB3
+ 289               	.LM18:
+ 290 00cc 8081      		ld r24,Z
+ 291 00ce 0E94 0000 		call sendChar
+ 292 00d2 00C0      		rjmp .L13
+ 293               	.L15:
+ 294               	/* epilogue start */
+  75:i2cio.c       ****       place++;
+  76:i2cio.c       ****    }
+  77:i2cio.c       **** #endif
+  78:i2cio.c       **** }
+ 295               		.stabn	68,0,78,.LM19-.LFBB3
+ 296               	.LM19:
+ 297 00d4 2F96      		adiw r28,15
+ 298 00d6 0FB6      		in __tmp_reg__,__SREG__
+ 299 00d8 F894      		cli
+ 300 00da DEBF      		out __SP_H__,r29
+ 301 00dc 0FBE      		out __SREG__,__tmp_reg__
+ 302 00de CDBF      		out __SP_L__,r28
+ 303 00e0 DF91      		pop r29
+ 304 00e2 CF91      		pop r28
+ 305 00e4 1F91      		pop r17
+ 306 00e6 0F91      		pop r16
+ 307 00e8 FF90      		pop r15
+ 308 00ea EF90      		pop r14
+ 309 00ec DF90      		pop r13
+ 310 00ee CF90      		pop r12
+ 311 00f0 BF90      		pop r11
+ 312 00f2 AF90      		pop r10
+ 313 00f4 7F90      		pop r7
+ 314 00f6 6F90      		pop r6
+ 315 00f8 5F90      		pop r5
+ 316 00fa 4F90      		pop r4
+ 317 00fc 0895      		ret
+ 318               		.size	sendULInt, .-sendULInt
+ 319               		.stabs	"integer:(0,52)=ar(0,53)=r(0,53);0;0177777;;0;14;(0,2)",128,0,59,1
+GAS LISTING /tmp/ccu7QES2.s 			page 8
+
+
+ 320               		.stabs	"place:r(0,1)",64,0,60,16
+ 321               		.stabn	192,0,0,.LFBB3-.LFBB3
+ 322               		.stabn	224,0,0,.Lscope3-.LFBB3
+ 323               	.Lscope3:
+ 324               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 325               		.stabd	78,0,0
+ 326               		.stabs	"sendByte:F(0,47)",36,0,82,sendByte
+ 327               		.stabs	"b:P(0,48)",64,0,82,15
+ 328               	.global	sendByte
+ 329               		.type	sendByte, @function
+ 330               	sendByte:
+ 331               		.stabd	46,0,0
+  79:i2cio.c       **** 
+  80:i2cio.c       **** 
+  81:i2cio.c       **** 
+  82:i2cio.c       **** void sendByte(byte_t b)
+  83:i2cio.c       **** {
+ 332               		.stabn	68,0,83,.LM20-.LFBB4
+ 333               	.LM20:
+ 334               	.LFBB4:
+ 335 00fe FF92      		push r15
+ 336 0100 0F93      		push r16
+ 337 0102 1F93      		push r17
+ 338 0104 CF93      		push r28
+ 339 0106 DF93      		push r29
+ 340 0108 00D0      		rcall .
+ 341 010a 1F92      		push __zero_reg__
+ 342 010c CDB7      		in r28,__SP_L__
+ 343 010e DEB7      		in r29,__SP_H__
+ 344               	/* prologue: function */
+ 345               	/* frame size = 3 */
+ 346               	/* stack size = 8 */
+ 347               	.L__stack_usage = 8
+ 348 0110 F82E      		mov r15,r24
+  84:i2cio.c       **** #ifdef SERIAL
+  85:i2cio.c       ****    char integer[3];
+  86:i2cio.c       ****    int place=2;
+  87:i2cio.c       ****    if(b==0)
+ 349               		.stabn	68,0,87,.LM21-.LFBB4
+ 350               	.LM21:
+ 351 0112 8111      		cpse r24,__zero_reg__
+ 352 0114 00C0      		rjmp .L17
+  88:i2cio.c       ****    {
+  89:i2cio.c       ****       sendChar('0');
+ 353               		.stabn	68,0,89,.LM22-.LFBB4
+ 354               	.LM22:
+ 355 0116 80E3      		ldi r24,lo8(48)
+ 356 0118 0E94 0000 		call sendChar
+ 357               	.L17:
+ 358 011c FE01      		movw r30,r28
+ 359 011e 3496      		adiw r30,4
+  83:i2cio.c       **** {
+ 360               		.stabn	68,0,83,.LM23-.LFBB4
+ 361               	.LM23:
+ 362 0120 02E0      		ldi r16,lo8(2)
+ 363 0122 10E0      		ldi r17,0
+  90:i2cio.c       ****    }
+GAS LISTING /tmp/ccu7QES2.s 			page 9
+
+
+  91:i2cio.c       ****    while(b!=0)
+  92:i2cio.c       ****    {
+  93:i2cio.c       ****       integer[place]=(b%10)+48;
+ 364               		.stabn	68,0,93,.LM24-.LFBB4
+ 365               	.LM24:
+ 366 0124 2AE0      		ldi r18,lo8(10)
+ 367               	.L18:
+  91:i2cio.c       ****    while(b!=0)
+ 368               		.stabn	68,0,91,.LM25-.LFBB4
+ 369               	.LM25:
+ 370 0126 FF20      		tst r15
+ 371 0128 01F0      		breq .L20
+ 372               		.stabn	68,0,93,.LM26-.LFBB4
+ 373               	.LM26:
+ 374 012a 8F2D      		mov r24,r15
+ 375 012c 622F      		mov r22,r18
+ 376 012e 0E94 0000 		call __udivmodqi4
+ 377 0132 905D      		subi r25,lo8(-(48))
+ 378 0134 9293      		st -Z,r25
+  94:i2cio.c       ****       b/=10;
+ 379               		.stabn	68,0,94,.LM27-.LFBB4
+ 380               	.LM27:
+ 381 0136 F82E      		mov r15,r24
+  95:i2cio.c       ****       place--;
+ 382               		.stabn	68,0,95,.LM28-.LFBB4
+ 383               	.LM28:
+ 384 0138 0150      		subi r16,1
+ 385 013a 1109      		sbc r17,__zero_reg__
+ 386 013c 00C0      		rjmp .L18
+ 387               	.L20:
+ 388 013e 0F5F      		subi r16,-1
+ 389 0140 1F4F      		sbci r17,-1
+  96:i2cio.c       ****    }
+  97:i2cio.c       ****    place++;
+  98:i2cio.c       ****    while(place<=2)
+ 390               		.stabn	68,0,98,.LM29-.LFBB4
+ 391               	.LM29:
+ 392 0142 0330      		cpi r16,3
+ 393 0144 1105      		cpc r17,__zero_reg__
+ 394 0146 01F0      		breq .L22
+ 395 0148 E1E0      		ldi r30,lo8(1)
+ 396 014a F0E0      		ldi r31,0
+ 397 014c EC0F      		add r30,r28
+ 398 014e FD1F      		adc r31,r29
+ 399 0150 E00F      		add r30,r16
+ 400 0152 F11F      		adc r31,r17
+  99:i2cio.c       ****    {
+ 100:i2cio.c       ****       sendChar(integer[place]);
+ 401               		.stabn	68,0,100,.LM30-.LFBB4
+ 402               	.LM30:
+ 403 0154 8081      		ld r24,Z
+ 404 0156 0E94 0000 		call sendChar
+ 405 015a 00C0      		rjmp .L20
+ 406               	.L22:
+ 407               	/* epilogue start */
+ 101:i2cio.c       ****       place++;
+ 102:i2cio.c       ****    }
+GAS LISTING /tmp/ccu7QES2.s 			page 10
+
+
+ 103:i2cio.c       **** #endif 
+ 104:i2cio.c       **** }
+ 408               		.stabn	68,0,104,.LM31-.LFBB4
+ 409               	.LM31:
+ 410 015c 0F90      		pop __tmp_reg__
+ 411 015e 0F90      		pop __tmp_reg__
+ 412 0160 0F90      		pop __tmp_reg__
+ 413 0162 DF91      		pop r29
+ 414 0164 CF91      		pop r28
+ 415 0166 1F91      		pop r17
+ 416 0168 0F91      		pop r16
+ 417 016a FF90      		pop r15
+ 418 016c 0895      		ret
+ 419               		.size	sendByte, .-sendByte
+ 420               		.stabs	"integer:(0,54)=ar(0,53);0;2;(0,2)",128,0,85,1
+ 421               		.stabs	"place:r(0,1)",64,0,86,16
+ 422               		.stabn	192,0,0,.LFBB4-.LFBB4
+ 423               		.stabn	224,0,0,.Lscope4-.LFBB4
+ 424               	.Lscope4:
+ 425               		.stabs	"",36,0,0,.Lscope4-.LFBB4
+ 426               		.stabd	78,0,0
+ 427               		.stabs	"sendWord:F(0,47)",36,0,106,sendWord
+ 428               		.stabs	"w:P(0,4)",64,0,106,16
+ 429               	.global	sendWord
+ 430               		.type	sendWord, @function
+ 431               	sendWord:
+ 432               		.stabd	46,0,0
+ 105:i2cio.c       **** 
+ 106:i2cio.c       **** void sendWord(unsigned int w)
+ 107:i2cio.c       **** {
+ 433               		.stabn	68,0,107,.LM32-.LFBB5
+ 434               	.LM32:
+ 435               	.LFBB5:
+ 436 016e EF92      		push r14
+ 437 0170 FF92      		push r15
+ 438 0172 0F93      		push r16
+ 439 0174 1F93      		push r17
+ 440 0176 CF93      		push r28
+ 441 0178 DF93      		push r29
+ 442 017a 00D0      		rcall .
+ 443 017c 00D0      		rcall .
+ 444 017e 1F92      		push __zero_reg__
+ 445 0180 CDB7      		in r28,__SP_L__
+ 446 0182 DEB7      		in r29,__SP_H__
+ 447               	/* prologue: function */
+ 448               	/* frame size = 5 */
+ 449               	/* stack size = 11 */
+ 450               	.L__stack_usage = 11
+ 451 0184 8C01      		movw r16,r24
+ 108:i2cio.c       ****    char integer[5];
+ 109:i2cio.c       ****    int place=4;
+ 110:i2cio.c       ****    if(w==0)
+ 452               		.stabn	68,0,110,.LM33-.LFBB5
+ 453               	.LM33:
+ 454 0186 0097      		sbiw r24,0
+ 455 0188 01F4      		brne .L24
+ 111:i2cio.c       ****    {
+GAS LISTING /tmp/ccu7QES2.s 			page 11
+
+
+ 112:i2cio.c       ****       sendChar('0');
+ 456               		.stabn	68,0,112,.LM34-.LFBB5
+ 457               	.LM34:
+ 458 018a 80E3      		ldi r24,lo8(48)
+ 459 018c 0E94 0000 		call sendChar
+ 460               	.L24:
+ 461 0190 FE01      		movw r30,r28
+ 462 0192 3696      		adiw r30,6
+ 107:i2cio.c       **** {
+ 463               		.stabn	68,0,107,.LM35-.LFBB5
+ 464               	.LM35:
+ 465 0194 24E0      		ldi r18,lo8(4)
+ 466 0196 30E0      		ldi r19,0
+ 113:i2cio.c       ****    }
+ 114:i2cio.c       ****    while(w!=0)
+ 115:i2cio.c       ****    {
+ 116:i2cio.c       ****       integer[place]=(w%10)+48;
+ 467               		.stabn	68,0,116,.LM36-.LFBB5
+ 468               	.LM36:
+ 469 0198 9AE0      		ldi r25,lo8(10)
+ 470 019a E92E      		mov r14,r25
+ 471 019c F12C      		mov r15,__zero_reg__
+ 472               	.L25:
+ 114:i2cio.c       ****    while(w!=0)
+ 473               		.stabn	68,0,114,.LM37-.LFBB5
+ 474               	.LM37:
+ 475 019e 0115      		cp r16,__zero_reg__
+ 476 01a0 1105      		cpc r17,__zero_reg__
+ 477 01a2 01F0      		breq .L29
+ 478               		.stabn	68,0,116,.LM38-.LFBB5
+ 479               	.LM38:
+ 480 01a4 C801      		movw r24,r16
+ 481 01a6 B701      		movw r22,r14
+ 482 01a8 0E94 0000 		call __udivmodhi4
+ 483 01ac 805D      		subi r24,lo8(-(48))
+ 484 01ae 8293      		st -Z,r24
+ 117:i2cio.c       ****       w/=10;
+ 485               		.stabn	68,0,117,.LM39-.LFBB5
+ 486               	.LM39:
+ 487 01b0 8B01      		movw r16,r22
+ 118:i2cio.c       ****       place--;
+ 488               		.stabn	68,0,118,.LM40-.LFBB5
+ 489               	.LM40:
+ 490 01b2 2150      		subi r18,1
+ 491 01b4 3109      		sbc r19,__zero_reg__
+ 492 01b6 00C0      		rjmp .L25
+ 493               	.L29:
+ 494 01b8 8901      		movw r16,r18
+ 495               	.L27:
+ 496 01ba 0F5F      		subi r16,-1
+ 497 01bc 1F4F      		sbci r17,-1
+ 119:i2cio.c       ****    }
+ 120:i2cio.c       ****    place++;
+ 121:i2cio.c       ****    while(place<=4)
+ 498               		.stabn	68,0,121,.LM41-.LFBB5
+ 499               	.LM41:
+ 500 01be 0530      		cpi r16,5
+GAS LISTING /tmp/ccu7QES2.s 			page 12
+
+
+ 501 01c0 1105      		cpc r17,__zero_reg__
+ 502 01c2 01F0      		breq .L30
+ 503 01c4 E1E0      		ldi r30,lo8(1)
+ 504 01c6 F0E0      		ldi r31,0
+ 505 01c8 EC0F      		add r30,r28
+ 506 01ca FD1F      		adc r31,r29
+ 507 01cc E00F      		add r30,r16
+ 508 01ce F11F      		adc r31,r17
+ 122:i2cio.c       ****    {
+ 123:i2cio.c       ****       sendChar(integer[place]);
+ 509               		.stabn	68,0,123,.LM42-.LFBB5
+ 510               	.LM42:
+ 511 01d0 8081      		ld r24,Z
+ 512 01d2 0E94 0000 		call sendChar
+ 513 01d6 00C0      		rjmp .L27
+ 514               	.L30:
+ 515               	/* epilogue start */
+ 124:i2cio.c       ****       place++;
+ 125:i2cio.c       ****    }
+ 126:i2cio.c       **** }
+ 516               		.stabn	68,0,126,.LM43-.LFBB5
+ 517               	.LM43:
+ 518 01d8 0F90      		pop __tmp_reg__
+ 519 01da 0F90      		pop __tmp_reg__
+ 520 01dc 0F90      		pop __tmp_reg__
+ 521 01de 0F90      		pop __tmp_reg__
+ 522 01e0 0F90      		pop __tmp_reg__
+ 523 01e2 DF91      		pop r29
+ 524 01e4 CF91      		pop r28
+ 525 01e6 1F91      		pop r17
+ 526 01e8 0F91      		pop r16
+ 527 01ea FF90      		pop r15
+ 528 01ec EF90      		pop r14
+ 529 01ee 0895      		ret
+ 530               		.size	sendWord, .-sendWord
+ 531               		.stabs	"integer:(0,55)=ar(0,53);0;4;(0,2)",128,0,108,1
+ 532               		.stabs	"place:r(0,1)",64,0,109,18
+ 533               		.stabn	192,0,0,.LFBB5-.LFBB5
+ 534               		.stabn	224,0,0,.Lscope5-.LFBB5
+ 535               	.Lscope5:
+ 536               		.stabs	"",36,0,0,.Lscope5-.LFBB5
+ 537               		.stabd	78,0,0
+ 538               		.stabs	"get_checksum:F(0,48)",36,0,128,get_checksum
+ 539               		.stabs	"start:P(0,56)=*(0,48)",64,0,128,24
+ 540               		.stabs	"count:P(0,1)",64,0,128,22
+ 541               	.global	get_checksum
+ 542               		.type	get_checksum, @function
+ 543               	get_checksum:
+ 544               		.stabd	46,0,0
+ 127:i2cio.c       **** 
+ 128:i2cio.c       **** byte_t get_checksum(byte_t * start, int count)
+ 129:i2cio.c       **** {
+ 545               		.stabn	68,0,129,.LM44-.LFBB6
+ 546               	.LM44:
+ 547               	.LFBB6:
+ 548               	/* prologue: function */
+ 549               	/* frame size = 0 */
+GAS LISTING /tmp/ccu7QES2.s 			page 13
+
+
+ 550               	/* stack size = 0 */
+ 551               	.L__stack_usage = 0
+ 130:i2cio.c       ****    byte_t sum = 0;
+ 131:i2cio.c       ****    int i;
+ 132:i2cio.c       ****    for(i=0; i<count; i++)
+ 552               		.stabn	68,0,132,.LM45-.LFBB6
+ 553               	.LM45:
+ 554 01f0 FC01      		movw r30,r24
+ 130:i2cio.c       ****    byte_t sum = 0;
+ 555               		.stabn	68,0,130,.LM46-.LFBB6
+ 556               	.LM46:
+ 557 01f2 40E0      		ldi r20,0
+ 558               	.L32:
+ 559 01f4 9F01      		movw r18,r30
+ 560 01f6 281B      		sub r18,r24
+ 561 01f8 390B      		sbc r19,r25
+ 562               		.stabn	68,0,132,.LM47-.LFBB6
+ 563               	.LM47:
+ 564 01fa 2617      		cp r18,r22
+ 565 01fc 3707      		cpc r19,r23
+ 566 01fe 04F4      		brge .L34
+ 133:i2cio.c       ****    {
+ 134:i2cio.c       ****       sum+=start[i];
+ 567               		.stabn	68,0,134,.LM48-.LFBB6
+ 568               	.LM48:
+ 569 0200 2191      		ld r18,Z+
+ 570 0202 420F      		add r20,r18
+ 571 0204 00C0      		rjmp .L32
+ 572               	.L34:
+ 135:i2cio.c       ****    }
+ 136:i2cio.c       ****    sum++;
+ 137:i2cio.c       ****    return 0-sum;
+ 138:i2cio.c       **** }
+ 573               		.stabn	68,0,138,.LM49-.LFBB6
+ 574               	.LM49:
+ 575 0206 842F      		mov r24,r20
+ 576 0208 8095      		com r24
+ 577 020a 0895      		ret
+ 578               		.size	get_checksum, .-get_checksum
+ 579               	.Lscope6:
+ 580               		.stabs	"",36,0,0,.Lscope6-.LFBB6
+ 581               		.stabd	78,0,0
+ 582               		.section	.rodata.str1.1,"aMS",@progbits,1
+ 583               	.LC0:
+ 584 0000 6368 6563 		.string	"checksum good\n\r"
+ 584      6B73 756D 
+ 584      2067 6F6F 
+ 584      640A 0D00 
+ 585               	.LC1:
+ 586 0010 6368 6563 		.string	"checksum bad   expected:"
+ 586      6B73 756D 
+ 586      2062 6164 
+ 586      2020 2065 
+ 586      7870 6563 
+ 587               	.LC2:
+ 588 0029 7265 6365 		.string	"received:"
+ 588      6976 6564 
+GAS LISTING /tmp/ccu7QES2.s 			page 14
+
+
+ 588      3A00 
+ 589               	.LC3:
+ 590 0033 0A0D 00   		.string	"\n\r"
+ 591               		.text
+ 592               		.stabs	"prepare_response:F(0,47)",36,0,140,prepare_response
+ 593               	.global	prepare_response
+ 594               		.type	prepare_response, @function
+ 595               	prepare_response:
+ 596               		.stabd	46,0,0
+ 139:i2cio.c       **** 
+ 140:i2cio.c       **** void prepare_response()
+ 141:i2cio.c       **** {
+ 597               		.stabn	68,0,141,.LM50-.LFBB7
+ 598               	.LM50:
+ 599               	.LFBB7:
+ 600 020c 1F93      		push r17
+ 601 020e CF93      		push r28
+ 602 0210 DF93      		push r29
+ 603               	/* prologue: function */
+ 604               	/* frame size = 0 */
+ 605               	/* stack size = 3 */
+ 606               	.L__stack_usage = 3
+ 142:i2cio.c       ****    byte_t len = Incoming[0];  //length of whole packet icluding len and data and checksum.
+ 607               		.stabn	68,0,142,.LM51-.LFBB7
+ 608               	.LM51:
+ 609 0212 C091 0000 		lds r28,Incoming
+ 143:i2cio.c       ****    int index_of_checksum = len-1;
+ 610               		.stabn	68,0,143,.LM52-.LFBB7
+ 611               	.LM52:
+ 612 0216 D0E0      		ldi r29,0
+ 613 0218 2197      		sbiw r28,1
+ 144:i2cio.c       ****    //data is from index 1 to index_of_checksum-1;
+ 145:i2cio.c       ****    //checksum is of len and data;
+ 146:i2cio.c       ****    byte_t expected_checksum = get_checksum(Incoming, len-1);
+ 614               		.stabn	68,0,146,.LM53-.LFBB7
+ 615               	.LM53:
+ 616 021a BE01      		movw r22,r28
+ 617 021c 80E0      		ldi r24,lo8(Incoming)
+ 618 021e 90E0      		ldi r25,hi8(Incoming)
+ 619 0220 0E94 0000 		call get_checksum
+ 620 0224 182F      		mov r17,r24
+ 147:i2cio.c       ****    if(expected_checksum == Incoming[index_of_checksum])
+ 621               		.stabn	68,0,147,.LM54-.LFBB7
+ 622               	.LM54:
+ 623 0226 C050      		subi r28,lo8(-(Incoming))
+ 624 0228 D040      		sbci r29,hi8(-(Incoming))
+ 625 022a 8881      		ld r24,Y
+ 626 022c 1813      		cpse r17,r24
+ 627 022e 00C0      		rjmp .L36
+ 148:i2cio.c       ****    {
+ 149:i2cio.c       ****       sendString("checksum good\n\r");
+ 628               		.stabn	68,0,149,.LM55-.LFBB7
+ 629               	.LM55:
+ 630 0230 80E0      		ldi r24,lo8(.LC0)
+ 631 0232 90E0      		ldi r25,hi8(.LC0)
+ 632 0234 0E94 0000 		call sendString
+ 150:i2cio.c       ****       Outgoing[0] = 1;
+GAS LISTING /tmp/ccu7QES2.s 			page 15
+
+
+ 633               		.stabn	68,0,150,.LM56-.LFBB7
+ 634               	.LM56:
+ 635 0238 81E0      		ldi r24,lo8(1)
+ 636 023a 8093 0000 		sts Outgoing,r24
+ 151:i2cio.c       ****       Outgoing[1] = -2;
+ 637               		.stabn	68,0,151,.LM57-.LFBB7
+ 638               	.LM57:
+ 639 023e 8EEF      		ldi r24,lo8(-2)
+ 640 0240 8093 0000 		sts Outgoing+1,r24
+ 641 0244 00C0      		rjmp .L37
+ 642               	.L36:
+ 152:i2cio.c       ****    }
+ 153:i2cio.c       ****    else
+ 154:i2cio.c       ****    {
+ 155:i2cio.c       ****       sendString("checksum bad   expected:");
+ 643               		.stabn	68,0,155,.LM58-.LFBB7
+ 644               	.LM58:
+ 645 0246 80E0      		ldi r24,lo8(.LC1)
+ 646 0248 90E0      		ldi r25,hi8(.LC1)
+ 647 024a 0E94 0000 		call sendString
+ 156:i2cio.c       ****       sendULInt(expected_checksum);
+ 648               		.stabn	68,0,156,.LM59-.LFBB7
+ 649               	.LM59:
+ 650 024e 612F      		mov r22,r17
+ 651 0250 70E0      		ldi r23,0
+ 652 0252 80E0      		ldi r24,0
+ 653 0254 90E0      		ldi r25,0
+ 654 0256 0E94 0000 		call sendULInt
+ 157:i2cio.c       ****       sendString("received:");
+ 655               		.stabn	68,0,157,.LM60-.LFBB7
+ 656               	.LM60:
+ 657 025a 80E0      		ldi r24,lo8(.LC2)
+ 658 025c 90E0      		ldi r25,hi8(.LC2)
+ 659 025e 0E94 0000 		call sendString
+ 158:i2cio.c       ****       sendULInt(Incoming[index_of_checksum]);
+ 660               		.stabn	68,0,158,.LM61-.LFBB7
+ 661               	.LM61:
+ 662 0262 6881      		ld r22,Y
+ 663 0264 70E0      		ldi r23,0
+ 664 0266 80E0      		ldi r24,0
+ 665 0268 90E0      		ldi r25,0
+ 666 026a 0E94 0000 		call sendULInt
+ 159:i2cio.c       ****       sendString("\n\r");
+ 667               		.stabn	68,0,159,.LM62-.LFBB7
+ 668               	.LM62:
+ 669 026e 80E0      		ldi r24,lo8(.LC3)
+ 670 0270 90E0      		ldi r25,hi8(.LC3)
+ 671 0272 0E94 0000 		call sendString
+ 672               	.L37:
+ 160:i2cio.c       ****    }
+ 161:i2cio.c       ****    Outgoing[0] = 0xff;
+ 673               		.stabn	68,0,161,.LM63-.LFBB7
+ 674               	.LM63:
+ 675 0276 8FEF      		ldi r24,lo8(-1)
+ 676 0278 8093 0000 		sts Outgoing,r24
+ 162:i2cio.c       ****    Outgoing[1] = 0xee;
+ 677               		.stabn	68,0,162,.LM64-.LFBB7
+GAS LISTING /tmp/ccu7QES2.s 			page 16
+
+
+ 678               	.LM64:
+ 679 027c 8EEE      		ldi r24,lo8(-18)
+ 680 027e 8093 0000 		sts Outgoing+1,r24
+ 681               	/* epilogue start */
+ 163:i2cio.c       **** }
+ 682               		.stabn	68,0,163,.LM65-.LFBB7
+ 683               	.LM65:
+ 684 0282 DF91      		pop r29
+ 685 0284 CF91      		pop r28
+ 686 0286 1F91      		pop r17
+ 687 0288 0895      		ret
+ 688               		.size	prepare_response, .-prepare_response
+ 689               		.stabs	"len:r(0,48)",64,0,142,28
+ 690               		.stabs	"index_of_checksum:r(0,1)",64,0,143,28
+ 691               		.stabs	"expected_checksum:r(0,48)",64,0,146,17
+ 692               		.stabn	192,0,0,.LFBB7-.LFBB7
+ 693               		.stabn	224,0,0,.Lscope7-.LFBB7
+ 694               	.Lscope7:
+ 695               		.stabs	"",36,0,0,.Lscope7-.LFBB7
+ 696               		.stabd	78,0,0
+ 697               		.section	.rodata.str1.1
+ 698               	.LC4:
+ 699 0036 5374 6172 		.string	"Start\n\r"
+ 699      740A 0D00 
+ 700               		.section	.text.startup,"ax",@progbits
+ 701               		.stabs	"main:F(0,1)",36,0,167,main
+ 702               	.global	main
+ 703               		.type	main, @function
+ 704               	main:
+ 705               		.stabd	46,0,0
+ 164:i2cio.c       ****    
+ 165:i2cio.c       ****    
+ 166:i2cio.c       ****    
+ 167:i2cio.c       **** int main()
+ 168:i2cio.c       **** {
+ 706               		.stabn	68,0,168,.LM66-.LFBB8
+ 707               	.LM66:
+ 708               	.LFBB8:
+ 709               	/* prologue: function */
+ 710               	/* frame size = 0 */
+ 711               	/* stack size = 0 */
+ 712               	.L__stack_usage = 0
+ 169:i2cio.c       ****    DDRC = 0xFC;
+ 713               		.stabn	68,0,169,.LM67-.LFBB8
+ 714               	.LM67:
+ 715 0000 8CEF      		ldi r24,lo8(-4)
+ 716 0002 84BB      		out 0x14,r24
+ 170:i2cio.c       ****    PORTC = 3;
+ 717               		.stabn	68,0,170,.LM68-.LFBB8
+ 718               	.LM68:
+ 719 0004 83E0      		ldi r24,lo8(3)
+ 720 0006 85BB      		out 0x15,r24
+ 171:i2cio.c       ****    
+ 172:i2cio.c       ****    UCSRB = (1<<RXEN)|(1<<TXEN)|(1<<RXCIE);
+ 721               		.stabn	68,0,172,.LM69-.LFBB8
+ 722               	.LM69:
+ 723 0008 88E9      		ldi r24,lo8(-104)
+GAS LISTING /tmp/ccu7QES2.s 			page 17
+
+
+ 724 000a 8AB9      		out 0xa,r24
+ 173:i2cio.c       ****    UCSRC = (1<<URSEL)|(1<<UCSZ1)|(1<<UCSZ0);
+ 725               		.stabn	68,0,173,.LM70-.LFBB8
+ 726               	.LM70:
+ 727 000c 86E8      		ldi r24,lo8(-122)
+ 728 000e 80BD      		out 0x20,r24
+ 174:i2cio.c       ****    //UBRRL = 103;      //9600
+ 175:i2cio.c       ****    UBRRL = 8;          //115200
+ 729               		.stabn	68,0,175,.LM71-.LFBB8
+ 730               	.LM71:
+ 731 0010 88E0      		ldi r24,lo8(8)
+ 732 0012 89B9      		out 0x9,r24
+ 176:i2cio.c       ****    
+ 177:i2cio.c       ****    sendString("Start\n\r");
+ 733               		.stabn	68,0,177,.LM72-.LFBB8
+ 734               	.LM72:
+ 735 0014 80E0      		ldi r24,lo8(.LC4)
+ 736 0016 90E0      		ldi r25,hi8(.LC4)
+ 737 0018 0E94 0000 		call sendString
+ 178:i2cio.c       ****    
+ 179:i2cio.c       ****    
+ 180:i2cio.c       ****    ADCSRA = (1<<ADEN) | (1<<ADPS2) | (1<<ADPS1) | (1<<ADPS0);
+ 738               		.stabn	68,0,180,.LM73-.LFBB8
+ 739               	.LM73:
+ 740 001c 87E8      		ldi r24,lo8(-121)
+ 741 001e 86B9      		out 0x6,r24
+ 181:i2cio.c       ****    
+ 182:i2cio.c       ****    
+ 183:i2cio.c       ****    
+ 184:i2cio.c       ****    TWBR = 98;
+ 742               		.stabn	68,0,184,.LM74-.LFBB8
+ 743               	.LM74:
+ 744 0020 82E6      		ldi r24,lo8(98)
+ 745 0022 80B9      		out 0,r24
+ 185:i2cio.c       ****    TWAR = 0x10<<1|1;
+ 746               		.stabn	68,0,185,.LM75-.LFBB8
+ 747               	.LM75:
+ 748 0024 81E2      		ldi r24,lo8(33)
+ 749 0026 82B9      		out 0x2,r24
+ 186:i2cio.c       ****    //TWCR = (1<<TWEA)|(1<<TWEN)|(1<<TWIE);
+ 187:i2cio.c       ****    TWCR = (1<<TWIE) | (1<<TWEA) | (1<<TWINT) | (1<<TWEN);
+ 750               		.stabn	68,0,187,.LM76-.LFBB8
+ 751               	.LM76:
+ 752 0028 85EC      		ldi r24,lo8(-59)
+ 753 002a 86BF      		out 0x36,r24
+ 188:i2cio.c       ****    TWSR = 0;
+ 754               		.stabn	68,0,188,.LM77-.LFBB8
+ 755               	.LM77:
+ 756 002c 11B8      		out 0x1,__zero_reg__
+ 189:i2cio.c       ****    Outgoing[0] = 7;
+ 757               		.stabn	68,0,189,.LM78-.LFBB8
+ 758               	.LM78:
+ 759 002e 87E0      		ldi r24,lo8(7)
+ 760 0030 8093 0000 		sts Outgoing,r24
+ 190:i2cio.c       ****    Outgoing[1] = 9;
+ 761               		.stabn	68,0,190,.LM79-.LFBB8
+ 762               	.LM79:
+GAS LISTING /tmp/ccu7QES2.s 			page 18
+
+
+ 763 0034 89E0      		ldi r24,lo8(9)
+ 764 0036 8093 0000 		sts Outgoing+1,r24
+ 191:i2cio.c       ****    
+ 192:i2cio.c       ****    
+ 193:i2cio.c       ****    TCCR0 = 0;
+ 765               		.stabn	68,0,193,.LM80-.LFBB8
+ 766               	.LM80:
+ 767 003a 13BE      		out 0x33,__zero_reg__
+ 194:i2cio.c       ****    TCNT0 = 0;
+ 768               		.stabn	68,0,194,.LM81-.LFBB8
+ 769               	.LM81:
+ 770 003c 12BE      		out 0x32,__zero_reg__
+ 195:i2cio.c       ****    TIMSK = 1;
+ 771               		.stabn	68,0,195,.LM82-.LFBB8
+ 772               	.LM82:
+ 773 003e 81E0      		ldi r24,lo8(1)
+ 774 0040 89BF      		out 0x39,r24
+ 196:i2cio.c       ****    
+ 197:i2cio.c       ****    
+ 198:i2cio.c       ****    sei();
+ 775               		.stabn	68,0,198,.LM83-.LFBB8
+ 776               	.LM83:
+ 777               	/* #APP */
+ 778               	 ;  198 "i2cio.c" 1
+ 779 0042 7894      		sei
+ 780               	 ;  0 "" 2
+ 781               	/* #NOAPP */
+ 782               	.L39:
+ 783 0044 00C0      		rjmp .L39
+ 784               		.size	main, .-main
+ 785               	.Lscope8:
+ 786               		.stabs	"",36,0,0,.Lscope8-.LFBB8
+ 787               		.stabd	78,0,0
+ 788               		.section	.rodata.str1.1
+ 789               	.LC5:
+ 790 003e 0909 5354 		.string	"\t\tSTATUS="
+ 790      4154 5553 
+ 790      3D00 
+ 791               	.LC6:
+ 792 0048 5074 7220 		.string	"Ptr set to "
+ 792      7365 7420 
+ 792      746F 2000 
+ 793               	.LC7:
+ 794 0054 5365 7420 		.string	"Set data as "
+ 794      6461 7461 
+ 794      2061 7320 
+ 794      00
+ 795               	.LC8:
+ 796 0061 496E 7074 		.string	"Inptr out of bounds.\n\r"
+ 796      7220 6F75 
+ 796      7420 6F66 
+ 796      2062 6F75 
+ 796      6E64 732E 
+ 797               	.LC9:
+ 798 0078 7374 6F70 		.string	"stop or repeated start.\n\r"
+ 798      206F 7220 
+ 798      7265 7065 
+GAS LISTING /tmp/ccu7QES2.s 			page 19
+
+
+ 798      6174 6564 
+ 798      2073 7461 
+ 799               	.LC10:
+ 800 0092 7374 6174 		.string	"state is pkt rcvd.\n\r"
+ 800      6520 6973 
+ 800      2070 6B74 
+ 800      2072 6376 
+ 800      642E 0A0D 
+ 801               	.LC11:
+ 802 00a7 7374 6174 		.string	"state is idle.\n\r"
+ 802      6520 6973 
+ 802      2069 646C 
+ 802      652E 0A0D 
+ 802      00
+ 803               	.LC12:
+ 804 00b8 7265 6164 		.string	"read data as "
+ 804      2064 6174 
+ 804      6120 6173 
+ 804      2000 
+ 805               	.LC13:
+ 806 00c6 436C 6F73 		.string	"Close I2C\n\r"
+ 806      6520 4932 
+ 806      430A 0D00 
+ 807               	.LC14:
+ 808 00d2 0A0D 4445 		.string	"\n\rDEFAULT in ISR\n\r"
+ 808      4641 554C 
+ 808      5420 696E 
+ 808      2049 5352 
+ 808      0A0D 00
+ 809               		.text
+ 810               		.stabs	"__vector_19:F(0,47)",36,0,208,__vector_19
+ 811               	.global	__vector_19
+ 812               		.type	__vector_19, @function
+ 813               	__vector_19:
+ 814               		.stabd	46,0,0
+ 199:i2cio.c       ****    
+ 200:i2cio.c       ****    
+ 201:i2cio.c       ****    while(1);
+ 202:i2cio.c       ****    return 0;
+ 203:i2cio.c       **** }
+ 204:i2cio.c       **** 
+ 205:i2cio.c       **** 
+ 206:i2cio.c       **** //Decimal: 96 128 128 160
+ 207:i2cio.c       **** //Hex:     60  80  80  A0
+ 208:i2cio.c       **** ISR(TWI_vect)
+ 209:i2cio.c       **** {
+ 815               		.stabn	68,0,209,.LM84-.LFBB9
+ 816               	.LM84:
+ 817               	.LFBB9:
+ 818 028a 1F92      		push r1
+ 819 028c 0F92      		push r0
+ 820 028e 0FB6      		in r0,__SREG__
+ 821 0290 0F92      		push r0
+ 822 0292 1124      		clr __zero_reg__
+ 823 0294 2F93      		push r18
+ 824 0296 3F93      		push r19
+ 825 0298 4F93      		push r20
+GAS LISTING /tmp/ccu7QES2.s 			page 20
+
+
+ 826 029a 5F93      		push r21
+ 827 029c 6F93      		push r22
+ 828 029e 7F93      		push r23
+ 829 02a0 8F93      		push r24
+ 830 02a2 9F93      		push r25
+ 831 02a4 AF93      		push r26
+ 832 02a6 BF93      		push r27
+ 833 02a8 CF93      		push r28
+ 834 02aa EF93      		push r30
+ 835 02ac FF93      		push r31
+ 836               	/* prologue: Signal */
+ 837               	/* frame size = 0 */
+ 838               	/* stack size = 16 */
+ 839               	.L__stack_usage = 16
+ 210:i2cio.c       ****    byte_t status = TWSR&0xF8;
+ 840               		.stabn	68,0,210,.LM85-.LFBB9
+ 841               	.LM85:
+ 842 02ae C1B1      		in r28,0x1
+ 843 02b0 C87F      		andi r28,lo8(-8)
+ 211:i2cio.c       ****    sendString("\t\tSTATUS=");
+ 844               		.stabn	68,0,211,.LM86-.LFBB9
+ 845               	.LM86:
+ 846 02b2 80E0      		ldi r24,lo8(.LC5)
+ 847 02b4 90E0      		ldi r25,hi8(.LC5)
+ 848 02b6 0E94 0000 		call sendString
+ 212:i2cio.c       ****    sendByte(status);
+ 849               		.stabn	68,0,212,.LM87-.LFBB9
+ 850               	.LM87:
+ 851 02ba 8C2F      		mov r24,r28
+ 852 02bc 0E94 0000 		call sendByte
+ 213:i2cio.c       ****    sendString("\n\r");
+ 853               		.stabn	68,0,213,.LM88-.LFBB9
+ 854               	.LM88:
+ 855 02c0 80E0      		ldi r24,lo8(.LC3)
+ 856 02c2 90E0      		ldi r25,hi8(.LC3)
+ 857 02c4 0E94 0000 		call sendString
+ 214:i2cio.c       ****    byte_t data;
+ 215:i2cio.c       ****    //while(1);
+ 216:i2cio.c       ****    
+ 217:i2cio.c       ****    //sendChar('\t');
+ 218:i2cio.c       ****    //sendULInt(state);
+ 219:i2cio.c       ****    //sendString("\n\r");
+ 220:i2cio.c       ****    
+ 221:i2cio.c       ****    
+ 222:i2cio.c       ****    switch(status)
+ 858               		.stabn	68,0,222,.LM89-.LFBB9
+ 859               	.LM89:
+ 860 02c8 C03A      		cpi r28,lo8(-96)
+ 861 02ca 01F4      		brne .+2
+ 862 02cc 00C0      		rjmp .L42
+ 863 02ce 00F4      		brsh .L43
+ 864 02d0 C036      		cpi r28,lo8(96)
+ 865 02d2 01F0      		breq .L44
+ 866 02d4 C038      		cpi r28,lo8(-128)
+ 867 02d6 01F0      		breq .L45
+ 868 02d8 C111      		cpse r28,__zero_reg__
+ 869 02da 00C0      		rjmp .L41
+GAS LISTING /tmp/ccu7QES2.s 			page 21
+
+
+ 223:i2cio.c       ****    {
+ 224:i2cio.c       ****       case TW_SR_SLA_ACK:        //0x60         96
+ 225:i2cio.c       ****          // SLA+W received. ACk returned.
+ 226:i2cio.c       ****          state = MY_ADDR;
+ 227:i2cio.c       ****          TWCR |= (1<<TWIE) | (1<<TWINT) | (1<<TWEA) | (1<<TWEN); 
+ 228:i2cio.c       ****          break;
+ 229:i2cio.c       **** 
+ 230:i2cio.c       ****       case TW_SR_DATA_ACK:    //0x80         128
+ 231:i2cio.c       ****          data = TWDR;
+ 232:i2cio.c       ****          if(state == MY_ADDR)
+ 233:i2cio.c       ****          {
+ 234:i2cio.c       ****             inptr = data;
+ 235:i2cio.c       ****             state = PTR_RCVD;
+ 236:i2cio.c       ****             sendString("Ptr set to ");
+ 237:i2cio.c       ****             sendByte(data);
+ 238:i2cio.c       ****             sendString("\n\r");
+ 239:i2cio.c       ****             TWCR |= (1<<TWIE) | (1<<TWINT) | (1<<TWEA) | (1<<TWEN); 
+ 240:i2cio.c       ****          }
+ 241:i2cio.c       ****          else if(state == PTR_RCVD)
+ 242:i2cio.c       ****          {
+ 243:i2cio.c       ****             // data now has valid data to be put at RegAddr
+ 244:i2cio.c       ****             // handle it.
+ 245:i2cio.c       ****             if(1)
+ 246:i2cio.c       ****             {
+ 247:i2cio.c       ****                //if you can receive more data. 
+ 248:i2cio.c       ****                //At the moment always true.
+ 249:i2cio.c       ****                //So send ACK back.
+ 250:i2cio.c       ****          
+ 251:i2cio.c       ****                if(inptr>=0 && inptr<(sizeof(Incoming)/sizeof(Incoming[0])))
+ 252:i2cio.c       ****                {
+ 253:i2cio.c       ****                   Incoming[inptr] = data;
+ 254:i2cio.c       ****                   
+ 255:i2cio.c       ****                   sendString("Set data as ");
+ 256:i2cio.c       ****                   sendByte(data);
+ 257:i2cio.c       ****                   sendString("\n\r");
+ 258:i2cio.c       ****                   
+ 259:i2cio.c       ****                                     
+ 260:i2cio.c       ****                   inptr = (inptr+1)%(sizeof(Incoming)/sizeof(Incoming[0]));
+ 261:i2cio.c       ****                }
+ 262:i2cio.c       ****                else
+ 263:i2cio.c       ****                {
+ 264:i2cio.c       ****                   //inptr out of bounds.
+ 265:i2cio.c       ****                   sendString("Inptr out of bounds.\n\r");
+ 266:i2cio.c       ****                }
+ 267:i2cio.c       ****                TWCR |= (1<<TWIE) | (1<<TWINT) | (1<<TWEA) | (1<<TWEN); 
+ 268:i2cio.c       ****             }
+ 269:i2cio.c       ****             else
+ 270:i2cio.c       ****             {
+ 271:i2cio.c       ****                //if you cannot receive more data. 
+ 272:i2cio.c       ****                //So send NACK back.
+ 273:i2cio.c       ****                TWCR |= (1<<TWIE) | (1<<TWINT) | (1<<TWEN); 
+ 274:i2cio.c       ****             }
+ 275:i2cio.c       ****          }
+ 276:i2cio.c       ****          break;
+ 277:i2cio.c       ****       
+ 278:i2cio.c       ****       case TW_SR_STOP:        //0xA0         160
+ 279:i2cio.c       ****          // stop condition or a repeated start condition has been received.
+GAS LISTING /tmp/ccu7QES2.s 			page 22
+
+
+ 280:i2cio.c       ****          sendString("stop or repeated start.\n\r");
+ 281:i2cio.c       ****          if(state == PTR_RCVD)
+ 282:i2cio.c       ****          {
+ 283:i2cio.c       ****             state = PKT_RCVD;
+ 284:i2cio.c       ****             sendString("state is pkt rcvd.\n\r");
+ 285:i2cio.c       ****             //prepare a response
+ 286:i2cio.c       ****             prepare_response();
+ 287:i2cio.c       ****             outptr = 0;
+ 288:i2cio.c       ****          }
+ 289:i2cio.c       ****          else
+ 290:i2cio.c       ****          {
+ 291:i2cio.c       ****             state = IDLE;
+ 292:i2cio.c       ****             sendString("state is idle.\n\r");
+ 293:i2cio.c       ****             //TWCR |= (1<<TWEA) | (1<<TWEN); 
+ 294:i2cio.c       ****             //TWCR |= (1<<TWEA) | (1<<TWINT) | (1<<TWEN);   
+ 295:i2cio.c       ****             TWCR |= (1<<TWIE) | (1<<TWEA) | (1<<TWEN) | (1<<TWINT);
+ 296:i2cio.c       ****             
+ 297:i2cio.c       ****          }     
+ 298:i2cio.c       ****       
+ 299:i2cio.c       ****          break;
+ 300:i2cio.c       ****       
+ 301:i2cio.c       ****       case TW_ST_SLA_ACK:        //0xA8         168
+ 302:i2cio.c       ****          // SLA+R received. ACK returned.    
+ 303:i2cio.c       ****          // Need to transmit data back to master.
+ 304:i2cio.c       ****          TWDR = Outgoing[outptr];
+ 305:i2cio.c       ****          outptr = (outptr+1)%(sizeof(Outgoing)/sizeof(Outgoing[0]));
+ 306:i2cio.c       ****          state = SENDING_RESP;
+ 307:i2cio.c       ****          
+ 308:i2cio.c       ****          sendString("read data as ");
+ 309:i2cio.c       ****          sendByte(TWDR);
+ 310:i2cio.c       ****          sendString("\n\r");
+ 311:i2cio.c       ****          TWCR |= (1<<TWEA) | (1<<TWINT);
+ 312:i2cio.c       ****          break;
+ 313:i2cio.c       ****       
+ 314:i2cio.c       ****       case TW_ST_DATA_ACK:    //0xB8         184
+ 315:i2cio.c       ****          //Data transmitted back to master. ACK received. Transmit next data.
+ 316:i2cio.c       ****          TWDR = Outgoing[outptr];
+ 317:i2cio.c       ****          outptr = (outptr+1)%(sizeof(Outgoing)/sizeof(Outgoing[0]));
+ 318:i2cio.c       ****          state = SENDING_RESP;
+ 319:i2cio.c       ****          
+ 320:i2cio.c       ****          sendString("read data as ");
+ 321:i2cio.c       ****          sendByte(TWDR);
+ 322:i2cio.c       ****          sendString("\n\r");
+ 323:i2cio.c       ****          TWCR |= (1<<TWEA) | (1<<TWINT);
+ 324:i2cio.c       ****          break;
+ 325:i2cio.c       ****       
+ 326:i2cio.c       ****       case TW_ST_DATA_NACK:      //0xC0         192
+ 327:i2cio.c       ****          state = IDLE;
+ 328:i2cio.c       ****          
+ 329:i2cio.c       ****          sendString("Close I2C\n\r");
+ 330:i2cio.c       ****          TWCR |= (1<<TWEA) | (1<<TWINT);
+ 331:i2cio.c       ****          break;
+ 332:i2cio.c       ****          
+ 333:i2cio.c       ****          
+ 334:i2cio.c       ****          
+ 335:i2cio.c       ****       case  TW_BUS_ERROR:
+ 336:i2cio.c       ****          //bus error. illegal start/stop condition.
+GAS LISTING /tmp/ccu7QES2.s 			page 23
+
+
+ 337:i2cio.c       ****          state = IDLE;
+ 870               		.stabn	68,0,337,.LM90-.LFBB9
+ 871               	.LM90:
+ 872 02dc 1092 0000 		sts state+1,__zero_reg__
+ 873 02e0 1092 0000 		sts state,__zero_reg__
+ 874 02e4 00C0      		rjmp .L56
+ 875               	.L43:
+ 222:i2cio.c       ****    switch(status)
+ 876               		.stabn	68,0,222,.LM91-.LFBB9
+ 877               	.LM91:
+ 878 02e6 C83B      		cpi r28,lo8(-72)
+ 879 02e8 01F4      		brne .+2
+ 880 02ea 00C0      		rjmp .L47
+ 881 02ec C03C      		cpi r28,lo8(-64)
+ 882 02ee 01F4      		brne .+2
+ 883 02f0 00C0      		rjmp .L48
+ 884 02f2 C83A      		cpi r28,lo8(-88)
+ 885 02f4 01F0      		breq .+2
+ 886 02f6 00C0      		rjmp .L41
+ 887 02f8 00C0      		rjmp .L47
+ 888               	.L44:
+ 226:i2cio.c       ****          state = MY_ADDR;
+ 889               		.stabn	68,0,226,.LM92-.LFBB9
+ 890               	.LM92:
+ 891 02fa 81E0      		ldi r24,lo8(1)
+ 892 02fc 90E0      		ldi r25,0
+ 893 02fe 9093 0000 		sts state+1,r25
+ 894 0302 8093 0000 		sts state,r24
+ 895 0306 00C0      		rjmp .L53
+ 896               	.L45:
+ 231:i2cio.c       ****          data = TWDR;
+ 897               		.stabn	68,0,231,.LM93-.LFBB9
+ 898               	.LM93:
+ 899 0308 C3B1      		in r28,0x3
+ 232:i2cio.c       ****          if(state == MY_ADDR)
+ 900               		.stabn	68,0,232,.LM94-.LFBB9
+ 901               	.LM94:
+ 902 030a 2091 0000 		lds r18,state
+ 903 030e 3091 0000 		lds r19,state+1
+ 904 0312 2130      		cpi r18,1
+ 905 0314 3105      		cpc r19,__zero_reg__
+ 906 0316 01F4      		brne .L51
+ 234:i2cio.c       ****             inptr = data;
+ 907               		.stabn	68,0,234,.LM95-.LFBB9
+ 908               	.LM95:
+ 909 0318 2C2F      		mov r18,r28
+ 910 031a 30E0      		ldi r19,0
+ 911 031c 3093 0000 		sts inptr+1,r19
+ 912 0320 2093 0000 		sts inptr,r18
+ 235:i2cio.c       ****             state = PTR_RCVD;
+ 913               		.stabn	68,0,235,.LM96-.LFBB9
+ 914               	.LM96:
+ 915 0324 22E0      		ldi r18,lo8(2)
+ 916 0326 30E0      		ldi r19,0
+ 917 0328 3093 0000 		sts state+1,r19
+ 918 032c 2093 0000 		sts state,r18
+ 236:i2cio.c       ****             sendString("Ptr set to ");
+GAS LISTING /tmp/ccu7QES2.s 			page 24
+
+
+ 919               		.stabn	68,0,236,.LM97-.LFBB9
+ 920               	.LM97:
+ 921 0330 80E0      		ldi r24,lo8(.LC6)
+ 922 0332 90E0      		ldi r25,hi8(.LC6)
+ 923 0334 0E94 0000 		call sendString
+ 237:i2cio.c       ****             sendByte(data);
+ 924               		.stabn	68,0,237,.LM98-.LFBB9
+ 925               	.LM98:
+ 926 0338 8C2F      		mov r24,r28
+ 927 033a 0E94 0000 		call sendByte
+ 238:i2cio.c       ****             sendString("\n\r");
+ 928               		.stabn	68,0,238,.LM99-.LFBB9
+ 929               	.LM99:
+ 930 033e 80E0      		ldi r24,lo8(.LC3)
+ 931 0340 90E0      		ldi r25,hi8(.LC3)
+ 932 0342 00C0      		rjmp .L59
+ 933               	.L51:
+ 241:i2cio.c       ****          else if(state == PTR_RCVD)
+ 934               		.stabn	68,0,241,.LM100-.LFBB9
+ 935               	.LM100:
+ 936 0344 2091 0000 		lds r18,state
+ 937 0348 3091 0000 		lds r19,state+1
+ 938 034c 2230      		cpi r18,2
+ 939 034e 3105      		cpc r19,__zero_reg__
+ 940 0350 01F0      		breq .+2
+ 941 0352 00C0      		rjmp .L40
+ 251:i2cio.c       ****                if(inptr>=0 && inptr<(sizeof(Incoming)/sizeof(Incoming[0])))
+ 942               		.stabn	68,0,251,.LM101-.LFBB9
+ 943               	.LM101:
+ 944 0354 2091 0000 		lds r18,inptr
+ 945 0358 3091 0000 		lds r19,inptr+1
+ 946 035c 37FD      		sbrc r19,7
+ 947 035e 00C0      		rjmp .L52
+ 251:i2cio.c       ****                if(inptr>=0 && inptr<(sizeof(Incoming)/sizeof(Incoming[0])))
+ 948               		.stabn	68,0,251,.LM102-.LFBB9
+ 949               	.LM102:
+ 950 0360 2091 0000 		lds r18,inptr
+ 951 0364 3091 0000 		lds r19,inptr+1
+ 952 0368 2233      		cpi r18,50
+ 953 036a 3105      		cpc r19,__zero_reg__
+ 954 036c 00F4      		brsh .L52
+ 253:i2cio.c       ****                   Incoming[inptr] = data;
+ 955               		.stabn	68,0,253,.LM103-.LFBB9
+ 956               	.LM103:
+ 957 036e E091 0000 		lds r30,inptr
+ 958 0372 F091 0000 		lds r31,inptr+1
+ 959 0376 E050      		subi r30,lo8(-(Incoming))
+ 960 0378 F040      		sbci r31,hi8(-(Incoming))
+ 961 037a C083      		st Z,r28
+ 255:i2cio.c       ****                   sendString("Set data as ");
+ 962               		.stabn	68,0,255,.LM104-.LFBB9
+ 963               	.LM104:
+ 964 037c 80E0      		ldi r24,lo8(.LC7)
+ 965 037e 90E0      		ldi r25,hi8(.LC7)
+ 966 0380 0E94 0000 		call sendString
+ 256:i2cio.c       ****                   sendByte(data);
+ 967               		.stabn	68,0,256,.LM105-.LFBB9
+GAS LISTING /tmp/ccu7QES2.s 			page 25
+
+
+ 968               	.LM105:
+ 969 0384 8C2F      		mov r24,r28
+ 970 0386 0E94 0000 		call sendByte
+ 257:i2cio.c       ****                   sendString("\n\r");
+ 971               		.stabn	68,0,257,.LM106-.LFBB9
+ 972               	.LM106:
+ 973 038a 80E0      		ldi r24,lo8(.LC3)
+ 974 038c 90E0      		ldi r25,hi8(.LC3)
+ 975 038e 0E94 0000 		call sendString
+ 260:i2cio.c       ****                   inptr = (inptr+1)%(sizeof(Incoming)/sizeof(Incoming[0]));
+ 976               		.stabn	68,0,260,.LM107-.LFBB9
+ 977               	.LM107:
+ 978 0392 8091 0000 		lds r24,inptr
+ 979 0396 9091 0000 		lds r25,inptr+1
+ 980 039a 0196      		adiw r24,1
+ 981 039c 62E3      		ldi r22,lo8(50)
+ 982 039e 70E0      		ldi r23,0
+ 983 03a0 0E94 0000 		call __udivmodhi4
+ 984 03a4 9093 0000 		sts inptr+1,r25
+ 985 03a8 8093 0000 		sts inptr,r24
+ 986 03ac 00C0      		rjmp .L53
+ 987               	.L52:
+ 265:i2cio.c       ****                   sendString("Inptr out of bounds.\n\r");
+ 988               		.stabn	68,0,265,.LM108-.LFBB9
+ 989               	.LM108:
+ 990 03ae 80E0      		ldi r24,lo8(.LC8)
+ 991 03b0 90E0      		ldi r25,hi8(.LC8)
+ 992               	.L59:
+ 993 03b2 0E94 0000 		call sendString
+ 994               	.L53:
+ 267:i2cio.c       ****                TWCR |= (1<<TWIE) | (1<<TWINT) | (1<<TWEA) | (1<<TWEN); 
+ 995               		.stabn	68,0,267,.LM109-.LFBB9
+ 996               	.LM109:
+ 997 03b6 86B7      		in r24,0x36
+ 998 03b8 856C      		ori r24,lo8(-59)
+ 999 03ba 00C0      		rjmp .L55
+ 1000               	.L42:
+ 280:i2cio.c       ****          sendString("stop or repeated start.\n\r");
+ 1001               		.stabn	68,0,280,.LM110-.LFBB9
+ 1002               	.LM110:
+ 1003 03bc 80E0      		ldi r24,lo8(.LC9)
+ 1004 03be 90E0      		ldi r25,hi8(.LC9)
+ 1005 03c0 0E94 0000 		call sendString
+ 281:i2cio.c       ****          if(state == PTR_RCVD)
+ 1006               		.stabn	68,0,281,.LM111-.LFBB9
+ 1007               	.LM111:
+ 1008 03c4 8091 0000 		lds r24,state
+ 1009 03c8 9091 0000 		lds r25,state+1
+ 1010 03cc 0297      		sbiw r24,2
+ 1011 03ce 01F4      		brne .L54
+ 283:i2cio.c       ****             state = PKT_RCVD;
+ 1012               		.stabn	68,0,283,.LM112-.LFBB9
+ 1013               	.LM112:
+ 1014 03d0 83E0      		ldi r24,lo8(3)
+ 1015 03d2 90E0      		ldi r25,0
+ 1016 03d4 9093 0000 		sts state+1,r25
+ 1017 03d8 8093 0000 		sts state,r24
+GAS LISTING /tmp/ccu7QES2.s 			page 26
+
+
+ 284:i2cio.c       ****             sendString("state is pkt rcvd.\n\r");
+ 1018               		.stabn	68,0,284,.LM113-.LFBB9
+ 1019               	.LM113:
+ 1020 03dc 80E0      		ldi r24,lo8(.LC10)
+ 1021 03de 90E0      		ldi r25,hi8(.LC10)
+ 1022 03e0 0E94 0000 		call sendString
+ 286:i2cio.c       ****             prepare_response();
+ 1023               		.stabn	68,0,286,.LM114-.LFBB9
+ 1024               	.LM114:
+ 1025 03e4 0E94 0000 		call prepare_response
+ 287:i2cio.c       ****             outptr = 0;
+ 1026               		.stabn	68,0,287,.LM115-.LFBB9
+ 1027               	.LM115:
+ 1028 03e8 1092 0000 		sts outptr+1,__zero_reg__
+ 1029 03ec 1092 0000 		sts outptr,__zero_reg__
+ 1030 03f0 00C0      		rjmp .L40
+ 1031               	.L54:
+ 291:i2cio.c       ****             state = IDLE;
+ 1032               		.stabn	68,0,291,.LM116-.LFBB9
+ 1033               	.LM116:
+ 1034 03f2 1092 0000 		sts state+1,__zero_reg__
+ 1035 03f6 1092 0000 		sts state,__zero_reg__
+ 292:i2cio.c       ****             sendString("state is idle.\n\r");
+ 1036               		.stabn	68,0,292,.LM117-.LFBB9
+ 1037               	.LM117:
+ 1038 03fa 80E0      		ldi r24,lo8(.LC11)
+ 1039 03fc 90E0      		ldi r25,hi8(.LC11)
+ 1040 03fe 00C0      		rjmp .L59
+ 1041               	.L47:
+ 316:i2cio.c       ****          TWDR = Outgoing[outptr];
+ 1042               		.stabn	68,0,316,.LM118-.LFBB9
+ 1043               	.LM118:
+ 1044 0400 E091 0000 		lds r30,outptr
+ 1045 0404 F091 0000 		lds r31,outptr+1
+ 1046 0408 E050      		subi r30,lo8(-(Outgoing))
+ 1047 040a F040      		sbci r31,hi8(-(Outgoing))
+ 1048 040c 8081      		ld r24,Z
+ 1049 040e 83B9      		out 0x3,r24
+ 317:i2cio.c       ****          outptr = (outptr+1)%(sizeof(Outgoing)/sizeof(Outgoing[0]));
+ 1050               		.stabn	68,0,317,.LM119-.LFBB9
+ 1051               	.LM119:
+ 1052 0410 8091 0000 		lds r24,outptr
+ 1053 0414 9091 0000 		lds r25,outptr+1
+ 1054 0418 0196      		adiw r24,1
+ 1055 041a 62E3      		ldi r22,lo8(50)
+ 1056 041c 70E0      		ldi r23,0
+ 1057 041e 0E94 0000 		call __udivmodhi4
+ 1058 0422 9093 0000 		sts outptr+1,r25
+ 1059 0426 8093 0000 		sts outptr,r24
+ 318:i2cio.c       ****          state = SENDING_RESP;
+ 1060               		.stabn	68,0,318,.LM120-.LFBB9
+ 1061               	.LM120:
+ 1062 042a 84E0      		ldi r24,lo8(4)
+ 1063 042c 90E0      		ldi r25,0
+ 1064 042e 9093 0000 		sts state+1,r25
+ 1065 0432 8093 0000 		sts state,r24
+ 320:i2cio.c       ****          sendString("read data as ");
+GAS LISTING /tmp/ccu7QES2.s 			page 27
+
+
+ 1066               		.stabn	68,0,320,.LM121-.LFBB9
+ 1067               	.LM121:
+ 1068 0436 80E0      		ldi r24,lo8(.LC12)
+ 1069 0438 90E0      		ldi r25,hi8(.LC12)
+ 1070 043a 0E94 0000 		call sendString
+ 321:i2cio.c       ****          sendByte(TWDR);
+ 1071               		.stabn	68,0,321,.LM122-.LFBB9
+ 1072               	.LM122:
+ 1073 043e 83B1      		in r24,0x3
+ 1074 0440 0E94 0000 		call sendByte
+ 322:i2cio.c       ****          sendString("\n\r");
+ 1075               		.stabn	68,0,322,.LM123-.LFBB9
+ 1076               	.LM123:
+ 1077 0444 80E0      		ldi r24,lo8(.LC3)
+ 1078 0446 90E0      		ldi r25,hi8(.LC3)
+ 1079 0448 00C0      		rjmp .L57
+ 1080               	.L48:
+ 327:i2cio.c       ****          state = IDLE;
+ 1081               		.stabn	68,0,327,.LM124-.LFBB9
+ 1082               	.LM124:
+ 1083 044a 1092 0000 		sts state+1,__zero_reg__
+ 1084 044e 1092 0000 		sts state,__zero_reg__
+ 329:i2cio.c       ****          sendString("Close I2C\n\r");
+ 1085               		.stabn	68,0,329,.LM125-.LFBB9
+ 1086               	.LM125:
+ 1087 0452 80E0      		ldi r24,lo8(.LC13)
+ 1088 0454 90E0      		ldi r25,hi8(.LC13)
+ 1089               	.L57:
+ 1090 0456 0E94 0000 		call sendString
+ 330:i2cio.c       ****          TWCR |= (1<<TWEA) | (1<<TWINT);
+ 1091               		.stabn	68,0,330,.LM126-.LFBB9
+ 1092               	.LM126:
+ 1093 045a 86B7      		in r24,0x36
+ 1094 045c 806C      		ori r24,lo8(-64)
+ 1095 045e 00C0      		rjmp .L55
+ 1096               	.L41:
+ 338:i2cio.c       ****          TWCR |= (1<<TWSTO) | (1<<TWINT) | (1<<TWEA);
+ 339:i2cio.c       ****          break;
+ 340:i2cio.c       ****          
+ 341:i2cio.c       ****       default:
+ 342:i2cio.c       ****          // if none of the above apply prepare TWI to be addressed again
+ 343:i2cio.c       ****          state = IDLE;
+ 1097               		.stabn	68,0,343,.LM127-.LFBB9
+ 1098               	.LM127:
+ 1099 0460 1092 0000 		sts state+1,__zero_reg__
+ 1100 0464 1092 0000 		sts state,__zero_reg__
+ 344:i2cio.c       ****          sendString("\n\rDEFAULT in ISR\n\r");
+ 1101               		.stabn	68,0,344,.LM128-.LFBB9
+ 1102               	.LM128:
+ 1103 0468 80E0      		ldi r24,lo8(.LC14)
+ 1104 046a 90E0      		ldi r25,hi8(.LC14)
+ 1105 046c 0E94 0000 		call sendString
+ 345:i2cio.c       ****          sendString("\t\tSTATUS=");
+ 1106               		.stabn	68,0,345,.LM129-.LFBB9
+ 1107               	.LM129:
+ 1108 0470 80E0      		ldi r24,lo8(.LC5)
+ 1109 0472 90E0      		ldi r25,hi8(.LC5)
+GAS LISTING /tmp/ccu7QES2.s 			page 28
+
+
+ 1110 0474 0E94 0000 		call sendString
+ 346:i2cio.c       ****          sendByte(status);
+ 1111               		.stabn	68,0,346,.LM130-.LFBB9
+ 1112               	.LM130:
+ 1113 0478 8C2F      		mov r24,r28
+ 1114 047a 0E94 0000 		call sendByte
+ 347:i2cio.c       ****          sendString("\n\r");
+ 1115               		.stabn	68,0,347,.LM131-.LFBB9
+ 1116               	.LM131:
+ 1117 047e 80E0      		ldi r24,lo8(.LC3)
+ 1118 0480 90E0      		ldi r25,hi8(.LC3)
+ 1119 0482 0E94 0000 		call sendString
+ 1120               	.L56:
+ 348:i2cio.c       ****          //TWCR |= (1<<TWIE) | (1<<TWEA) | (1<<TWEN);
+ 349:i2cio.c       ****          TWCR |= (1<<TWEA) | (1<<TWINT) | (1<<TWSTO);
+ 1121               		.stabn	68,0,349,.LM132-.LFBB9
+ 1122               	.LM132:
+ 1123 0486 86B7      		in r24,0x36
+ 1124 0488 806D      		ori r24,lo8(-48)
+ 1125               	.L55:
+ 1126 048a 86BF      		out 0x36,r24
+ 1127               	.L40:
+ 1128               	/* epilogue start */
+ 350:i2cio.c       ****          break;
+ 351:i2cio.c       ****    
+ 352:i2cio.c       ****    }
+ 353:i2cio.c       **** 
+ 354:i2cio.c       **** }
+ 1129               		.stabn	68,0,354,.LM133-.LFBB9
+ 1130               	.LM133:
+ 1131 048c FF91      		pop r31
+ 1132 048e EF91      		pop r30
+ 1133 0490 CF91      		pop r28
+ 1134 0492 BF91      		pop r27
+ 1135 0494 AF91      		pop r26
+ 1136 0496 9F91      		pop r25
+ 1137 0498 8F91      		pop r24
+ 1138 049a 7F91      		pop r23
+ 1139 049c 6F91      		pop r22
+ 1140 049e 5F91      		pop r21
+ 1141 04a0 4F91      		pop r20
+ 1142 04a2 3F91      		pop r19
+ 1143 04a4 2F91      		pop r18
+ 1144 04a6 0F90      		pop r0
+ 1145 04a8 0FBE      		out __SREG__,r0
+ 1146 04aa 0F90      		pop r0
+ 1147 04ac 1F90      		pop r1
+ 1148 04ae 1895      		reti
+ 1149               		.size	__vector_19, .-__vector_19
+ 1150               		.stabs	"status:r(0,48)",64,0,210,28
+ 1151               		.stabs	"data:r(0,48)",64,0,214,28
+ 1152               		.stabn	192,0,0,.LFBB9-.LFBB9
+ 1153               		.stabn	224,0,0,.Lscope9-.LFBB9
+ 1154               	.Lscope9:
+ 1155               		.stabs	"",36,0,0,.Lscope9-.LFBB9
+ 1156               		.stabd	78,0,0
+ 1157               		.stabs	"__vector_13:F(0,47)",36,0,356,__vector_13
+GAS LISTING /tmp/ccu7QES2.s 			page 29
+
+
+ 1158               	.global	__vector_13
+ 1159               		.type	__vector_13, @function
+ 1160               	__vector_13:
+ 1161               		.stabd	46,0,0
+ 355:i2cio.c       **** 
+ 356:i2cio.c       **** ISR(USART_RXC_vect)
+ 357:i2cio.c       **** {
+ 1162               		.stabn	68,0,357,.LM134-.LFBB10
+ 1163               	.LM134:
+ 1164               	.LFBB10:
+ 1165 04b0 1F92      		push r1
+ 1166 04b2 0F92      		push r0
+ 1167 04b4 0FB6      		in r0,__SREG__
+ 1168 04b6 0F92      		push r0
+ 1169 04b8 1124      		clr __zero_reg__
+ 1170 04ba 2F93      		push r18
+ 1171 04bc 3F93      		push r19
+ 1172 04be 4F93      		push r20
+ 1173 04c0 5F93      		push r21
+ 1174 04c2 6F93      		push r22
+ 1175 04c4 7F93      		push r23
+ 1176 04c6 8F93      		push r24
+ 1177 04c8 9F93      		push r25
+ 1178 04ca AF93      		push r26
+ 1179 04cc BF93      		push r27
+ 1180 04ce EF93      		push r30
+ 1181 04d0 FF93      		push r31
+ 1182               	/* prologue: Signal */
+ 1183               	/* frame size = 0 */
+ 1184               	/* stack size = 15 */
+ 1185               	.L__stack_usage = 15
+ 358:i2cio.c       ****    sendChar(UDR);
+ 1186               		.stabn	68,0,358,.LM135-.LFBB10
+ 1187               	.LM135:
+ 1188 04d2 8CB1      		in r24,0xc
+ 1189 04d4 0E94 0000 		call sendChar
+ 1190               	/* epilogue start */
+ 359:i2cio.c       **** }
+ 1191               		.stabn	68,0,359,.LM136-.LFBB10
+ 1192               	.LM136:
+ 1193 04d8 FF91      		pop r31
+ 1194 04da EF91      		pop r30
+ 1195 04dc BF91      		pop r27
+ 1196 04de AF91      		pop r26
+ 1197 04e0 9F91      		pop r25
+ 1198 04e2 8F91      		pop r24
+ 1199 04e4 7F91      		pop r23
+ 1200 04e6 6F91      		pop r22
+ 1201 04e8 5F91      		pop r21
+ 1202 04ea 4F91      		pop r20
+ 1203 04ec 3F91      		pop r19
+ 1204 04ee 2F91      		pop r18
+ 1205 04f0 0F90      		pop r0
+ 1206 04f2 0FBE      		out __SREG__,r0
+ 1207 04f4 0F90      		pop r0
+ 1208 04f6 1F90      		pop r1
+ 1209 04f8 1895      		reti
+GAS LISTING /tmp/ccu7QES2.s 			page 30
+
+
+ 1210               		.size	__vector_13, .-__vector_13
+ 1211               	.Lscope10:
+ 1212               		.stabs	"",36,0,0,.Lscope10-.LFBB10
+ 1213               		.stabd	78,0,0
+ 1214               		.comm	Outgoing,50,1
+ 1215               		.comm	Incoming,50,1
+ 1216               	.global	outptr
+ 1217               		.section .bss
+ 1218               		.type	outptr, @object
+ 1219               		.size	outptr, 2
+ 1220               	outptr:
+ 1221 0000 0000      		.zero	2
+ 1222               	.global	inptr
+ 1223               		.type	inptr, @object
+ 1224               		.size	inptr, 2
+ 1225               	inptr:
+ 1226 0002 0000      		.zero	2
+ 1227               	.global	state
+ 1228               		.type	state, @object
+ 1229               		.size	state, 2
+ 1230               	state:
+ 1231 0004 0000      		.zero	2
+ 1232               		.stabs	"state:G(0,57)=B(0,1)",32,0,28,0
+ 1233               		.stabs	"inptr:G(0,57)",32,0,29,0
+ 1234               		.stabs	"outptr:G(0,57)",32,0,29,0
+ 1235               		.stabs	"Incoming:G(0,58)=ar(0,53);0;49;(0,59)=B(0,11)",32,0,32,0
+ 1236               		.stabs	"Outgoing:G(0,58)",32,0,33,0
+ 1237               		.text
+ 1238               		.stabs	"",100,0,0,.Letext0
+ 1239               	.Letext0:
+ 1240               		.ident	"GCC: (GNU) 4.8.2"
+ 1241               	.global __do_copy_data
+ 1242               	.global __do_clear_bss
+GAS LISTING /tmp/ccu7QES2.s 			page 31
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 i2cio.c
+     /tmp/ccu7QES2.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccu7QES2.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccu7QES2.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccu7QES2.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccu7QES2.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccu7QES2.s:108    .text:0000000000000000 sendChar
+     /tmp/ccu7QES2.s:147    .text:000000000000001c sendString
+     /tmp/ccu7QES2.s:186    .text:0000000000000038 sendULInt
+     /tmp/ccu7QES2.s:330    .text:00000000000000fe sendByte
+     /tmp/ccu7QES2.s:431    .text:000000000000016e sendWord
+     /tmp/ccu7QES2.s:543    .text:00000000000001f0 get_checksum
+     /tmp/ccu7QES2.s:595    .text:000000000000020c prepare_response
+                            *COM*:0000000000000032 Incoming
+                            *COM*:0000000000000032 Outgoing
+     /tmp/ccu7QES2.s:704    .text.startup:0000000000000000 main
+     /tmp/ccu7QES2.s:813    .text:000000000000028a __vector_19
+     /tmp/ccu7QES2.s:1230   .bss:0000000000000004 state
+     /tmp/ccu7QES2.s:1225   .bss:0000000000000002 inptr
+     /tmp/ccu7QES2.s:1220   .bss:0000000000000000 outptr
+     /tmp/ccu7QES2.s:1160   .text:00000000000004b0 __vector_13
+
+UNDEFINED SYMBOLS
+__udivmodsi4
+__udivmodqi4
+__udivmodhi4
+__do_copy_data
+__do_clear_bss
