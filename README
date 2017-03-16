@@ -1,0 +1,12 @@
+I2CIO aims to create an I2C io expanssion card and the accompanying I2C protocol 
+for GPIO and other peripheral expanssion over I2C bus.
+
+We are making an I2C slave board powered by an AVR ATmega32 microcontroller. It 
+is controlled by the host computer over an I2C bus. The host may be any computer
+desiring GPIO and other low level peripheral control like UART, PWM, SPI, ADC 
+etc and possesing an I2C port.
+
+The immediate goal is to establish reliable commpunication between a host 
+(beaglebone black in this case) and our AVR board.
+
+Then we aim to frame a protocol in which we can send commands to the AVR.
